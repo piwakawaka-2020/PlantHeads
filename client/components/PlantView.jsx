@@ -228,6 +228,7 @@ const rosemary = {
 }
 
 import PhMeter from './PhMeter'
+import Temperature from './Temperature'
 
 function PlantView() {
   return (
@@ -237,6 +238,7 @@ function PlantView() {
     <h1>{rosemary.family_common_name}</h1>
     <img id='plantImage' src={rosemary.images[0].url} />
     <PhMeter min={rosemary.main_species.growth.ph_minimum} max={rosemary.main_species.growth.ph_maximum} />
+    <Temperature temp={rosemary.main_species.growth.temperature_minimum.deg_c} />
     </>
   )
 }

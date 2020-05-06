@@ -10,7 +10,7 @@ body {
     border-radius: 5px;
 }
 
-#phMeter {
+#phMeter, #temperature {
     border: 2px black solid;
     display: flex;
     justify-content: center;
