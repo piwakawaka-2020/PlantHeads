@@ -89,17 +89,20 @@ As a user:
   | --- | --- |
   | id | Integer |
   | plant_id | Integer |
-  | name | String |
-  | seller | Timestamp |
-  | cost | integer |
-  | notes | integer |
+  | plant_name | String |
+  | username | String |
+  | cost | Integer |
+  | notes | String |
   
 ### SavedPlant
 
  | Column Name | Data Type |
  | --- | --- |
+ | id | Integer |
  | user_id | Integer |
+ | plant_name | String |
  | plant_id | Integer |
+ | photo | URL photo |
 
  ---
 
