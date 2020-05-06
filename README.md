@@ -71,6 +71,12 @@ As a user:
 | --- | --- | --- | --- | --- |
 | Post | /api/auth/login | Yes | Log In a User | The Users JWT Token |
 | Post | /api/auth/register | Yes | Register a user with JWT Token | The Users JWT Token |
+| Get | /api/plants/search/:queryPlant | Yes | Search for a plant | An array of plants |
+| Get | /api/plants/:plantId | Yes | Get the details of an individual plant | An array of plants |
+| Get | /api/listings/:plantId | Yes | Get the listings for an individual plant | A plant object |
+| Get | /api/listings/:listingId | Yes | Get the details of a listing | A listing object |
+| Get | /api/savedPlants/:userId | Yes | Get an array of saved plants for logged in user | An array of plants |
+
 
 ## DB (Server Side)
   There should be three tables for MVP
