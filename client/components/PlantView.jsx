@@ -234,6 +234,7 @@ import Toxicity from './Toxicity'
 import DroughtTolerance from './DroughtTolerance'
 import Lifespan from './Lifespan'
 import Seasons from './Seasons'
+import PlantViewListings from './PlantViewListings'
 
 function PlantView() {
   return (
@@ -254,6 +255,7 @@ function PlantView() {
                 <Lifespan lifespan={rosemary.main_species.specifications.lifespan} />
             </div>
             <Seasons />
+            <PlantViewListings />
         </div>
     </div>
   )
