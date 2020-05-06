@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Balsamiq+Sans&display=swap');
+
+body {
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+#plantImage {
+    width: 200px;
+}
