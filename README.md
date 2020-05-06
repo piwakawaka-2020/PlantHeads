@@ -82,30 +82,26 @@ As a user:
   | first_name | String |
   | last_name | String |
   | hash | text |
-  | hourly_wage | decimal |
   | created_at | timestamp |
   | updated_at | timestamp |
 
-### Meetings
+### Listing
   | Column Name | Data Type |
   | --- | --- |
   | id | Integer |
-  | meeting_name | String |
-  | startTime | Timestamp |
-  | endTime | Timestamp |
-  | attendees | integer |
-  | cost | Decimal |
-  | notes | string |
+  | name | String |
+  | seller | Timestamp |
+  | cost | integer |
+  | notes | integer |
   
-
-### Attendees (Join Table M2M)
+### SavedPlant
 
   Many Users attend Many Meetings
 
  | Column Name | Data Type |
  | --- | --- |
  | user_id | Integer |
- | meeting_id | Integer |
+ | plant_id | Integer |
 
  ---
 
