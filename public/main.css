@@ -14,7 +14,7 @@ body {
     display: inline-flex;
 }
 
-#phMeter, #temperature, #water, #toxicity, #drought {
+#phMeter, #temperature, #water, #toxicity, #drought, #lifespan {
     border: 2px black solid;
     display: flex;
     justify-content: center;

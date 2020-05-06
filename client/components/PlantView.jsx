@@ -232,6 +232,7 @@ import Temperature from './Temperature'
 import Water from './Water'
 import Toxicity from './Toxicity'
 import DroughtTolerance from './DroughtTolerance'
+import Lifespan from './Lifespan'
 
 function PlantView() {
   return (
@@ -246,6 +247,7 @@ function PlantView() {
         <Water water={rosemary.main_species.growth.moisture_use} />
         <Toxicity toxicity={rosemary.main_species.specifications.toxicity} />
         <DroughtTolerance drought={rosemary.main_species.growth.drought_tolerance} />
+        <Lifespan lifespan={rosemary.main_species.specifications.lifespan} />
     </div>
     </>
   )
