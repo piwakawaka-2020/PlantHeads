@@ -10,7 +10,11 @@ body {
     border-radius: 5px;
 }
 
-#phMeter, #temperature {
+#propertyFlex {
+    display: flex;
+}
+
+#phMeter, #temperature, #water {
     border: 2px black solid;
     display: flex;
     justify-content: center;
