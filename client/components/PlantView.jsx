@@ -237,21 +237,25 @@ import Seasons from './Seasons'
 
 function PlantView() {
   return (
-    <>
-    <h1>"{rosemary.common_name}"</h1>
-    <h1>{rosemary.scientific_name}</h1>
-    <h1>{rosemary.family_common_name}</h1>
-    <img id='plantImage' src={rosemary.images[0].url} />
-    <div id='properties'>
-        <PhMeter min={rosemary.main_species.growth.ph_minimum} max={rosemary.main_species.growth.ph_maximum} />
-        <Temperature temp={rosemary.main_species.growth.temperature_minimum.deg_c} />
-        <Water water={rosemary.main_species.growth.moisture_use} />
-        <Toxicity toxicity={rosemary.main_species.specifications.toxicity} />
-        <DroughtTolerance drought={rosemary.main_species.growth.drought_tolerance} />
-        <Lifespan lifespan={rosemary.main_species.specifications.lifespan} />
+    <div id='mainContainer'>
+        <div id='leftSide'>
+            <h1>"{rosemary.common_name}"</h1>
+            <h1>{rosemary.scientific_name}</h1>
+            <h1>{rosemary.family_common_name}</h1>
+            <img id='plantImage' src={rosemary.images[0].url} />
+        </div>
+        <div id='rightSide'>
+            <div id='properties'>
+                <PhMeter min={rosemary.main_species.growth.ph_minimum} max={rosemary.main_species.growth.ph_maximum} />
+                <Temperature temp={rosemary.main_species.growth.temperature_minimum.deg_c} />
+                <Water water={rosemary.main_species.growth.moisture_use} />
+                <Toxicity toxicity={rosemary.main_species.specifications.toxicity} />
+                <DroughtTolerance drought={rosemary.main_species.growth.drought_tolerance} />
+                <Lifespan lifespan={rosemary.main_species.specifications.lifespan} />
+            </div>
+            <Seasons />
+        </div>
     </div>
-    <Seasons />
-    </>
   )
 }
 

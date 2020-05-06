@@ -3,7 +3,8 @@ import React from 'react'
 function DroughtTolerance(props) {
     return (
       <div id='drought'>
-          <p>DroughtTolerance</p>
+          <p>Drought</p>
+          <p>Tolerance</p>
           <p>{props.drought}</p>
       </div>
     )

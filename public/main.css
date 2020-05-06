@@ -4,6 +4,11 @@ body {
     font-family: 'Balsamiq Sans', cursive;
 }
 
+#mainContainer {
+    display: flex;
+    justify-content: center;
+}
+
 #plantImage {
     width: 200px;
     border: 2px black solid;
@@ -12,6 +17,8 @@ body {
 
 #properties {
     display: inline-flex;
+    width: 500px;
+    flex-wrap: wrap;
 }
 
 #phMeter, #temperature, #water, #toxicity, #drought, #lifespan {
@@ -25,6 +32,7 @@ body {
     padding: 15px;
     width: 100px;
     height: 100px;
+    margin: 5px;
 }
 
 p {
