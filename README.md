@@ -20,6 +20,7 @@ As a user:
 - [ ] Plant identification by picture
 - [ ] Uploading your own picture when making a listing
 - [ ] Seperate buy/sell section for listings
+- [ ] More search filters
 
   ---
 
