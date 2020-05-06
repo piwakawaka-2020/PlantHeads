@@ -90,14 +90,13 @@ As a user:
   | Column Name | Data Type |
   | --- | --- |
   | id | Integer |
+  | plant_id | Integer |
   | name | String |
   | seller | Timestamp |
   | cost | integer |
   | notes | integer |
   
 ### SavedPlant
-
-  Many Users attend Many Meetings
 
  | Column Name | Data Type |
  | --- | --- |
