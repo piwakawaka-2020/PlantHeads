@@ -230,6 +230,7 @@ const rosemary = {
 import PhMeter from './PhMeter'
 import Temperature from './Temperature'
 import Water from './Water'
+import Toxicity from './Toxicity'
 
 function PlantView() {
   return (
@@ -242,6 +243,7 @@ function PlantView() {
         <PhMeter min={rosemary.main_species.growth.ph_minimum} max={rosemary.main_species.growth.ph_maximum} />
         <Temperature temp={rosemary.main_species.growth.temperature_minimum.deg_c} />
         <Water water={rosemary.main_species.growth.moisture_use} />
+        <Toxicity toxicity={rosemary.main_species.specifications.toxicity} />
     </div>
     </>
   )
