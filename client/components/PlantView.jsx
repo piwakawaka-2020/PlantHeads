@@ -233,6 +233,7 @@ import Water from './Water'
 import Toxicity from './Toxicity'
 import DroughtTolerance from './DroughtTolerance'
 import Lifespan from './Lifespan'
+import Seasons from './Seasons'
 
 function PlantView() {
   return (
@@ -241,7 +242,7 @@ function PlantView() {
     <h1>{rosemary.scientific_name}</h1>
     <h1>{rosemary.family_common_name}</h1>
     <img id='plantImage' src={rosemary.images[0].url} />
-    <div id='propertyFlex'>
+    <div id='properties'>
         <PhMeter min={rosemary.main_species.growth.ph_minimum} max={rosemary.main_species.growth.ph_maximum} />
         <Temperature temp={rosemary.main_species.growth.temperature_minimum.deg_c} />
         <Water water={rosemary.main_species.growth.moisture_use} />
@@ -249,6 +250,7 @@ function PlantView() {
         <DroughtTolerance drought={rosemary.main_species.growth.drought_tolerance} />
         <Lifespan lifespan={rosemary.main_species.specifications.lifespan} />
     </div>
+    <Seasons />
     </>
   )
 }

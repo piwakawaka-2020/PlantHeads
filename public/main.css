@@ -10,7 +10,7 @@ body {
     border-radius: 5px;
 }
 
-#propertyFlex {
+#properties {
     display: inline-flex;
 }
 
@@ -25,4 +25,40 @@ body {
     padding: 15px;
     width: 100px;
     height: 100px;
+}
+
+p {
+    padding: 0;
+    margin: 0
+}
+
+#seasons {
+    border: 2px black solid;
+    display: inline-flex;
+    border-radius: 5px;
+}
+
+.season {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+#summer {
+    background-color: rgb(233, 155, 53);
+}
+
+#autumn {
+    background-color: rgb(165, 77, 42);
+}
+
+#winter {
+    background-color: rgb(109, 109, 235);
+}
+
+#spring {
+    background-color: rgb(75, 163, 75);
 }
