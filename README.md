@@ -14,7 +14,7 @@ As a user:
 - [ ] I log in and register my own plants to my account
 - [ ] We can add a listing to the plant page and it saves it to a database
 - [ ] We can accept a listing and the app will notify the seller
-- [ ] Registered users can see the plant database but cant save plants
+- [ ] Unregistered users can see the plant database but cant save plants
 
 ### Stretch
 - [ ] Plant identification by picture
@@ -69,7 +69,8 @@ As a user:
 
 | Method | Endpoint | Protected | Usage | Response |
 | --- | --- | --- | --- | --- |
-| Post | /api/auth/signin | Yes | Log In a User | The Users JWT Token |
+| Post | /api/auth/login | Yes | Log In a User | The Users JWT Token |
+| Post | /api/auth/register | Yes | Register a user with JWT Token | The Users JWT Token |
 
 ## DB (Server Side)
   There should be three tables for MVP
