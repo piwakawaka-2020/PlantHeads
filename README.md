@@ -57,11 +57,17 @@ As a user:
 | --- | --- | --- | --- | --- |
 | Post | /api/auth/login | Yes | Log In a User | The Users JWT Token |
 | Post | /api/auth/register | Yes | Register a user with JWT Token | The Users JWT Token |
+| Put | /api/users/:userId | Yes | update a users details | 200 status code |
 | Get | /api/plants/search/:queryPlant | Yes | Search for a plant | An array of plants |
 | Get | /api/plants/:plantId | Yes | Get the details of an individual plant | An array of plants |
 | Get | /api/listings/:plantId | Yes | Get the listings for an individual plant | A plant object |
 | Get | /api/listings/:listingId | Yes | Get the details of a listing | A listing object |
+| Post | /api/listings | Yes | Add a listing | 201 status code |
+| Delete | /api/listings | Yes | Delete a listing | 200 status code |
+| Put | /api/listings/:userId | Yes | update a listing details | 201 status code |
 | Get | /api/savedPlants/:userId | Yes | Get an array of saved plants for logged in user | An array of plants |
+| Post | /api/savedPlants | Yes | Add a plant to favourites | 201 status code |
+| Delete | /api/savedPlants | Yes | Delete a favourite from database | 200 status code |
 
 
 ## DB (Server Side)
