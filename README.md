@@ -88,8 +88,8 @@ As a user:
   | Column Name | Data Type |
   | --- | --- |
   | id | Integer |
-  | plant_id | Integer |
-  | plant_name | String |
+  | plants_id | Integer |
+  | scientific_name | String |
   | username | String |
   | cost | Integer |
   | notes | String |
@@ -100,9 +100,10 @@ As a user:
  | --- | --- |
  | id | Integer |
  | user_id | Integer |
- | plant_name | String |
- | plant_id | Integer |
- | photo | URL photo |
+ | scientific_name | String |
+ | plants_id | Integer |
+ | photoURL | String |
+ | notes | String |
 
  ---
 
