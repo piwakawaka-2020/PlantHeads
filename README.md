@@ -8,10 +8,18 @@ app description
 ### MVP
 
 As a user:
-- [x] I want to register for the App under my name, and state my hourly wage
+- [ ] I want to search a plant and see a page with a variety of details about it
+- [ ] I want to filter plants by different categories
+- [ ] I want to register an account with my name
+- [ ] I log in and register my own plants to my account
+- [ ] We can add a listing to the plant page and it saves it to a database
+- [ ] We can accept a listing and the app will notify the seller
+- [ ] Registered users can see the plant database but cant save plants
 
 ### Stretch
-- [x] I want to be able to select existing users of the App as meeting attendees, so that our wages don't have to be shown / inputted manually. If a meeting attendee doesn't have an account, I want to be able to manually add them to the App.
+- [ ] Plant identification by picture
+- [ ] Uploading your own picture when making a listing
+- [ ] Seperate buy/sell section for listings
 
   ---
 
@@ -19,6 +27,12 @@ As a user:
   | name | purpose |
   | --- | --- |
   | Login | View for user to enter their login credentials |
+  | Register | View for user to register an account |
+  | Home | Landing view for website |
+  | Plant Profile | Plant details for selected plant |
+  | Listing | Details for individual plant listing |
+  | Saved Plants | Current users saved plants (not listings) |
+  | Make Listing | Form to create a listing |
 
 
 ## Reducers (Client Side)
