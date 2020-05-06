@@ -11,10 +11,10 @@ body {
 }
 
 #propertyFlex {
-    display: flex;
+    display: inline-flex;
 }
 
-#phMeter, #temperature, #water, #toxicity {
+#phMeter, #temperature, #water, #toxicity, #drought {
     border: 2px black solid;
     display: flex;
     justify-content: center;

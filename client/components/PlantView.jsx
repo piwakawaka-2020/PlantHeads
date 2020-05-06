@@ -231,6 +231,7 @@ import PhMeter from './PhMeter'
 import Temperature from './Temperature'
 import Water from './Water'
 import Toxicity from './Toxicity'
+import DroughtTolerance from './DroughtTolerance'
 
 function PlantView() {
   return (
@@ -244,6 +245,7 @@ function PlantView() {
         <Temperature temp={rosemary.main_species.growth.temperature_minimum.deg_c} />
         <Water water={rosemary.main_species.growth.moisture_use} />
         <Toxicity toxicity={rosemary.main_species.specifications.toxicity} />
+        <DroughtTolerance drought={rosemary.main_species.growth.drought_tolerance} />
     </div>
     </>
   )
