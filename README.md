@@ -63,7 +63,7 @@ As a user:
 | Get | /api/listings/:plantId | Yes | Get the listings for an individual plant | A plant object |
 | Get | /api/listings/:listingId | Yes | Get the details of a listing | A listing object |
 | Post | /api/listings | Yes | Add a listing | 201 status code |
-| Delete | /api/savedPlants | Yes | Delete a listing | 200 status code |
+| Delete | /api/listings | Yes | Delete a listing | 200 status code |
 | Put | /api/listings/:userId | Yes | update a listing details | 200 status code |
 | Get | /api/savedPlants/:userId | Yes | Get an array of saved plants for logged in user | An array of plants |
 | Post | /api/savedPlants | Yes | Add a plant to favourites | 201 status code |
