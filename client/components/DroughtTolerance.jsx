@@ -5,6 +5,7 @@ function DroughtTolerance(props) {
 
     if (props.drought === 'High') {
       style.backgroundColor = 'rgb(233, 155, 53)'
+      style.color = 'white'
     } else {
       style.backgroundColor = 'rgb(235, 190, 132)'
     }

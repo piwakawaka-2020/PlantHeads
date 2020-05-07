@@ -5,6 +5,7 @@ function Lifespan(props) {
 
     if (props.lifespan === 'Long') {
       style.backgroundColor = 'rgb(165, 77, 42)';
+      style.color = 'white'
     } else {
       style.backgroundColor = 'rgb(163, 116, 98)';
     }

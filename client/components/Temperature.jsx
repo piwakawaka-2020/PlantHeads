@@ -7,6 +7,7 @@ function Temperature(props) {
       style.backgroundColor = 'rgb(184, 184, 255)';
     } else {
       style.backgroundColor = 'rgb(241, 97, 40)';
+      style.color = 'white'
     }
 
     return (
