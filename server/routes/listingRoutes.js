@@ -25,7 +25,10 @@ router.post('/', (req,res) => {
         .then((id) => {
             dbFunction.getListingById(id[0])
                 .then((listing) => {
-                    res.json(listing)
+                    res.status(201).send(listing)
+                })
+                .catch ((error) => {
+                    res.status(500).send(error.message)
                 })
         })
 })
@@ -35,7 +38,7 @@ router.delete('/:id', (req,res) => {
     let id = req.params.id
     dbFunction.deleteListing(id)
         .then(() => {
-            res.json({deleted:id})
+            res.status(200).json({deleted:id})
         })
 })
 
@@ -43,7 +46,10 @@ router.delete('/:id', (req,res) => {
 router.put('/:id', (req,res) => {
     dbFunction.updateListing(req.params.id, req.body)
         .then((listing) => {
-            res.json(listing)
+            res.status(201).send(listing)
+        })
+        .catch ((error) => {
+            res.status(500).send(error.message)
         })
 })
 
