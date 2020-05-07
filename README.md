@@ -79,6 +79,7 @@ As a user:
   | --- | --- |
   | id | Integer |
   | username | String |
+  | email | String |
   | first_name | String |
   | last_name | String |
   | hash | text |
