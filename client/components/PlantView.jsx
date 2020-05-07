@@ -240,11 +240,10 @@ import Height from './Height'
 function PlantView() {
   return (
     <div id='mainContainer'>
-        <div id='leftSide'>
-            <h1>"{rosemary.common_name}"</h1>
-            <h1>{rosemary.scientific_name}</h1>
-            <h1>{rosemary.family_common_name}</h1>
-            <img id='plantImage' src={rosemary.images[0].url} />
+        <div id='leftSide' style={{backgroundImage: `url(${rosemary.images[0].url})`}}>
+            <h2 className='plantHeading'>"{rosemary.common_name}"</h2>
+            <h3 className='plantHeading'>{rosemary.scientific_name}</h3>
+            <h3 className='plantHeading'>{rosemary.family_common_name}</h3>
         </div>
         <Height />
         <div id='rightSide'>

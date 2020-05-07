@@ -7,7 +7,6 @@ body {
 #mainContainer {
     display: flex;
     justify-content: center;
-    border: 1px black solid;
 }
 
 #plantImage {
@@ -101,4 +100,19 @@ p {
     width: 20px;
     height: 500px;
     margin: 10px;
+}
+
+#leftSide {
+    background-size: cover;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 20%;
+}
+
+.plantHeading {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 4px;
 }
