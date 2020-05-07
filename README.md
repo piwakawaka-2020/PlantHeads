@@ -59,7 +59,7 @@ As a user:
 | Post | /api/auth/register | Yes | Register a user with JWT Token | The Users JWT Token |
 | Put | /api/users/:userId | Yes | update a users details | 200 status code |
 | Get | /api/plants/search/:queryPlant | Yes | Search for a plant | An array of plants |
-| Get | /api/plants/:plantId | Yes | Get the details of an individual plant | An array of plants |
+| Get | /api/plants/:plantId | Yes | Get the details of an individual plant | A single plant object |
 | Get | /api/listings/:plantId | Yes | Get the listings for an individual plant | A plant object |
 | Get | /api/listings/:listingId | Yes | Get the details of a listing | A listing object |
 | Post | /api/listings | Yes | Add a listing | 201 status code |
@@ -88,18 +88,22 @@ As a user:
   | Column Name | Data Type |
   | --- | --- |
   | id | Integer |
-  | plant_id | Integer |
-  | name | String |
-  | seller | Timestamp |
-  | cost | integer |
-  | notes | integer |
+  | plants_id | Integer |
+  | scientific_name | String |
+  | users_id | Integer |
+  | cost | Integer |
+  | notes | String |
   
 ### SavedPlant
 
  | Column Name | Data Type |
  | --- | --- |
- | user_id | Integer |
- | plant_id | Integer |
+ | id | Integer |
+ | users_id | Integer |
+ | scientific_name | String |
+ | plants_id | Integer |
+ | photoURL | String |
+ | notes | String |
 
  ---
 
