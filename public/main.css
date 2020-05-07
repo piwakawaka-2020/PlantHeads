@@ -52,7 +52,7 @@ p {
     display: inline-block;
     width: 25%;
     padding-top: 10px;
-    height: 100px;
+    height: 40px;
     text-align: center;
     color: white;
     font-size: 20px;
@@ -113,6 +113,7 @@ p {
     top: 55%;
     outline: 2px black solid;
 }
+
 
 #height p {
     writing-mode: vertical-rl;
