@@ -90,7 +90,7 @@ As a user:
   | id | Integer |
   | plants_id | Integer |
   | scientific_name | String |
-  | username | String |
+  | users_id | Integer |
   | cost | Integer |
   | notes | String |
   
@@ -99,7 +99,7 @@ As a user:
  | Column Name | Data Type |
  | --- | --- |
  | id | Integer |
- | user_id | Integer |
+ | users_id | Integer |
  | scientific_name | String |
  | plants_id | Integer |
  | photoURL | String |

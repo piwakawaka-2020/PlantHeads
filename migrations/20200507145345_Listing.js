@@ -3,7 +3,7 @@ exports.up = function(knex) {
         table.integer('id').primary()
         table.integer('plants_id')
         table.string('scientific_name')
-        table.integer('user_id')
+        table.integer('users_id')
         table.integer('cost')
         table.string('notes')
     })
