@@ -1,6 +1,6 @@
 const express = require('express')
 
-const allPlants = require('./routes/plants')
+const allPlants = require('./routes/plantsRoutes')
 
 const server = express()
 
