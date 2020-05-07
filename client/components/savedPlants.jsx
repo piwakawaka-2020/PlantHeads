@@ -21,7 +21,7 @@ const plants = [
         scientific_name: 'BB',
         plants_id: 102,
         photoURL: 'www.photo.com',
-        notes: 'Im baby chicharrones lumbersexual ethical gluten-free. Yuccie occupy glossier godard VHS. YOLO kickstarter sriracha meggings. Letterpress stumptown woke keffiyeh kitsch la croix. Shoreditch narwhal selvage shabby chic tumeric try-hard. Wayfarers leggings bushwick, cloud bread fingerstache truffaut roof party hammock jean shorts craft beer ugh sustainable sartorial chia tbh.'
+        notes: ''
     },
     { 
         className: 3,
@@ -29,7 +29,7 @@ const plants = [
         scientific_name: 'CC',
         plants_id: 103,
         photoURL: 'www.photo.com',
-        notes: 'Knausgaard etsy mumblecore plaid vegan, lomo flexitarian fingerstache hoodie hexagon venmo try-hard single-origin coffee gochujang salvia. Tofu pabst poutine lumbersexual kogi gochujang selfies forage. Heirloom YOLO whatever af air plant jean shorts. Brooklyn salvia health goth next level scenester, cold-pressed fixie quinoa.'
+        notes: ''
     },
     { 
         className: 1,
@@ -37,7 +37,7 @@ const plants = [
         scientific_name: 'AA',
         plants_id: 101,
         photoURL: 'www.photo.com',
-        notes: 'Brunch next level hammock 90s. Affogato salvia shoreditch selvage authentic cliche fashion axe vape asymmetrical mumblecore swag hot chicken. Pok pok sriracha heirloom brooklyn succulents. Green juice skateboard mumblecore, polaroid keytar af pinterest single-origin coffee brunch flannel.'
+        notes: ''
     }
 ]
 
@@ -55,40 +55,40 @@ class SavedPlants extends React.Component {
     render() {
         return (
             <div id= 'savedPlantContainer'>
-                <div id='shelfTopLeft'></div>   
+                {/* <div id='shelfTopLeft'></div>   
                 <div id='shelfTopRight'></div>
                 <div id='shelfBotLeft'></div>
                 <div id='shelfBotRight'></div>
                 <div id='TableBotleft'></div>
                 <div id='TableBotRight'></div>
-                <div id='Floor'></div>
+                <div id='Floor'></div> */}
+                <div>
                     <ul>
                         {plants.map((plant) => (
                             <li>{plant.className}</li>
                         ))} 
                     </ul>
-                <div>
-                        <button onclick={this.handleClick}>
+                </div> 
+                <div className="flip-card">
+                    <div className="flip-card-inner">
+                        <div className="flip-card-front">
+                        <div className="flip-card-front-image"></div>  
+                        </div>
+                        <div className="flip-card-back">
+                            <h1>Plant</h1> 
+                            <p></p> 
+                            </div>
+                        </div>
+                    </div>
+                     <div>
+                        <button onClick={this.handleClick}>
                             Individual Plant Care & Information
                         </button>
-                </div>
+                    </div>               
             </div>
         )
-
     }
-
 }
 
 export default SavedPlants
 
-//className.user_id.scientific_name.plants_id
-// className: {
-//     user_id: {
-//         scientific_name: {
-//             plants_id: {
-
-//             }
-
-//         }
-//     }
-// }
