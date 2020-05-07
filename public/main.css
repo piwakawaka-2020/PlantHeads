@@ -108,6 +108,9 @@ p {
     height: 400px;
     margin: 5px;
     border: 2px black solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 #pot {
@@ -140,4 +143,6 @@ p {
     border-radius: 5px;
     padding: 5px;
     margin: 4px;
+    text-align: center;
+    width: 50%;
 }
