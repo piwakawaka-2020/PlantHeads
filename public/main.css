@@ -115,8 +115,8 @@ p {
     height: 20px;
     width: 20px;
     position: relative;
-    top: 55%;
     outline: 2px black solid;
+    margin-top: 20px;
 }
 
 

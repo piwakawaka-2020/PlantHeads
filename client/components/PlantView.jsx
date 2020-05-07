@@ -274,7 +274,7 @@ function PlantView() {
             <h3 className='plantHeading'>{rosemary.scientific_name}</h3>
             <h3 className='plantHeading'>{rosemary.family_common_name}</h3>
         </div>
-        <Height height={rosemary.main_species.specifications.mature_height.cm.toFixed(1)} />
+        <Height growth={rosemary.main_species.specifications.growth_rate} height={rosemary.main_species.specifications.mature_height.cm.toFixed(1)} />
         <div id='rightSide'>
             <div id='properties'>
                 <PhMeter min={rosemary.main_species.growth.ph_minimum} max={rosemary.main_species.growth.ph_maximum} />
