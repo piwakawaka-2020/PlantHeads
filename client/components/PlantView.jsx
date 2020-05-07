@@ -227,6 +227,33 @@ const rosemary = {
     ]
 }
 
+const listings = [
+    {
+        id: 1,
+        plants_id: 69,
+        scientific_name: 'crazy plant',
+        username: 'planthead 420',
+        cost: 20,
+        notes: 'my favourite plant'
+    },
+    {
+        id: 2,
+        plants_id: 69,
+        scientific_name: 'crazy plant',
+        username: 'i love plants',
+        cost: 20,
+        notes: 'my favourite plant'
+    },
+    {
+        id: 3,
+        plants_id: 69,
+        scientific_name: 'crazy plant',
+        username: 'Ross Jourdain',
+        cost: 20,
+        notes: 'my favourite plant'
+    }
+]
+
 import PhMeter from './PhMeter'
 import Temperature from './Temperature'
 import Water from './Water'
@@ -258,7 +285,7 @@ function PlantView() {
                 <Lifespan lifespan={rosemary.main_species.specifications.lifespan} />
             </div>
             <Seasons />
-            <PlantViewListings />
+            <PlantViewListings listings={listings} />
         </div>
     </div>
   )
