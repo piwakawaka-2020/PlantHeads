@@ -18,7 +18,7 @@ class Register extends React.Component{
     handleSubmit = event => {
         event.preventDefault()
 
-        registerUser(this.state)
+        this.props.dispatch(registerUser(this.state))
 
     }
 
