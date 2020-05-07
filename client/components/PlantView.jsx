@@ -238,10 +238,12 @@ import PlantViewListings from './PlantViewListings'
 import Height from './Height'
 
 function PlantView() {
+    const uppercaseTitle = rosemary.common_name.charAt(0).toUpperCase() + rosemary.common_name.slice(1);
+
   return (
     <div id='mainContainer'>
         <div id='leftSide' style={{backgroundImage: `url(${rosemary.images[0].url})`}}>
-            <h2 className='plantHeading'>"{rosemary.common_name}"</h2>
+            <h2 className='plantHeading'>"{uppercaseTitle}"</h2>
             <h3 className='plantHeading'>{rosemary.scientific_name}</h3>
             <h3 className='plantHeading'>{rosemary.family_common_name}</h3>
         </div>
