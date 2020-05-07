@@ -2,7 +2,12 @@ const connection = require('./connection')
 const {generateHash} = require('../auth/hash')
 
 module.exports = {
-  createUser
+  createUser,
+  getUser
+}
+
+function getUser(userID, db = connection){
+  return db('users').select().where('id', userID)
 }
 
 function createUser ({username, password}, db = connection) {

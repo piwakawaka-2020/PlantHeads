@@ -1,7 +1,27 @@
 const express = require('express')
 const router = express.Router()
 const token = require('../auth/token')
-const { createUser } = require('../db/users')
+const verifyJwt = require('express-jwt')
+
+const { createUser, getUser } = require('../db/users')
+
+
+router.get('/user', verifyJwt({secret: process.env.JWT_SECRET}), user)
+
+  function user (req, res) {
+    getUser(req.user.id)
+      .then((username) =>{
+      console.log(username[0])
+        res.json({
+          ok: true,
+          username: username[0].username
+        })})
+      .catch(() =>
+        res.status(500).json({
+          ok: false,
+          message: 'An error ocurred while retrieving your user profile.'
+        }))
+  }
 
 router.post('/register', register, token.issue)
 
