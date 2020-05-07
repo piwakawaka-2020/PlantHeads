@@ -1,4 +1,6 @@
 import React from 'react'
+// import savedPlants from '../components/savedPlants'
+
 
 const App = () => {
   return (
