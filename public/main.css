@@ -97,9 +97,25 @@ p {
 
 #height {
     background-color: green;
+    border-radius: 10px;
     width: 20px;
-    height: 500px;
-    margin: 10px;
+    height: 400px;
+    margin: 5px;
+}
+
+#pot {
+    background-color: rgb(165, 77, 42);
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 55%;
+}
+
+#height p {
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    color: white;
+    margin-top: 10px;
 }
 
 #leftSide {
