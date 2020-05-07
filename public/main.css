@@ -1,0 +1,8 @@
+
+
+#savedPlantContainer{
+  height: 100vh;
+  width: 100vw;  
+  background-image: url('/images/plantPageImg.PNG');
+  background-repeat: no-repeat;
+}
