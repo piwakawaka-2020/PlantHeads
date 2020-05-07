@@ -13,7 +13,6 @@ const plants = '/plants'
 
 //routes to getAllPlants
 router.get('/', (req,res) => {
-    console.log(token)
     return request
         .get(baseUrl + plants)
         .query('token=' + token)
