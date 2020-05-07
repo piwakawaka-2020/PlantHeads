@@ -1,8 +1,14 @@
 import React from 'react'
 
+import HomePage from './HomePage'
+import Nav from './Nav'
+
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <>
+    <Nav />
+    <HomePage />
+    </>
   )
 }
 
