@@ -88,18 +88,22 @@ As a user:
   | Column Name | Data Type |
   | --- | --- |
   | id | Integer |
-  | plant_id | Integer |
-  | name | String |
-  | seller | Timestamp |
-  | cost | integer |
-  | notes | integer |
+  | plants_id | Integer |
+  | scientific_name | String |
+  | username | String |
+  | cost | Integer |
+  | notes | String |
   
 ### SavedPlant
 
  | Column Name | Data Type |
  | --- | --- |
+ | id | Integer |
  | user_id | Integer |
- | plant_id | Integer |
+ | scientific_name | String |
+ | plants_id | Integer |
+ | photoURL | String |
+ | notes | String |
 
  ---
 
