@@ -11,5 +11,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable('savedPlant')
+  return knex.schema.dropTable('saved_plant')
 };
