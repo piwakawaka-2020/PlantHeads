@@ -70,7 +70,7 @@ const rosemary = {
             "fire_tolerance": "Medium",
             "frost_free_days_minimum": 200.0,
             "hedge_tolerance": "Medium",
-            "moisture_use": "Low",
+            "moisture_use": 'Low',
             "ph_maximum": 7.5,
             "ph_minimum": 5.0,
             "planting_density_maximum": {
