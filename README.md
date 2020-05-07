@@ -62,9 +62,10 @@ As a user:
 | Get | /api/plants/:plantId | Yes | Get the details of an individual plant | A single plant object |
 | Get | /api/listings/:plantId | Yes | Get the listings for an individual plant | A plant object |
 | Get | /api/listings/:listingId | Yes | Get the details of a listing | A listing object |
+| Get | /api/listings | Yes | Get a listing of all plants | 201 status code |
 | Post | /api/listings | Yes | Add a listing | 201 status code |
 | Delete | /api/listings | Yes | Delete a listing | 200 status code |
-| Put | /api/listings/:userId | Yes | update a listing details | 201 status code |
+| Put | /api/listings/:id | Yes | update a listing details | 201 status code |
 | Get | /api/savedPlants/:userId | Yes | Get an array of saved plants for logged in user | An array of plants |
 | Post | /api/savedPlants | Yes | Add a plant to favourites | 201 status code |
 | Delete | /api/savedPlants | Yes | Delete a favourite from database | 200 status code |
@@ -89,17 +90,21 @@ As a user:
   | --- | --- |
   | id | Integer |
   | plant_id | Integer |
-  | name | String |
-  | seller | Timestamp |
-  | cost | integer |
-  | notes | integer |
+  | scientiic_name | String |
+  | users_id | Integer |
+  | cost | Integer |
+  | notes | String |
   
 ### SavedPlant
 
  | Column Name | Data Type |
  | --- | --- |
- | user_id | Integer |
- | plant_id | Integer |
+ | id | Integer |
+ | users_id | Integer |
+ | scientific_name | String |
+ | plants_id | Integer |
+ | photoURL | String |
+ | notes | String |
 
  ---
 
