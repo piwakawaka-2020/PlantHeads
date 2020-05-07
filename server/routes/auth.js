@@ -6,22 +6,23 @@ const verifyJwt = require('express-jwt')
 const { createUser, getUser } = require('../db/users')
 
 
-router.get('/user', verifyJwt({secret: process.env.JWT_SECRET}), user)
+router.get('/user', verifyJwt({ secret: process.env.JWT_SECRET }), user)
 
-  function user (req, res) {
+function user(req, res) {
     getUser(req.user.id)
-      .then((username) =>{
-      console.log(username[0])
-        res.json({
-          ok: true,
-          username: username[0].username
-        })})
-      .catch(() =>
-        res.status(500).json({
-          ok: false,
-          message: 'An error ocurred while retrieving your user profile.'
-        }))
-  }
+        .then((username) => {
+            console.log(username[0])
+            res.json({
+                ok: true,
+                username: username[0].username
+            })
+        })
+        .catch(() =>
+            res.status(500).json({
+                ok: false,
+                message: 'An error ocurred while retrieving your user profile.'
+            }))
+}
 
 router.post('/register', register, token.issue)
 
@@ -31,8 +32,8 @@ function register(req, res, next) {
         .then(([id]) => {
             // Be sure to grab the id out of the array Knex returns it in!
             // You can use array destructuring (as above) if you like.
-           res.locals.userId = id
-           next()
+            res.locals.userId = id
+            next()
         })
         .catch(({ message }) => {
             // This is vulnerable to changing databases. SQLite happens to use
