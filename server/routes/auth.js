@@ -5,7 +5,7 @@ const verifyJwt = require('express-jwt')
 
 const { createUser, getUser } = require('../db/users')
 
-
+//get and authorise the user's jwt
 router.get('/user', verifyJwt({ secret: process.env.JWT_SECRET }), user)
 
 function user(req, res) {
@@ -24,20 +24,17 @@ function user(req, res) {
             }))
 }
 
+//registers and assigns them a jwt 
 router.post('/register', register, token.issue)
 
 function register(req, res, next) {
     const { username, password } = req.body
     createUser({ username, password })
         .then(([id]) => {
-            // Be sure to grab the id out of the array Knex returns it in!
-            // You can use array destructuring (as above) if you like.
             res.locals.userId = id
             next()
         })
         .catch(({ message }) => {
-            // This is vulnerable to changing databases. SQLite happens to use
-            // this message, but Postgres doesn't.  
             if (message.includes('UNIQUE constraint failed: users.username')) {
                 return res.status(400).json({
                     ok: false,
