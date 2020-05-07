@@ -37,3 +37,20 @@ li:hover {
     color: white;
     cursor: pointer;
 }
+
+#intro {
+    background-color: rgb(52, 184, 52);
+    background-image: url(images/plant2.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 100px;
+    margin: 10px 0;
+}
+
+#heading {
+    font-size: 100px;
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10px auto;
+}
