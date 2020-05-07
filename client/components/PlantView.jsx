@@ -1,33 +1,7 @@
 import React from 'react'
 
 import {getPlant} from '../apis/plants'
-
-const listings = [
-    {
-        id: 1,
-        plants_id: 69,
-        scientific_name: 'crazy plant',
-        username: 'planthead 420',
-        cost: 20,
-        notes: 'my favourite plant'
-    },
-    {
-        id: 2,
-        plants_id: 69,
-        scientific_name: 'crazy plant',
-        username: 'i love plants',
-        cost: 20,
-        notes: 'my favourite plant'
-    },
-    {
-        id: 3,
-        plants_id: 69,
-        scientific_name: 'crazy plant',
-        username: 'Ross Jourdain',
-        cost: 20,
-        notes: 'my favourite plant'
-    }
-]
+import {getListingsByPlant} from '../apis/listings'
 
 import PhMeter from './PhMeter'
 import Temperature from './Temperature'
@@ -41,6 +15,7 @@ import Height from './Height'
 
 function PlantView() {
     const rosemary = getPlant()
+    const listings = getListingsByPlant()
     const uppercaseTitle = rosemary.common_name.charAt(0).toUpperCase() + rosemary.common_name.slice(1);
     return (
         <div id='mainContainer'>
