@@ -87,9 +87,12 @@ li:hover, .result:hover {
 }
 
 #resultSection {
-    /* border: 2px black solid;
-    border-radius: 10px; */
     text-align: center;
     background-color: rgb(119, 201, 119);
     padding: 20px;
+}
+
+#resultSection h3 {
+    font-size: 40px;
+    margin: 0;
 }
