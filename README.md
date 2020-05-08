@@ -60,7 +60,7 @@ As a user:
 | Put | /api/users/:userId | Yes | update a users details | 200 status code |
 | Get | /api/plants/search/:queryPlant | Yes | Search for a plant | An array of plants |
 | Get | /api/plants/:plantId | Yes | Get the details of an individual plant | A single plant object |
-| Get | /api/listings/:plantId | Yes | Get the listings for an individual plant | A plant object |
+| Get | /api/listings/plantId/:plantId | Yes | Get the listings for an individual plant | A plant object |
 | Get | /api/listings/:listingId | Yes | Get the details of a listing | A listing object |
 | Get | /api/listings | Yes | Get a listing of all plants | 201 status code |
 | Post | /api/listings | Yes | Add a listing | 201 status code |
