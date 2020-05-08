@@ -35,9 +35,21 @@ router.get('/search/:queryPlant', (req,res) => {
         })
 })
 
+//router forindividual plant that returns a single plant object
+//api/plants/:plantId
+router.get('/:id', (req,res) => {
+    let id = req.params.id
+    return request
+        .get(baseUrl + plants + '/' + id)
+        .query('token=' + token)
+        .then((p) => {
+            res.json(p.body)
+        })
+})
 
 
 
+//http://trefle.io/api/plants/173194?token=Y1NFNVFIVHB2SzFqM3R0ajFtRHJ2dz09&q
 
 // https://trefle.io/api/plants?token=Y1NFNVFIVHB2SzFqM3R0ajFtRHJ2dz09&complete_data=true
 
