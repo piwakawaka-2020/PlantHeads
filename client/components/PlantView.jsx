@@ -27,7 +27,9 @@ function PlantView() {
                 </div>
                 <button id='save'>Save to favourites</button>
             </div>
+            <div id='middle'>
             <Height growth={plant.main_species.specifications.growth_rate} height={plant.main_species.specifications.mature_height.cm.toFixed(1)} />
+            </div>
             <div id='rightSide'>
                 <div id='properties'>
                     <PhMeter min={plant.main_species.growth.ph_minimum} max={plant.main_species.growth.ph_maximum} />
