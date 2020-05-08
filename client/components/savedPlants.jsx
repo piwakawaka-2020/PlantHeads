@@ -53,40 +53,199 @@ class SavedPlants extends React.Component {
     // }
 
     render() {
-        return (
-            <div id='savedPlantRoom'>
-                {/* <div id='shelfTopLeft'></div>   
-                <div id='shelfTopRight'></div>
-                <div id='shelfBotLeft'></div>
-                <div id='shelfBotRight'></div>
-                <div id='TableBotleft'></div>
-                <div id='TableBotRight'></div>
-                <div id='Floor'></div> */}
-                <div>
-                    <ul>
-                        {plants.map((plant) => (
-                            <li>{plant.className}</li>
-                        ))} 
-                    </ul>
-                </div> 
-                <div className="flip-card">
+         return (
+         
+            <div className='container'>
+                <div className='plant-container'>
+                     {plants.map((plant) => (
+                    <div className="flip-card">
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
-                        <div className="flip-card-front-image"></div>  
+                            <img className="flip-card-front-image"  src={"/images/potplantexample.PNG"} />
                         </div>
                         <div className="flip-card-back">
-                            <h1>Plant</h1> 
+                            <h5>{plant.scientific_name}</h5> 
+                            <h5>Asphodeloideae</h5>
                             <p></p> 
-                            </div>
                         </div>
                     </div>
-                     <div>
-                        <button onClick={this.handleClick}>
-                            Individual Plant Care & Information
-                        </button>
-                    </div>               
-            </div>
-        )
+                  </div>
+                     ))}
+                </div>  
+        </div> 
+         )
+
+//create a row of four plants this repeats and needs an index 
+//array.map((item, i) => 
+//item is the element and index is i
+//greater than 3 less than seven
+//in between curly braces in react 
+
+
+    //     {/* <div>
+    //        <button onClick={this.handleClick}>
+    //            Individual Plant Care & Information
+    //        </button>
+    //    </div>                */}
+
+        
+
+
+    // return (<div>
+    //     <ul>
+    //         {/* {plants.map((plant) => ( */}
+    //             <div className="flip-card">
+    //             <div className="flip-card-inner">
+    //                 <div className="flip-card-front">
+    //                     <img src={plant.photoURL} />
+    //                 </div>
+    //                 <div className="flip-card-back">
+    //                     <h5>{plant.scientific_name}</h5> 
+    //                     <h5>Asphodeloideae</h5>
+    //                     <p></p> 
+    //                 </div>
+    //             </div>
+    //         </div>
+    //         ))} 
+    //     </ul>
+    // </div> 
+    //  )
+
+
+
+
+
+
+
+
+
+
+        
+        // return (
+        //     <div id='savedPlantRoom'>
+        //         <h1 className='heading'>Your Favourite Plants</h1>
+        //         <div id='row'> 
+        //              <div className="flip-card">
+        //                     <div className="flip-card-inner">
+        //                         <div className="flip-card-front">
+        //                             <div className="flip-card-front-image"></div> 
+        //                             {/* <img src={image} /> */}
+        //                         </div>
+        //                         <div className="flip-card-back">
+        //                             <h5>Aloe</h5> 
+        //                             <h5>Asphodeloideae</h5>
+        //                             <p></p> 
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //             <div className="shelf-row">
+        //                 <div className="flip-card">
+        //                     <div className="flip-card-inner">
+        //                         <div className="flip-card-front">
+        //                             <div className="flip-card-front-image"></div>  
+        //                         </div>
+        //                         <div className="flip-card-back">
+        //                             <h1>Plant</h1> 
+        //                             <p></p> 
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //                 <div className="flip-card">
+        //                     <div className="flip-card-inner">
+        //                         <div className="flip-card-front">
+        //                             <div className="flip-card-front-image"></div>  
+        //                         </div>
+        //                         <div className="flip-card-back">
+        //                             <h1>Plant</h1> 
+        //                             <p></p> 
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //             <div className="shelf-row">
+        //                 <div className="flip-card">
+        //                     <div className="flip-card-inner">
+        //                         <div className="flip-card-front">
+        //                             <div className="flip-card-front-image"></div>  
+        //                         </div>
+        //                         <div className="flip-card-back">
+        //                             <h1>Plant</h1> 
+        //                             <p></p> 
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //                 <div className="flip-card">
+        //                     <div className="flip-card-inner">
+        //                         <div className="flip-card-front">
+        //                             <div className="flip-card-front-image"></div>  
+        //                         </div>
+        //                         <div className="flip-card-back">
+        //                             <h1>Plant</h1> 
+        //                             <p></p> 
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //                 <div className="flip-card">
+        //                     <div className="flip-card-inner">
+        //                         <div className="flip-card-front">
+        //                             <div className="flip-card-front-image"></div>  
+        //                         </div>
+        //                         <div className="flip-card-back">
+        //                             <h1>Plant</h1> 
+        //                             <p></p> 
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //             <div className="shelf-row">
+        //                 <div className="flip-card">
+        //                     <div className="flip-card-inner">
+        //                         <div className="flip-card-front">
+        //                             <div className="flip-card-front-image"></div>  
+        //                         </div>
+        //                         <div className="flip-card-back">
+        //                             <h1>Plant</h1> 
+        //                             <p></p> 
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //                 <div className="flip-card">
+        //                     <div className="flip-card-inner">
+        //                         <div className="flip-card-front">
+        //                             <div className="flip-card-front-image"></div>  
+        //                         </div>
+        //                         <div className="flip-card-back">
+        //                             <h1>Plant</h1> 
+        //                             <p></p> 
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //                 <div className="flip-card">
+        //                     <div className="flip-card-inner">
+        //                         <div className="flip-card-front">
+        //                             <div className="flip-card-front-image"></div>  
+        //                         </div>
+        //                         <div className="flip-card-back">
+        //                             <h1>Plant</h1> 
+        //                             <p></p> 
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //                 <div className="flip-card">
+        //                     <div className="flip-card-inner">
+        //                         <div className="flip-card-front">
+        //                             <div className="flip-card-front-image"></div>  
+        //                         </div>
+        //                         <div className="flip-card-back">
+        //                             <h1>Plant</h1> 
+        //                             <p></p> 
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //             </div>   
+        //         </div>
+        //     </div>  
+        // )
     }
 }
 
