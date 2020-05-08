@@ -94,7 +94,7 @@ As a user:
   | scientiic_name | String |
   | users_id | Integer |
   | cost | Integer |
-  | notes | String |
+  | common_name | String |
   
 ### SavedPlant
 
@@ -105,7 +105,7 @@ As a user:
  | scientific_name | String |
  | plants_id | Integer |
  | photoURL | String |
- | notes | String |
+ | common_name | String |
 
  ---
 
