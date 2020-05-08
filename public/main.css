@@ -10,6 +10,13 @@ body {
     padding: 10px;
 }
 
+#leftSide {
+    display: flex;
+     flex-direction: column;
+    /* justify-content: flex-end;
+    justify-content: right; */
+}
+
 #plantImage {
     width: 200px;
     border: 2px black solid;
@@ -188,7 +195,7 @@ li {
     background-color: white;
 }
 
-li:hover, .result:hover, #searchSubmit:hover {
+li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     background-color: rgb(10, 146, 10);
     color: white;
     cursor: pointer;
@@ -247,4 +254,14 @@ li:hover, .result:hover, #searchSubmit:hover {
 #resultSection h3 {
     font-size: 40px;
     margin: 0;
+}
+
+#save {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    border: 2px black solid;
+    font-family: 'Balsamiq Sans', cursive;
+    position: relative;
+    top: 55%;
 }

@@ -20,9 +20,12 @@ function PlantView() {
     return (
         <div id='mainContainer'>
             <div id='leftSide' style={{backgroundImage: `url(${plant.images[0].url})`}}>
+                <div>
                 <h2 className='plantHeading'>"{uppercaseTitle}"</h2>
                 <h3 className='plantHeading'>{plant.scientific_name}</h3>
                 <h3 className='plantHeading'>{plant.family_common_name}</h3>
+                </div>
+                <button id='save'>Save to favourites</button>
             </div>
             <Height growth={plant.main_species.specifications.growth_rate} height={plant.main_species.specifications.mature_height.cm.toFixed(1)} />
             <div id='rightSide'>
