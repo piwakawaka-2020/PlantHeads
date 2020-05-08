@@ -14,25 +14,25 @@ import PlantViewListings from './PlantViewListings'
 import Height from './Height'
 
 function PlantView() {
-    const rosemary = getPlant()
+    const plant = getPlant()
     const listings = getListingsByPlant()
-    const uppercaseTitle = rosemary.common_name.charAt(0).toUpperCase() + rosemary.common_name.slice(1);
+    const uppercaseTitle = plant.common_name.charAt(0).toUpperCase() + plant.common_name.slice(1);
     return (
         <div id='mainContainer'>
-            <div id='leftSide' style={{backgroundImage: `url(${rosemary.images[0].url})`}}>
+            <div id='leftSide' style={{backgroundImage: `url(${plant.images[0].url})`}}>
                 <h2 className='plantHeading'>"{uppercaseTitle}"</h2>
-                <h3 className='plantHeading'>{rosemary.scientific_name}</h3>
-                <h3 className='plantHeading'>{rosemary.family_common_name}</h3>
+                <h3 className='plantHeading'>{plant.scientific_name}</h3>
+                <h3 className='plantHeading'>{plant.family_common_name}</h3>
             </div>
-            <Height growth={rosemary.main_species.specifications.growth_rate} height={rosemary.main_species.specifications.mature_height.cm.toFixed(1)} />
+            <Height growth={plant.main_species.specifications.growth_rate} height={plant.main_species.specifications.mature_height.cm.toFixed(1)} />
             <div id='rightSide'>
                 <div id='properties'>
-                    <PhMeter min={rosemary.main_species.growth.ph_minimum} max={rosemary.main_species.growth.ph_maximum} />
-                    <Temperature temp={rosemary.main_species.growth.temperature_minimum.deg_c} />
-                    <Water water={rosemary.main_species.growth.moisture_use} />
-                    <Toxicity toxicity={rosemary.main_species.specifications.toxicity} />
-                    <DroughtTolerance drought={rosemary.main_species.growth.drought_tolerance} />
-                    <Lifespan lifespan={rosemary.main_species.specifications.lifespan} />
+                    <PhMeter min={plant.main_species.growth.ph_minimum} max={plant.main_species.growth.ph_maximum} />
+                    <Temperature temp={plant.main_species.growth.temperature_minimum.deg_c} />
+                    <Water water={plant.main_species.growth.moisture_use} />
+                    <Toxicity toxicity={plant.main_species.specifications.toxicity} />
+                    <DroughtTolerance drought={plant.main_species.growth.drought_tolerance} />
+                    <Lifespan lifespan={plant.main_species.specifications.lifespan} />
                 </div>
                 <Seasons />
                 <PlantViewListings listings={listings} />
