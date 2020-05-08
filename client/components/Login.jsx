@@ -1,8 +1,7 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import {login, logOut} from '../apis/auth'
 
-
-class Register extends React.Component{
+class Login extends React.Component{
 
     state = {
         username: '',
@@ -18,6 +17,7 @@ class Register extends React.Component{
     handleSubmit = event => {
         event.preventDefault()
 
+        login(this.state)
 
         this.setState({
             username: '',
@@ -35,11 +35,12 @@ class Register extends React.Component{
                     <input type="text" name="username" placeholder='Username' onChange={this.handleChange}/>
                     <input type="text" name="password" placeholder='Password' onChange={this.handleChange}/>
                 </label>
-                <input type="submit" value='Submit'/>
+                <input type="submit" value='Log in'/>
+                <button onClick={() => logOut()} >LogOut</button>
             </form>
             </>
         )
     }
 }
 
-export default connect()(Register)
+export default Login

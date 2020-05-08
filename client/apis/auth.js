@@ -2,7 +2,7 @@
 import request from 'superagent'
 
 import { get } from '../utils/localstorage'
-import { isAuthenticated } from '../utils/auth'
+import { isAuthenticated, removeUser } from '../utils/auth'
 import { saveUserToken } from '../utils/auth'
 
 
@@ -19,7 +19,6 @@ export function register(user) {
     .set(headers)
     .send(user)
     .then(res => {
-      console.log(res.body.token)
       return saveUserToken(res.body.token)
     })
 }
@@ -36,8 +35,15 @@ export function login (user) {
     .post('/api/v1/auth/login')
     .set(headers)
     .send(user)
-    .then(res => res.body.token)
+    .then(res => {
+      console.log('logged in')
+      return saveUserToken(res.body.token)
+    })
     .catch(err => {
       throw err
     })
+}
+
+export function logOut (){
+  removeUser()
 }
