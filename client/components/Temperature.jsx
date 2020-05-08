@@ -13,7 +13,7 @@ function Temperature(props) {
     return (
       <div id='temperature' style={style}>
           <p>Min Temp</p>
-          <p>{props.temp.toFixed(1)}°</p>
+          <p>{props.temp}°</p>
       </div>
     )
   }

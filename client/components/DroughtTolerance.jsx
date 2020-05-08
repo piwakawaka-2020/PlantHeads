@@ -14,7 +14,7 @@ function DroughtTolerance(props) {
       <div id='drought' style={style}>
           <p>Drought</p>
           <p>Tolerance</p>
-          <p>{props.drought}</p>
+          <p>{props.drought ? props.drought : '-'}</p>
       </div>
     )
   }

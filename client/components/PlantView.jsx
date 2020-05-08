@@ -33,19 +33,19 @@ class PlantView extends React.Component {
         <div id='mainContainer'>
             <div id='leftSide' style={plant.images[0] && {backgroundImage: `url(${plant.images[0].url})`}}>
                 <div>
-                <h2 className='plantHeading'>"{plant.common_name.charAt(0).toUpperCase() + plant.common_name.slice(1)}"</h2>
-                <h3 className='plantHeading'>{plant.scientific_name}</h3>
-                <h3 className='plantHeading'>{plant.family_common_name}</h3>
+                <h2 className='plantHeading'>"{plant.common_name ? plant.common_name.charAt(0).toUpperCase() + plant.common_name.slice(1) : plant.scientific_name}"</h2>
+                {plant.common_name ? <h3 className='plantHeading'>{plant.scientific_name}</h3> : <></>}
+                {plant.family_common_name ? <h3 className='plantHeading'>{plant.family_common_name}</h3> : <></>}
                 </div>
                 <button id='save'>Save to favourites</button>
             </div>
             <div id='middle'>
-            <Height growth={plant.main_species.specifications.growth_rate} height={plant.main_species.specifications.mature_height.cm.toFixed(1)} />
+            <Height growth={plant.main_species.specifications.growth_rate ? plant.main_species.specifications.growth_rate : '-'} height={plant.main_species.specifications.mature_height.cm ? plant.main_species.specifications.mature_height.cm.toFixed(1) : '-'} />
             </div>
             <div id='rightSide'>
                 <div id='properties'>
                     <PhMeter min={plant.main_species.growth.ph_minimum} max={plant.main_species.growth.ph_maximum} />
-                    <Temperature temp={plant.main_species.growth.temperature_minimum.deg_c} />
+                    <Temperature temp={plant.main_species.growth.temperature_minimum.deg_c ? plant.main_species.growth.temperature_minimum.deg_c.toFixed(1) : '-'} />
                     <Water water={plant.main_species.growth.moisture_use} />
                     <Toxicity toxicity={plant.main_species.specifications.toxicity} />
                     <DroughtTolerance drought={plant.main_species.growth.drought_tolerance} />
