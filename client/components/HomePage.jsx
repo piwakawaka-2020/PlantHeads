@@ -21,10 +21,12 @@ class HomePage extends React.Component {
         console.log('submit!')
         // searchPlants().then(res => {
         //     this.setState({
+                //    search: '',
         //         results: res
         //     })
         // })
         this.setState({
+            search: '',
             results: searchPlants()
         })
     }
@@ -36,7 +38,8 @@ class HomePage extends React.Component {
                 <h1 id='heading'>PlantHeads</h1>
                 <h2>For people who have a plant for a head</h2>
                 <form onSubmit={this.handleSubmit}>
-                <input onChange={this.handleChange} placeholder='Search for a plant!' name='search' id='search' />
+                <input onChange={this.handleChange} value={this.state.search} placeholder='Search for a plant!' name='search' id='search' />
+                <input type="submit" id='searchSubmit'/>
                 </form>
             </div>
             <Results results={this.state.results} />

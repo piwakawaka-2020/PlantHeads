@@ -188,7 +188,7 @@ li {
     background-color: white;
 }
 
-li:hover, .result:hover {
+li:hover, .result:hover, #searchSubmit:hover {
     background-color: rgb(10, 146, 10);
     color: white;
     cursor: pointer;
@@ -212,14 +212,16 @@ li:hover, .result:hover {
     margin: 40px auto;
 }
 
-#search {
+#search, #searchSubmit {
     font-family: 'Balsamiq Sans', cursive;
     font-size: 30px;
     border: 2px black solid;
     border-radius: 10px;
     padding: 10px;
     margin-top: 100px;
+    margin: 5px;
 }
+
 
 #results {
     display: flex;
