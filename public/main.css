@@ -13,8 +13,6 @@ body {
 #leftSide {
     display: flex;
      flex-direction: column;
-    /* justify-content: flex-end;
-    justify-content: right; */
 }
 
 #plantImage {
@@ -159,17 +157,13 @@ p {
     text-align: center;
     width: 50%;
 }
-@import url('https://fonts.googleapis.com/css?family=Balsamiq+Sans&display=swap');
-
-body, html {
-    font-family: 'Balsamiq Sans', cursive;
-    padding: 0;
-}
 
 #navBar {
     background-color: rgb(119, 201, 119);
     margin: 0;
     border-bottom: 2px black solid;
+    /* position: fixed;
+    width: 100%; */
 }
 
 ul {
