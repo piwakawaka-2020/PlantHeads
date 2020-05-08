@@ -12,7 +12,7 @@ body {
 
 #leftSide {
     display: flex;
-     flex-direction: column;
+    flex-direction: column;
 }
 
 #plantImage {
