@@ -48,9 +48,4 @@ router.get('/:id', (req,res) => {
 })
 
 
-
-//http://trefle.io/api/plants/173194?token=Y1NFNVFIVHB2SzFqM3R0ajFtRHJ2dz09&q
-
-// https://trefle.io/api/plants?token=Y1NFNVFIVHB2SzFqM3R0ajFtRHJ2dz09&complete_data=true
-
 module.exports = router

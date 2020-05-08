@@ -6,7 +6,7 @@ exports.up = function(knex) {
     table.string('scientific_name')
     table.integer('plants_id')
     table.string('photoURL')
-    table.string('notes')
+    table.string('common_name')
   })
 };
 
