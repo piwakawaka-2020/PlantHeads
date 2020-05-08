@@ -54,18 +54,22 @@ class SavedPlants extends React.Component {
 
     render() {
          return (
-         
-            <div className='container'>
+            <div className='savedPlantRoom'>
+             <div className='headingDiv'>
+             <h1>The Conservatory</h1>
+             <h2>Save your favourite plants here!</h2>
+             </div> 
                 <div className='plant-container'>
                      {plants.map((plant) => (
                     <div className="flip-card">
-                    <div className="flip-card-inner">
-                        <div className="flip-card-front">
-                            <img className="flip-card-front-image"  src={"/images/potplantexample.PNG"} />
-                        </div>
+                        <div className="flip-card-inner">
+                            <div className="flip-card-front">
+                                {/* <img className="flip-card-front-image"  src={"/images/potplantexample.PNG"} /> */}
+                                <img src={"/images/potplantexample.PNG"} />
+                            </div>
                         <div className="flip-card-back">
-                            <h5>{plant.scientific_name}</h5> 
-                            <h5>Asphodeloideae</h5>
+                            <h5>Aloe Vera</h5> 
+                            <h5>{plant.scientific_name}</h5>
                             <p></p> 
                         </div>
                     </div>
@@ -74,54 +78,16 @@ class SavedPlants extends React.Component {
                 </div>  
         </div> 
          )
-
-//create a row of four plants this repeats and needs an index 
-//array.map((item, i) => 
-//item is the element and index is i
-//greater than 3 less than seven
-//in between curly braces in react 
-
-
+ 
     //     {/* <div>
     //        <button onClick={this.handleClick}>
     //            Individual Plant Care & Information
     //        </button>
-    //    </div>                */}
+    //    </div> */}
 
         
 
-
-    // return (<div>
-    //     <ul>
-    //         {/* {plants.map((plant) => ( */}
-    //             <div className="flip-card">
-    //             <div className="flip-card-inner">
-    //                 <div className="flip-card-front">
-    //                     <img src={plant.photoURL} />
-    //                 </div>
-    //                 <div className="flip-card-back">
-    //                     <h5>{plant.scientific_name}</h5> 
-    //                     <h5>Asphodeloideae</h5>
-    //                     <p></p> 
-    //                 </div>
-    //             </div>
-    //         </div>
-    //         ))} 
-    //     </ul>
-    // </div> 
-    //  )
-
-
-
-
-
-
-
-
-
-
-        
-        // return (
+            // return (
         //     <div id='savedPlantRoom'>
         //         <h1 className='heading'>Your Favourite Plants</h1>
         //         <div id='row'> 
@@ -138,111 +104,6 @@ class SavedPlants extends React.Component {
         //                         </div>
         //                     </div>
         //                 </div>
-        //             <div className="shelf-row">
-        //                 <div className="flip-card">
-        //                     <div className="flip-card-inner">
-        //                         <div className="flip-card-front">
-        //                             <div className="flip-card-front-image"></div>  
-        //                         </div>
-        //                         <div className="flip-card-back">
-        //                             <h1>Plant</h1> 
-        //                             <p></p> 
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //                 <div className="flip-card">
-        //                     <div className="flip-card-inner">
-        //                         <div className="flip-card-front">
-        //                             <div className="flip-card-front-image"></div>  
-        //                         </div>
-        //                         <div className="flip-card-back">
-        //                             <h1>Plant</h1> 
-        //                             <p></p> 
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //             <div className="shelf-row">
-        //                 <div className="flip-card">
-        //                     <div className="flip-card-inner">
-        //                         <div className="flip-card-front">
-        //                             <div className="flip-card-front-image"></div>  
-        //                         </div>
-        //                         <div className="flip-card-back">
-        //                             <h1>Plant</h1> 
-        //                             <p></p> 
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //                 <div className="flip-card">
-        //                     <div className="flip-card-inner">
-        //                         <div className="flip-card-front">
-        //                             <div className="flip-card-front-image"></div>  
-        //                         </div>
-        //                         <div className="flip-card-back">
-        //                             <h1>Plant</h1> 
-        //                             <p></p> 
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //                 <div className="flip-card">
-        //                     <div className="flip-card-inner">
-        //                         <div className="flip-card-front">
-        //                             <div className="flip-card-front-image"></div>  
-        //                         </div>
-        //                         <div className="flip-card-back">
-        //                             <h1>Plant</h1> 
-        //                             <p></p> 
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //             <div className="shelf-row">
-        //                 <div className="flip-card">
-        //                     <div className="flip-card-inner">
-        //                         <div className="flip-card-front">
-        //                             <div className="flip-card-front-image"></div>  
-        //                         </div>
-        //                         <div className="flip-card-back">
-        //                             <h1>Plant</h1> 
-        //                             <p></p> 
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //                 <div className="flip-card">
-        //                     <div className="flip-card-inner">
-        //                         <div className="flip-card-front">
-        //                             <div className="flip-card-front-image"></div>  
-        //                         </div>
-        //                         <div className="flip-card-back">
-        //                             <h1>Plant</h1> 
-        //                             <p></p> 
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //                 <div className="flip-card">
-        //                     <div className="flip-card-inner">
-        //                         <div className="flip-card-front">
-        //                             <div className="flip-card-front-image"></div>  
-        //                         </div>
-        //                         <div className="flip-card-back">
-        //                             <h1>Plant</h1> 
-        //                             <p></p> 
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //                 <div className="flip-card">
-        //                     <div className="flip-card-inner">
-        //                         <div className="flip-card-front">
-        //                             <div className="flip-card-front-image"></div>  
-        //                         </div>
-        //                         <div className="flip-card-back">
-        //                             <h1>Plant</h1> 
-        //                             <p></p> 
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //             </div>   
         //         </div>
         //     </div>  
         // )
