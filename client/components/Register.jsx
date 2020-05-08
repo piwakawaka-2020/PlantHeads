@@ -18,14 +18,19 @@ class Register extends React.Component{
     handleSubmit = event => {
         event.preventDefault()
 
-        this.props.dispatch(registerUser(this.state))
+        registerUser(this.state)
+
+        this.setState({
+            username: '',
+            password: ''
+        })
 
     }
 
     render(){
         return(
             <>
-            <form>
+            <form onSubmit = {this.handleSubmit}>
                 <label>
                     <h2>Register</h2>
                     <input type="text" name="username" placeholder='Username' onChange={this.handleChange}/>
