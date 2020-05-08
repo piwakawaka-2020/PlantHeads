@@ -1,4 +1,4 @@
-  
+
 import request from 'superagent'
 
 import { get } from '../utils/localstorage'
@@ -6,7 +6,7 @@ import { isAuthenticated } from '../utils/auth'
 import { saveUserToken } from '../utils/auth'
 
 
-export function register (user) {
+export function register(user) {
   const token = get('token')
   const headers = { Accept: 'application/json' }
 
@@ -18,7 +18,10 @@ export function register (user) {
     .post('/api/v1/auth/register')
     .set(headers)
     .send(user)
-    .then(res => res.body.token)
+    .then(res => {
+      console.log(res.body.token)
+      return saveUserToken(res.body.token)
+    })
 }
 
 export function login (user) {
@@ -34,4 +37,7 @@ export function login (user) {
     .set(headers)
     .send(user)
     .then(res => res.body.token)
+    .catch(err => {
+      throw err
+    })
 }
