@@ -54,7 +54,7 @@ class SavedPlants extends React.Component {
 
     render() {
         return (
-            <div id= 'savedPlantContainer'>
+            <div id='savedPlantRoom'>
                 {/* <div id='shelfTopLeft'></div>   
                 <div id='shelfTopRight'></div>
                 <div id='shelfBotLeft'></div>

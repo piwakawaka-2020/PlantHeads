@@ -16,11 +16,15 @@ body {
   padding: 0;
 }
 
-#savedPlantContainer{
-  height: 100vh;
-  width: 100vw;  
-  background-image: url('/images/plantPageImg.PNG');
+#savedPlantRoom{
+  height: 100vh; 
+  max-width: 100vw;  
+  width: -webkit-fill-available;
+  background-image: url('/images/shelves.png');
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: scale(1.2);
 }
 
 .flip-card {
