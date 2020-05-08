@@ -1,4 +1,6 @@
 import React from 'react'
+import Register from './Register'
+import Login from './Login'
 
 import PlantView from './PlantView'
 
@@ -8,9 +10,9 @@ import Nav from './Nav'
 const App = () => {
   return (
     <>
-    <Nav />
-    <HomePage />
-    <PlantView />
+    <h1>React development has begun!</h1>
+    <Register />
+    <Login />
     </>
   )
 }
