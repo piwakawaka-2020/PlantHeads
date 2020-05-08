@@ -10,9 +10,10 @@ import Nav from './Nav'
 const App = () => {
   return (
     <>
-    <h1>React development has begun!</h1>
-    <Register />
-    <Login />
+    <Nav />
+    {/* <Register />
+    <Login /> */}
+    <HomePage />
     </>
   )
 }
