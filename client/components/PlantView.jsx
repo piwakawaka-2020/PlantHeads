@@ -55,7 +55,7 @@ class PlantView extends React.Component {
                 <PlantViewListings listings={listings} />
             </div>
         </div>
-        ) : 'Loading'
+        ) : <img className='oddishLoading' src='images/oddish.gif' />
     }
 }
 
