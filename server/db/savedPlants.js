@@ -18,7 +18,7 @@ function addSavedPlant(saved_plant, db = connection) {
         scientific_name: saved_plant.scientific_name,
         plants_id: saved_plant.plants_id,
         photoURL: saved_plant.photoURL,
-        notes: saved_plant.notes,
+        common_name: saved_plant.common_name,
     })
     .then(ids => {
         return ids[0]

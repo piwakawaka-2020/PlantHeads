@@ -18,7 +18,7 @@ function addListing(listing, db = connection) {
             scientific_name: listing.scientificName,
             users_id: listing.usersId,
             cost: listing.cost,
-            notes:listing.notes
+            common_name:listing.common_name
         })
 }
 
@@ -28,6 +28,13 @@ function getListingById(id, db = connection) {
         .then((listing) => {
             return listing[0]
         })
+}
+
+//functions for single listing details
+function getSingleListing(id, db = connection) {
+    return db('listing')
+        .where('id', id)
+        .select()
 }
 
 //functions to delete a listing
@@ -44,11 +51,19 @@ function updateListing(id, listing, db = connection) {
         .update(listing)
 }
 
+//functions to get the listing of an indiv plant
+function getAllByPlantId (id, db = connection) {
+    return db('listing')
+        .where('plants_id', id)
+        .select()
+}
 
 module.exports = {
     getAllListing,
     addListing,
     getListingById,
     deleteListing,
-    updateListing
+    updateListing,
+    getAllByPlantId,
+    getSingleListing
 }

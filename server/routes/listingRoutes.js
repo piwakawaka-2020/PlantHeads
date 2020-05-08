@@ -19,7 +19,7 @@ router.post('/', (req,res) => {
         plantsId: req.body.plantsId,
         scientificName: req.body.scientificName,
         cost: req.body.cost,
-        notes: req.body.notes
+        common_name: req.body.common_name
     }
     dbFunction.addListing(plant)
         .then((id) => {
@@ -52,5 +52,30 @@ router.put('/:id', (req,res) => {
             res.status(500).send(error.message)
         })
 })
+
+//routes to get a listing for an individual plant
+router.get('/plants/:plantsId', (req,res) => {
+    let id = req.params.plantsId
+    dbFunction.getAllByPlantId(id)
+        .then((plants) => {
+            res.json(plants)
+        })
+        .catch((error) => {
+            res.status(500).send(error.message)
+        })
+})
+
+//routes for listing details returns listing object
+router.get('/:listingId', (req,res) => {
+    let id = req.params.listingId
+    dbFunction.getSingleListing(id)
+    .then((listing) => {
+        res.json(listing)
+    })
+    .catch((error) => {
+        res.status(500).send(error.message)
+    })
+})
+
 
 module.exports = router
