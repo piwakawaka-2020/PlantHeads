@@ -7,13 +7,18 @@ import PlantView from './PlantView'
 import HomePage from './HomePage'
 import Nav from './Nav'
 
+import { HashRouter as Router, Route } from 'react-router-dom'
+
 const App = () => {
   return (
     <>
-    <Nav />
-    {/* <Register />
-    <Login /> */}
-    <HomePage />
+    <Router>
+      <Route path='/' component={Nav} />
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/register" component={Register} />
+      <Route exact path="/plant/:plantId" component={PlantView} />
+    </Router>
     </>
   )
 }

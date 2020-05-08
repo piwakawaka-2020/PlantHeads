@@ -4,6 +4,11 @@ body {
     font-family: 'Balsamiq Sans', cursive;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 #mainContainer {
     display: flex;
     justify-content: center;
@@ -186,7 +191,6 @@ ul {
 }
 
 li {
-    display: inline;
     padding: 5px;
     margin: 5px;
     font-size: 30px;
