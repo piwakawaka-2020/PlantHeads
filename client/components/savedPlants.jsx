@@ -1,11 +1,9 @@
 import React from 'react'
 import App from './App'
 
-//build a component that brings in the data base array of plants by className
-//if there is no image then add a placeholder (default img maybe)
-//connect to flexbox in css/html
 
 
+//hard data guff_________________________________________________
 const plants = [
     { 
         className: 1,
@@ -38,7 +36,95 @@ const plants = [
         plants_id: 101,
         photoURL: 'www.photo.com',
         notes: ''
-    }
+    },
+    { 
+        className: 1,
+        user_id: 11,
+        scientific_name: 'AA',
+        plants_id: 101,
+        photoURL: 'www.photo.com',
+        notes: ''
+    },
+    { 
+        className: 1,
+        user_id: 11,
+        scientific_name: 'AA',
+        plants_id: 101,
+        photoURL: 'www.photo.com',
+        notes: 'Botanical Lorem ipsum'
+    }, 
+    { 
+        className: 2,
+        user_id: 22,
+        scientific_name: 'BB',
+        plants_id: 102,
+        photoURL: 'www.photo.com',
+        notes: ''
+    },
+    { 
+        className: 3,
+        user_id: 33,
+        scientific_name: 'CC',
+        plants_id: 103,
+        photoURL: 'www.photo.com',
+        notes: ''
+    },
+    { 
+        className: 1,
+        user_id: 11,
+        scientific_name: 'AA',
+        plants_id: 101,
+        photoURL: 'www.photo.com',
+        notes: 'Botanical Lorem ipsum'
+    }, 
+    { 
+        className: 2,
+        user_id: 22,
+        scientific_name: 'BB',
+        plants_id: 102,
+        photoURL: 'www.photo.com',
+        notes: ''
+    },
+    { 
+        className: 3,
+        user_id: 33,
+        scientific_name: 'CC',
+        plants_id: 103,
+        photoURL: 'www.photo.com',
+        notes: ''
+    },
+    { 
+        className: 1,
+        user_id: 11,
+        scientific_name: 'AA',
+        plants_id: 101,
+        photoURL: 'www.photo.com',
+        notes: ''
+    },
+    { 
+        className: 1,
+        user_id: 11,
+        scientific_name: 'AA',
+        plants_id: 101,
+        photoURL: 'www.photo.com',
+        notes: 'Botanical Lorem ipsum'
+    }, 
+    { 
+        className: 2,
+        user_id: 22,
+        scientific_name: 'BB',
+        plants_id: 102,
+        photoURL: 'www.photo.com',
+        notes: ''
+    },
+    { 
+        className: 3,
+        user_id: 33,
+        scientific_name: 'CC',
+        plants_id: 103,
+        photoURL: 'www.photo.com',
+        notes: ''
+    },       
 ]
 
 
@@ -56,16 +142,17 @@ class SavedPlants extends React.Component {
          return (
             <div className='savedPlantRoom'>
              <div className='headingDiv'>
-             <h1>The Conservatory</h1>
-             <h2>Save your favourite plants here!</h2>
+              <div className='headingDiv-image'>
+                 <h1>The Conservatory</h1>
+                 <h2>Save your favourite plants here!</h2>
+              </div>
              </div> 
                 <div className='plant-container'>
                      {plants.map((plant) => (
                     <div className="flip-card">
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
-                                {/* <img className="flip-card-front-image"  src={"/images/potplantexample.PNG"} /> */}
-                                <img src={"/images/potplantexample.PNG"} />
+                                <img className="flip-card-front-image"  src={"/images/potplantexample.PNG"} />
                             </div>
                         <div className="flip-card-back">
                             <h5>Aloe Vera</h5> 
@@ -83,30 +170,11 @@ class SavedPlants extends React.Component {
     //        <button onClick={this.handleClick}>
     //            Individual Plant Care & Information
     //        </button>
-    //    </div> */}
-
-        
-
-            // return (
-        //     <div id='savedPlantRoom'>
-        //         <h1 className='heading'>Your Favourite Plants</h1>
-        //         <div id='row'> 
-        //              <div className="flip-card">
-        //                     <div className="flip-card-inner">
-        //                         <div className="flip-card-front">
-        //                             <div className="flip-card-front-image"></div> 
-        //                             {/* <img src={image} /> */}
-        //                         </div>
-        //                         <div className="flip-card-back">
-        //                             <h5>Aloe</h5> 
-        //                             <h5>Asphodeloideae</h5>
-        //                             <p></p> 
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //         </div>
-        //     </div>  
-        // )
+    //    </div> */} 
+    //DO THIS AJ > 
+    //OR AN ANCHOR TAG ON PLANT DIV WRAPPED WITH 'a' link
+    // Han note keep classnames out of button (why?)
+     
     }
 }
 
