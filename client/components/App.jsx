@@ -6,6 +6,7 @@ import PlantView from './PlantView'
 
 import HomePage from './HomePage'
 import Nav from './Nav'
+import CreateListing from './CreateListing'
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
     <Nav />
     {/* <Register />
     <Login /> */}
-    <HomePage />
+    {/* <HomePage /> */}
+    <CreateListing />
     </>
   )
 }

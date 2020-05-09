@@ -32,3 +32,9 @@ export function getListingsByPlant(plant_id) {
     //     .then(res => res.body)
     return listings
 }
+
+export function createListing(newListing) {
+    //make an API for the createlisting component
+    //need to call listing routes from the backend/server
+    return newListing
+}
