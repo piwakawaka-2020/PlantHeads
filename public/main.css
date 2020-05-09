@@ -139,3 +139,271 @@ body {
 
 
 
+@import url('https://fonts.googleapis.com/css?family=Balsamiq+Sans&display=swap');
+
+body {
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+#mainContainer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#leftSide {
+    display: flex;
+     flex-direction: column;
+}
+
+#plantImage {
+    width: 200px;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+
+#properties {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#phMeter, #temperature, #water, #toxicity, #drought, #lifespan {
+    border: 2px black solid;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 50%;
+    padding: 15px;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+p {
+    padding: 0;
+    margin: 0
+}
+
+/* Season component styles */
+
+#seasons {
+    border: 2px black solid;
+    display: flex;
+    border-radius: 5px;
+}
+
+.season {
+    display: inline-block;
+    width: 25%;
+    padding-top: 10px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+#summer {
+    background-color: rgb(233, 155, 53);
+}
+
+#autumn {
+    background-color: rgb(165, 77, 42);
+}
+
+#winter {
+    background-color: rgb(91, 91, 248);
+}
+
+#spring {
+    background-color: rgb(75, 163, 75);
+}
+
+/* Current plant listings */
+#plantViewListings {
+    border: 2px black solid;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#plantViewListingsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.listing {
+    width: 100px;
+    height: 100px;
+    border: 2px black solid;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#height {
+    background-color: green;
+    border-radius: 10px;
+    width: 20px;
+    height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px black solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#middle {
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#pot {
+    background-color: rgb(165, 77, 42);
+    height: 20px;
+    width: 20px;
+    position: relative;
+    outline: 2px black solid;
+    margin-top: 20px;
+}
+
+
+#height p {
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+    color: white;
+}
+
+#leftSide {
+    background-size: cover;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 20%;
+}
+
+.plantHeading {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 4px;
+    text-align: center;
+    width: 50%;
+}
+
+#navBar {
+    background-color: rgb(119, 201, 119);
+    margin: 0;
+    border-bottom: 2px black solid;
+    /* position: fixed;
+    width: 100%; */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navHeading {
+    float: left;
+    font-weight: bold;
+    font-size: 42px;
+    margin: 4px;
+}
+
+#icon {
+    width: 35px;
+}
+
+li {
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+    font-size: 30px;
+    border: 2px black solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+li:hover, .result:hover, #searchSubmit:hover, #save:hover {
+    background-color: rgb(10, 146, 10);
+    color: white;
+    cursor: pointer;
+}
+
+#intro {
+    background-color: rgb(52, 184, 52);
+    background-image: url(images/plant2.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 100px;
+    /* margin: 10px 0; */
+}
+
+#heading {
+    font-size: 100px;
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 10px;
+    width: 50%;
+    margin: 40px auto;
+}
+
+#search, #searchSubmit {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 30px;
+    border: 2px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 100px;
+    margin: 5px;
+}
+
+
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.result {
+    border: 2px black solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: white;
+}
+
+#resultSection {
+    text-align: center;
+    background-color: rgb(119, 201, 119);
+    padding: 20px;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+}
+
+#resultSection h3 {
+    font-size: 40px;
+    margin: 0;
+}
+
+#save {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    border: 2px black solid;
+    font-family: 'Balsamiq Sans', cursive;
+    position: relative;
+    top: 55%;
+}

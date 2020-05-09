@@ -1,13 +1,23 @@
 import React from 'react'
 import SavedPlants from './SavedPlants'
 
+import Register from './Register'
+import Login from './Login'
+
+import PlantView from './PlantView'
+
+import HomePage from './HomePage'
+import Nav from './Nav'
 
 const App = () => {
   return (
     <>
-    <h1></h1>
-     <SavedPlants/>
-     </>
+    <Nav />
+    {/* <Register />
+    <Login /> */}
+    <HomePage />
+    <SavedPlants/>
+    </>
   )
 }
 
