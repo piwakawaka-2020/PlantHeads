@@ -16,7 +16,7 @@ const App = () => {
     {/* <Register />
     <Login /> */}
     <HomePage />
-    <SavedPlants/>
+    <SavedPlants />
     </>
   )
 }

@@ -3,140 +3,34 @@ import App from './App'
 
 
 
-//hard data guff_________________________________________________
-const plants = [
-    { 
-        className: 1,
-        user_id: 11,
-        scientific_name: 'AA',
-        plants_id: 101,
-        photoURL: 'www.photo.com',
-        notes: 'Botanical Lorem ipsum'
-    }, 
-    { 
-        className: 2,
-        user_id: 22,
-        scientific_name: 'BB',
-        plants_id: 102,
-        photoURL: 'www.photo.com',
-        notes: ''
-    },
-    { 
-        className: 3,
-        user_id: 33,
-        scientific_name: 'CC',
-        plants_id: 103,
-        photoURL: 'www.photo.com',
-        notes: ''
-    },
-    { 
-        className: 1,
-        user_id: 11,
-        scientific_name: 'AA',
-        plants_id: 101,
-        photoURL: 'www.photo.com',
-        notes: ''
-    },
-    { 
-        className: 1,
-        user_id: 11,
-        scientific_name: 'AA',
-        plants_id: 101,
-        photoURL: 'www.photo.com',
-        notes: ''
-    },
-    { 
-        className: 1,
-        user_id: 11,
-        scientific_name: 'AA',
-        plants_id: 101,
-        photoURL: 'www.photo.com',
-        notes: 'Botanical Lorem ipsum'
-    }, 
-    { 
-        className: 2,
-        user_id: 22,
-        scientific_name: 'BB',
-        plants_id: 102,
-        photoURL: 'www.photo.com',
-        notes: ''
-    },
-    { 
-        className: 3,
-        user_id: 33,
-        scientific_name: 'CC',
-        plants_id: 103,
-        photoURL: 'www.photo.com',
-        notes: ''
-    },
-    { 
-        className: 1,
-        user_id: 11,
-        scientific_name: 'AA',
-        plants_id: 101,
-        photoURL: 'www.photo.com',
-        notes: 'Botanical Lorem ipsum'
-    }, 
-    { 
-        className: 2,
-        user_id: 22,
-        scientific_name: 'BB',
-        plants_id: 102,
-        photoURL: 'www.photo.com',
-        notes: ''
-    },
-    { 
-        className: 3,
-        user_id: 33,
-        scientific_name: 'CC',
-        plants_id: 103,
-        photoURL: 'www.photo.com',
-        notes: ''
-    },
-    { 
-        className: 1,
-        user_id: 11,
-        scientific_name: 'AA',
-        plants_id: 101,
-        photoURL: 'www.photo.com',
-        notes: ''
-    },
-    { 
-        className: 1,
-        user_id: 11,
-        scientific_name: 'AA',
-        plants_id: 101,
-        photoURL: 'www.photo.com',
-        notes: 'Botanical Lorem ipsum'
-    }, 
-    { 
-        className: 2,
-        user_id: 22,
-        scientific_name: 'BB',
-        plants_id: 102,
-        photoURL: 'www.photo.com',
-        notes: ''
-    },
-    { 
-        className: 3,
-        user_id: 33,
-        scientific_name: 'CC',
-        plants_id: 103,
-        photoURL: 'www.photo.com',
-        notes: ''
-    },       
-]
-
 
 class SavedPlants extends React.Component {
+    state = {
+        plants_id: '',
+        photoURL: '',
+        common_name: '',
+        scientific_name: ''
+    }
 
-    // componentDidMount() {
-    //     this.props.dispatch(fetchPlant())
-    // }
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
 
-    // handleClick = () => {
-    //     this.props.dispatch(fetchPlant())
-    // }
+    handleSubmit = (event) => {
+        event.preventDefault()
+        
+        searchPlants(this.state.search).then(res => {
+            
+            this.setState({
+                plants_id: '',
+                photoURL: '',
+                common_name: '',
+                scientific_name: ''  
+            })
+        })
+    }
 
     render() {
          return (
@@ -152,12 +46,11 @@ class SavedPlants extends React.Component {
                     <div className="flip-card">
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
-                                <img className="flip-card-front-image"  src={"/images/potplantexample.PNG"} />
+                                <img className="flip-card-front-image"  src={"saved_plant.photoURL"} />
                             </div>
                         <div className="flip-card-back">
-                            <h5>Aloe Vera</h5> 
-                            <h5>{plant.scientific_name}</h5>
-                            <p></p> 
+                            <h5>{plant.common_name}</h5> 
+                            <h5>{plant.scientific_name}</h5> 
                         </div>
                     </div>
                   </div>
@@ -178,5 +71,5 @@ class SavedPlants extends React.Component {
     }
 }
 
-export default SavedPlants
+export default SavedPlants 
 
