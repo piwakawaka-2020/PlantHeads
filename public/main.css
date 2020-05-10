@@ -18,7 +18,7 @@ a {
 #leftSide {
     display: flex;
     flex-direction: column;
-    background-color: rgb(119, 201, 119);
+    background-color: rgb(35, 172, 35);
 }
 
 #plantImage {
@@ -165,7 +165,7 @@ p {
 }
 
 #navBar {
-    background-color: rgb(119, 201, 119);
+    background-color: rgb(35, 172, 35);
     margin: 0;
     border-bottom: 2px black solid;
     /* position: fixed;
@@ -207,7 +207,6 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 }
 
 #intro {
-    background-color: rgb(52, 184, 52);
     background-image: url(images/plant2.jpg);
     background-size: cover;
     text-align: center;
@@ -251,7 +250,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 
 #resultSection {
     text-align: center;
-    background-color: rgb(119, 201, 119);
+    background-color: rgb(35, 172, 35);
     padding: 20px;
     border-top: 2px black solid;
     border-bottom: 2px black solid;
