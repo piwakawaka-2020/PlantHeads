@@ -37,7 +37,7 @@ export function login (user) {
     .send(user)
     .then(res => {
       console.log('logged in')
-      return saveUserToken(res.body.token)
+      return res.body.token
     })
     .catch(err => {
       throw err

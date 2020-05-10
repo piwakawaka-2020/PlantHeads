@@ -6,6 +6,7 @@ import PlantView from './PlantView'
 
 import HomePage from './HomePage'
 import Nav from './Nav'
+import Logout from './Logout'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
     <h1>React development has begun!</h1>
     <Register />
     <Login />
+    <Logout />
     </>
   )
 }

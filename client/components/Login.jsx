@@ -1,5 +1,8 @@
 import React from 'react'
-import {login, logOut} from '../apis/auth'
+import { connect } from 'react-redux'
+import { loginUser } from '../actions/login'
+import { logOutUser, logoutUser } from '../actions/logout'
+
 
 class Login extends React.Component{
 
@@ -17,7 +20,7 @@ class Login extends React.Component{
     handleSubmit = event => {
         event.preventDefault()
 
-        login(this.state)
+        this.props.dispatch(loginUser(this.state))
 
         this.setState({
             username: '',
@@ -36,11 +39,10 @@ class Login extends React.Component{
                     <input type="text" name="password" placeholder='Password' onChange={this.handleChange}/>
                 </label>
                 <input type="submit" value='Log in'/>
-                <button onClick={() => logOut()} >LogOut</button>
             </form>
             </>
         )
     }
 }
 
-export default Login
+export default connect()(Login)
