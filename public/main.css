@@ -13,6 +13,7 @@ a {
     display: flex;
     justify-content: center;
     padding: 10px;
+    height: 60vh;
     border-bottom: 2px black solid;
 }
 
@@ -94,6 +95,7 @@ p {
     margin-top: 10px;
     padding: 10px;
     text-align: center;
+    width: 100%;
 }
 
 #plantViewListingsContainer {
@@ -114,7 +116,7 @@ p {
 }
 
 #height {
-    background-color: green;
+    background-color: rgb(35, 172, 35);
     border-radius: 10px;
     width: 20px;
     height: 100%;
@@ -162,7 +164,7 @@ p {
     padding: 5px;
     margin: 4px;
     text-align: center;
-    width: 50%;
+    width: 80%;
 }
 
 #navBar {
@@ -207,7 +209,7 @@ li {
 }
 
 li:hover, .result:hover, #searchSubmit:hover, #save:hover {
-    background-color: rgb(10, 146, 10);
+    background-color: rgb(35, 172, 35);
     color: white;
     cursor: pointer;
 }
@@ -274,11 +276,22 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     border: 2px black solid;
     font-family: 'Balsamiq Sans', cursive;
     position: relative;
-    top: 55%;
+    margin: 5px;
 }
 
 .oddishLoading {
     text-align: center;
     margin: 0 auto;
     border-radius: 50%;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#bottomRight {
+    display: flex;
 }

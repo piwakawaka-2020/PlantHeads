@@ -43,7 +43,6 @@ class PlantView extends React.Component {
                 {plant.common_name ? <h3 className='plantHeading'>{plant.scientific_name}</h3> : <></>}
                 {plant.family_common_name ? <h3 className='plantHeading'>{plant.family_common_name}</h3> : <></>}
                 </div>
-                <button id='save'>Save to favourites</button>
             </div>
             <div id='middle'>
             <Height growth={plant.main_species.specifications.growth_rate ? plant.main_species.specifications.growth_rate : '-'} height={plant.main_species.specifications.mature_height.cm ? plant.main_species.specifications.mature_height.cm.toFixed(1) : '-'} />
@@ -58,7 +57,14 @@ class PlantView extends React.Component {
                     <Lifespan lifespan={plant.main_species.specifications.lifespan} />
                 </div>
                 <Seasons />
-                <PlantViewListings listings={listings} />
+                <div id='bottomRight'>
+                    <div id='buttons'>
+                        <button id='save'>Save to favourites</button>
+                        <button id='save'>Create Listing</button>
+                    </div>
+                    <PlantViewListings listings={listings} />
+                </div>
+                
             </div>
         </div>
         ) : <img className='oddishLoading' src='images/oddish.gif' />
