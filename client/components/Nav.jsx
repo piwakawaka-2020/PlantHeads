@@ -1,15 +1,17 @@
 import React from 'react'
 
+import {Link} from 'react-router-dom'
+
 function Nav() {
   return (
     <div id='navBar'>
         <h2 id='navHeading'><img id='icon' src='images/plantIcon.svg' />PlantHeads</h2>
         <ul>
-            <li>Login</li>
-            <li>Register</li>
+            <Link to='/login'><li>Login</li></Link>
+            <Link to='/register'><li>Register</li></Link>
             <li>Saved Plants</li>
             <li>Buy/Sell Plants</li>
-            <li>Home</li>
+            <Link to='/'><li>Home</li></Link>
         </ul>
     </div>
   )

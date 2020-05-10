@@ -19,15 +19,11 @@ class HomePage extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         console.log('submit!')
-        // searchPlants().then(res => {
-        //     this.setState({
-                //    search: '',
-        //         results: res
-        //     })
-        // })
-        this.setState({
-            search: '',
-            results: searchPlants()
+        searchPlants(this.state.search).then(res => {
+            this.setState({
+                   search: '',
+                results: res
+            })
         })
     }
 

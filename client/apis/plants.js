@@ -271,13 +271,13 @@ const rosemary = {
 }
 
 export function searchPlants(query) {
-    // return request.get(`/api/plants/search/${query}`)
-    //     .then(res => res.body)
-    return results
+    return request.get(`/api/plants/search/${query}`)
+        .then(res => res.body)
+    // return results
 }
 
 export function getPlant(id) {
-    // return request.get(`/api/plants/${id}`)
-    //     .then(res => res.body)
-    return rosemary
+    return request.get(`/api/plants/${id}`)
+        .then(res => res.body)
+    // return rosemary
 }

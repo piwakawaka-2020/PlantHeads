@@ -13,7 +13,7 @@ function Toxicity(props) {
     return (
       <div id='toxicity' style={style}>
           <p>Toxicity</p>
-          <p>{props.toxicity ? props.toxicity : 'No data'}</p>
+          <p>{props.toxicity ? props.toxicity : '-'}</p>
       </div>
     )
   }

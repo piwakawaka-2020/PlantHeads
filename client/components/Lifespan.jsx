@@ -13,7 +13,7 @@ function Lifespan(props) {
     return (
         <div id='lifespan' style={style}>
             <p>Lifespan</p>
-            <p>{props.lifespan}</p>
+            <p>{props.lifespan ? props.lifespan : '-'}</p>
         </div>
     )
 }
