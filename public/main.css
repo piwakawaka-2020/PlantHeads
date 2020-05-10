@@ -4,6 +4,11 @@ body {
     font-family: 'Balsamiq Sans', cursive;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 #mainContainer {
     display: flex;
     justify-content: center;
@@ -12,7 +17,8 @@ body {
 
 #leftSide {
     display: flex;
-     flex-direction: column;
+    flex-direction: column;
+    background-color: rgb(119, 201, 119);
 }
 
 #plantImage {
@@ -186,7 +192,6 @@ ul {
 }
 
 li {
-    display: inline;
     padding: 5px;
     margin: 5px;
     font-size: 30px;
@@ -265,4 +270,10 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     font-family: 'Balsamiq Sans', cursive;
     position: relative;
     top: 55%;
+}
+
+.oddishLoading {
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50%;
 }
