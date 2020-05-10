@@ -12,27 +12,21 @@ class SavedPlants extends React.Component {
         scientific_name: ''
     }
 
-    handleChange = (event) => {
-        this.setState({
-            [event.target.name]: event.target.value
-        })
-    }
-
-    handleSubmit = (event) => {
-        event.preventDefault()
-        
-        searchPlants(this.state.search).then(res => {
-            
+    componentDidMount(){
+        callPlant()(Number(this.props.match.params.plantId)).then(plant => {
             this.setState({
-                plants_id: '',
-                photoURL: '',
-                common_name: '',
-                scientific_name: ''  
+                plant: plant
             })
         })
     }
+    }
+    
+    
 
     render() {
+        const plant = this.state.plant
+
+        //  return this.state.plant.id ? 
          return (
             <div className='savedPlantRoom'>
              <div className='headingDiv'>
@@ -42,15 +36,15 @@ class SavedPlants extends React.Component {
               </div>
              </div> 
                 <div className='plant-container'>
-                     {plants.map((plant) => (
+                     {savedPlants.map((plant) => (
                     <div className="flip-card">
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
                                 <img className="flip-card-front-image"  src={"saved_plant.photoURL"} />
                             </div>
                         <div className="flip-card-back">
-                            <h5>{plant.common_name}</h5> 
-                            <h5>{plant.scientific_name}</h5> 
+                            <h5>{this.state.common_name}</h5> 
+                            <h5>{this.state.scientific_name}</h5> 
                         </div>
                     </div>
                   </div>
@@ -67,6 +61,7 @@ class SavedPlants extends React.Component {
     //DO THIS AJ > 
     //OR AN ANCHOR TAG ON PLANT DIV WRAPPED WITH 'a' link
     // Han note keep classnames out of button (why?)
+    //Make button under each plant because anchor tag will stop card flip
      
     }
 }

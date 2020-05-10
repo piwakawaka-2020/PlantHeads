@@ -1,34 +1,19 @@
 import request from 'superagent'
 
-const listings = [
-    {
-        id: 1,
-        plants_id: 69,
-        scientific_name: 'crazy plant',
-        username: 'planthead 420',
-        cost: 20,
-        notes: 'my favourite plant'
-    },
-    {
-        id: 2,
-        plants_id: 69,
-        scientific_name: 'crazy plant',
-        username: 'i love plants',
-        cost: 20,
-        notes: 'my favourite plant'
-    },
-    {
-        id: 3,
-        plants_id: 69,
-        scientific_name: 'crazy plant',
-        username: 'Ross Jourdain',
-        cost: 20,
-        notes: 'my favourite plant'
-    }
-]
+const baseUrl = '/api/listings'
 
-export function getListingsByPlant(plant_id) {
-    // return request.get(`/api/listings/${plant_id}`)
-    //     .then(res => res.body)
-    return listings
+//removed hardcode data to be able to linked to the server side
+//PlantView component & will be affected by removing hardcoded data
+//needs to adjust PVComponent to accept a promise
+export function getListingsByPlant(plantsId) {
+    return request
+        .get(baseUrl + '/plants/' + plantsId)
+        .then(res => res.body)
+}
+
+export function createListing(newListing) {
+    return request
+        .post(baseUrl)
+        .send(newListing)
+        .then(res => res.body)
 }
