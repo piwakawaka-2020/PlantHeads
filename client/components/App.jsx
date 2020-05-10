@@ -14,8 +14,8 @@ const App = () => {
   return (
     <>
 
-      <Nav />
-      {/* <Register />
+<Nav />
+    {/* <Register />
     <Login /> */}
       {/* <HomePage /> */}
       <CreateListing
