@@ -13,8 +13,8 @@ a {
     display: flex;
     justify-content: center;
     padding: 10px;
-    height: 60vh;
-    border-bottom: 2px black solid;
+    /* height: 60vh;
+    border-bottom: 2px black solid; */
 }
 
 #leftSide {
