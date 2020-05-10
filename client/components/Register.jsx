@@ -32,6 +32,7 @@ class Register extends React.Component{
     render(){
         return(
             <>
+            <div id="mainContainer">
             <form onSubmit = {this.handleSubmit}>
                 <label>
                     <h2>Register</h2>
@@ -40,6 +41,7 @@ class Register extends React.Component{
                 </label>
                 <input type="submit" value='Submit'/>
             </form>
+            </div>
             </>
         )
     }
