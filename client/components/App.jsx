@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
 
-<!--     <Nav />
+<Nav />
     {/* <Register />
     <Login /> */}
     {/* <HomePage /> */}
