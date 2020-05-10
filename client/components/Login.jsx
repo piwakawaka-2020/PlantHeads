@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { loginUser } from '../actions/login'
-import { logOutUser, logoutUser } from '../actions/logout'
 
 
 class Login extends React.Component{
@@ -27,6 +26,7 @@ class Login extends React.Component{
             password: ''
         })
 
+        
     }
 
     render(){

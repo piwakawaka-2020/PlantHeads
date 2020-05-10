@@ -21,5 +21,6 @@ export function logoutUser() {
         logOut()
         dispatch(receiveLogout())
         console.log("logged out")
+        window.location.reload(false)
     }
 }
