@@ -15,7 +15,8 @@ import Height from './Height'
 
 class PlantView extends React.Component {
     state = {
-        plant: {}
+        plant: {},
+        listings: {}
     }
 
     componentDidMount() {
@@ -24,11 +25,16 @@ class PlantView extends React.Component {
                 plant: plant
             })
         })
+        getListingsByPlant(this.props.match.params.plantId).then(listings => {
+            this.setState({
+                listings: listings
+            })
+        })
     }
 
     render() {
     const plant = this.state.plant
-    const listings = getListingsByPlant()
+    const listings = this.state.listings
     return this.state.plant.id ? (
         <div id='mainContainer'>
             <div id='leftSide' style={plant.images[0] && {backgroundImage: `url(${plant.images[0].url})`}}>
