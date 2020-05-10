@@ -277,7 +277,7 @@ export function searchPlants(query) {
 }
 
 export function getPlant(id) {
-    // return request.get(`/api/plants/${id}`)
-    //     .then(res => res.body)
-    return rosemary
+    return request.get(`/api/plants/${id}`)
+        .then(res => res.body)
+    // return rosemary
 }

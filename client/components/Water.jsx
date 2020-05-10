@@ -17,7 +17,7 @@ function Water(props) {
       <>
       <div id='water' style={style}>
           <p>Water needs</p>
-          <p>{props.water ? props.water : 'No data'}</p>
+          <p>{props.water ? props.water : '-'}</p>
       </div>
       </>
     )
