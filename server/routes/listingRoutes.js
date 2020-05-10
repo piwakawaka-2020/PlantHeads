@@ -19,7 +19,7 @@ router.post('/', (req,res) => {
         plantsId: req.body.plantsId,
         scientificName: req.body.scientificName,
         cost: req.body.cost,
-        common_name: req.body.common_name
+        common_name: req.body.commonName
     }
     dbFunction.addListing(plant)
         .then((id) => {
