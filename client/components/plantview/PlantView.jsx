@@ -1,7 +1,7 @@
 import React from 'react'
 
-import {getPlant} from '../apis/plants'
-import {getListingsByPlant} from '../apis/listings'
+import {getPlant} from '../../apis/plants'
+import {getListingsByPlant} from '../../apis/listings'
 
 import PhMeter from './PhMeter'
 import Temperature from './Temperature'
