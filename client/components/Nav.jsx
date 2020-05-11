@@ -9,12 +9,11 @@ function Nav() {
         <ul>
             <Link to='/login'><li>Login</li></Link>
             <Link to='/register'><li>Register</li></Link>
-            <li>Saved Plants</li>
-            <li>Buy/Sell Plants</li>
+            <Link to='/savedPlants'><li>Saved Plants</li></Link>
+            <Link to='/listings'><li>Buy/Sell Plants</li></Link>
             <Link to='/'><li>Home</li></Link>
         </ul>
     </div>
   )
 }
-
 export default Nav
