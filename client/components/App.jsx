@@ -18,10 +18,6 @@ const App = () => {
 
     {/* <Register />
     <Login /> */}
-<<<<<<< HEAD
-    <HomePage />
-    <SavedPlants />
-=======
       {/* <HomePage /> */}
       {/* <CreateListing
         user='bossManThomas'
@@ -42,10 +38,9 @@ const App = () => {
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/plant/:plantId" component={PlantView} />
+        <Route exact path="/savedPlants" component={SavedPlants} />
       </Router>
-
->>>>>>> 8808ac068addd50ea0a747348d391e25d073b30b
-    </>
+      </>
   )
 }
 

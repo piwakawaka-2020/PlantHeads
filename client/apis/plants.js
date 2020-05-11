@@ -281,3 +281,9 @@ export function getPlant(id) {
         .then(res => res.body)
     // return rosemary
 }
+
+export function getAllSavedPlants() {
+    return request.get('api/savedPlants')
+    .then(res => res.body)
+    //return all saved plants for user
+}

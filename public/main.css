@@ -59,7 +59,7 @@ body {
  background-image: url('/images/shinyoddish.jpg'); 
  background-size: contain;
  background-repeat: no-repeat;
- margin-left: 500px;
+ margin-left: 350px;
 }
 
  .savedPlantRoom{
@@ -124,8 +124,9 @@ body {
 }
 
 .flip-card-front-image {
-  /* height: 300px; */
-  /* width: 300px; */
+  height: 280px; 
+  width: 280px;
+  background-color: rgb(11, 61, 28);
 }
 
 .flip-card-back {
