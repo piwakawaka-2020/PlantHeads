@@ -3,6 +3,7 @@ import React from 'react'
 import {getPlant} from '../../apis/plants'
 import {getListingsByPlant} from '../../apis/listings'
 import {savePlant} from '../../apis/savedPlants'
+import {Link} from 'react-router-dom'
 
 import PhMeter from './PhMeter'
 import Temperature from './Temperature'
@@ -72,7 +73,7 @@ class PlantView extends React.Component {
                 <div id='bottomRight'>
                     <div id='buttons'>
                         <button id='save' onClick={this.saveCurrentPlant}>Save to favourites</button>
-                        <button id='save'>Create Listing</button>
+                        <Link to='/createListing'><button id='save'>Create Listing</button></Link>
                     </div>
                     <PlantViewListings listings={listings} />
                 </div>
