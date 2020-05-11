@@ -206,7 +206,7 @@ li {
     background-color: white;
 }
 
-li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover {
+li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover, .greenHover:hover {
     background-color: rgb(35, 172, 35);
     color: white;
     cursor: pointer;

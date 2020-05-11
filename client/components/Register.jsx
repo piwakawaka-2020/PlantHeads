@@ -75,7 +75,7 @@ class Register extends React.Component {
 
                     </label>
                     <br />
-                    <input type="submit" value='Register' />
+                    <input className='greenHover' type="submit" value='Register' />
                 </form>
             </>
         )
