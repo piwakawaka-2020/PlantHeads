@@ -1,6 +1,6 @@
 import React from 'react'
 import App from './App'
-import { getAllSavedPlants } from '../apis/plants'
+import { getAllSavedPlants } from '../apis/savedPlants'
 
 
 

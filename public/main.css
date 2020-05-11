@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
 	padding: 40px;
 	overflow-x: hidden; /* For Opera */
 	-webkit-box-shadow:
@@ -33,7 +33,7 @@ body {
 		inset #40bb5f 0 0 0 17px,
 		inset #44d644 0 0 0 22px,
 		inset #7be680 0 0 0 23px;
-}
+} */
 
 .headingDiv{
   background-color: rgb(28, 49, 6);
