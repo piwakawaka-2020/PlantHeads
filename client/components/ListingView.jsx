@@ -24,7 +24,6 @@ class ListingView extends React.Component {
                 <h2>Adopt A New Best Friend</h2>
             </div>
             <div className='listingViewContainer'>
-            {console.log(listings)}
             {listings.map(listing => 
                 <div className='singleListingView'>
                     <img className='listingPic' src="/images/placeholder.jpg" alt="photo of tree"/>
