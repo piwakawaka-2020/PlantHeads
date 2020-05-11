@@ -72,7 +72,7 @@ class PlantView extends React.Component {
                 <div id='bottomRight'>
                     <div id='buttons'>
                         <button id='save' onClick={this.saveCurrentPlant}>Save to favourites</button>
-                        <button id='save'>Create Listing</button>
+                        <button id='createListingPlantView'>Create Listing</button>
                     </div>
                     <PlantViewListings listings={listings} />
                 </div>

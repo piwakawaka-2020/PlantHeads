@@ -269,7 +269,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     margin: 0;
 }
 
-#save {
+#save, #createListingPlantView {
     border-radius: 50%;
     height: 80px;
     width: 80px;
@@ -278,6 +278,8 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     position: relative;
     margin: 5px;
 }
+
+
 
 .oddishLoading {
     text-align: center;
@@ -304,7 +306,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 /* body {
 	padding: 40px;
 	overflow-x: hidden; /* For Opera */
-	-webkit-box-shadow:
+	/* -webkit-box-shadow:
 		inset #06380e 0 0 0 5px,
 		inset #0c4b1c 0 0 0 1px,
 		inset #0a7721 0 0 0 10px,
@@ -330,8 +332,8 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 		inset #23a74f 0 0 0 16px,
 		inset #40bb5f 0 0 0 17px,
 		inset #44d644 0 0 0 22px,
-		inset #7be680 0 0 0 23px;
-} */
+		inset #7be680 0 0 0 23px; */
+/* }  */
 
 .headingDiv{
   background-color: rgb(28, 49, 6);
