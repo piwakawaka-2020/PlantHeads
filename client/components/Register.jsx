@@ -1,13 +1,18 @@
 import React from 'react'
-import {registerUser} from '../actions/register'
+import { registerUser } from '../actions/register'
 import { connect } from 'react-redux'
-import {register} from '../apis/auth'
+import { register } from '../apis/auth'
+import { Redirect } from 'react-router-dom'
 
-class Register extends React.Component{
+class Register extends React.Component {
 
     state = {
+        first_name: '',
+        last_name: '',
         username: '',
-        password: ''
+        email: '',
+        password: '',
+        confirmedPassword: ''
     }
 
     handleChange = event => {
@@ -19,29 +24,56 @@ class Register extends React.Component{
     handleSubmit = event => {
         event.preventDefault()
 
-        // registerUser(this.state)
-        register(this.state)
+        const password = this.state.password
+        const confirmedPassword = this.state.confirmedPassword
 
-        this.setState({
-            username: '',
-            password: ''
-        })
+        if (password !== confirmedPassword) {
+            alert("Your passwords don't match")
+        } else {
+
+            register(this.state)
+
+            this.setState({
+                first_name: '',
+                last_name: '',
+                username: '',
+                email: '',
+                password: '',
+                confirmedPassword: ''
+            })
+            console.log('registered')
+            this.props.history.push('/login')
+        }
+        // registerUser(this.state)
 
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <>
-            <div id="mainContainer">
-            <form onSubmit = {this.handleSubmit}>
-                <label>
-                    <h2>Register</h2>
-                    <input type="text" name="username" placeholder='Username' onChange={this.handleChange}/>
-                    <input type="text" name="password" placeholder='Password' onChange={this.handleChange}/>
-                </label>
-                <input type="submit" value='Submit'/>
-            </form>
-            </div>
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                        <h2>Register</h2>
+                    Username:
+                    <br />
+                        <input type="text" name="username" onChange={this.handleChange} />
+                        <br />
+                    Email address:
+                    <br />
+                        <input type="email" name='email' onChange={this.handleChange} />
+                        <br />
+                    Password:
+                    <br />
+                        <input type="password" name="password" onChange={this.handleChange} />
+                        <br />
+                    Confirm Password:
+                    <br />
+                        <input type="password" name="confirmedPassword" onChange={this.handleChange} />
+
+                    </label>
+                    <br />
+                    <input type="submit" value='Register' />
+                </form>
             </>
         )
     }

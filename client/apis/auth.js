@@ -15,7 +15,7 @@ export function register(user) {
   }
 
   return request
-    .post('/api/v1/auth/register')
+    .post('/api/auth/register')
     .set(headers)
     .send(user)
     .then(res => {
@@ -32,7 +32,7 @@ export function login (user) {
   }
 
   return request
-    .post('/api/v1/auth/login')
+    .post('/api/auth/login')
     .set(headers)
     .send(user)
     .then(res => {
