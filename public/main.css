@@ -20,7 +20,7 @@ a {
 #leftSide {
     display: flex;
     flex-direction: column;
-    background-color: rgb(35, 172, 35);
+    background-image: url(images/placeholder.jpg)
 }
 
 #plantImage {
