@@ -33,7 +33,7 @@ function issue (req, res) {
 
 function createToken (user, secret) {
   const payload = {
-    firstName: user.first_name,
+    first_name: user.first_name,
     username: user.username,
     email: user.email,
   }

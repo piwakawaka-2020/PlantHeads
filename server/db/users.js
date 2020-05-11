@@ -23,7 +23,8 @@ function getUserByUsername(user_name, db = connection) {
     .where('username', user_name)
     .first()
 }
-function createUser({ username, password }, db = connection) {
+
+function createUser({ username, first_name, last_name, password , email}, db = connection) {
   return generatePasswordHash(password)
-    .then(hash => db('users').insert({ username, hash }))
+    .then(hash => db('users').insert({ username, first_name, last_name, hash, email }))
 }

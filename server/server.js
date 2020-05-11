@@ -12,7 +12,7 @@ server.use(express.json())
 server.use(express.static('public'))
 server.use(express.json())
 
-server.use('/api/auth', authRoute)
+server.use('/api/v1/auth', authRoute)
 
 server.use('/api/plants', allPlants)
 server.use('/api/listings', allListing)

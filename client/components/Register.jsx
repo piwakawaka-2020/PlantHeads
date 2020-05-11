@@ -1,8 +1,6 @@
 import React from 'react'
-import { registerUser } from '../actions/register'
 import { connect } from 'react-redux'
 import { register } from '../apis/auth'
-import { Redirect } from 'react-router-dom'
 
 class Register extends React.Component {
 
@@ -54,6 +52,11 @@ class Register extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         <h2>Register</h2>
+                    Your name:
+                    <br/>
+                    <input type="text" name="first_name" onChange={this.handleChange}/>
+                    <input type="text" name="last_name" onChange={this.handleChange}/>
+                    <br/>
                     Username:
                     <br />
                         <input type="text" name="username" onChange={this.handleChange} />
