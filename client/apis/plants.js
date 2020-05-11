@@ -11,6 +11,6 @@ export function getPlant(id) {
 }
 
 export function getAllSavedPlants() {
-    return request.get(`/api/plants`)
+    return request.get(`/api/plants/`)
         .then(res => res.body)
-}
+} 
