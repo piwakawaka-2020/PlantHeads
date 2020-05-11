@@ -9,7 +9,7 @@ function Nav() {
         <ul>
             <Link to='/login'><li>Login</li></Link>
             <Link to='/register'><li>Register</li></Link>
-            <li>Saved Plants</li>
+            <Link to='/savedPlants'><li>Saved Plants</li></Link>
             <li>Buy/Sell Plants</li>
             <Link to='/'><li>Home</li></Link>
         </ul>
