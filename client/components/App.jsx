@@ -7,7 +7,7 @@ import PlantView from './plantview/PlantView'
 import HomePage from './HomePage'
 import Nav from './Nav'
 import CreateListing from './CreateListing'
-import SavedPlants from './savedPlants'
+import SavedPlants from './SavedPlants'
 
 import { HashRouter as Router, Route } from 'react-router-dom'
 
