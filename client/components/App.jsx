@@ -23,6 +23,7 @@ const App = () => {
         <Route exact path="/plant/:plantId" component={PlantView} />
         <Route exact path="/savedPlants" component={SavedPlants} />
         <Route exact path="/createListing" component={CreateListing} />
+        <Route exact path="/listings" component={ListingView} />
       </Router>
       </>
   )

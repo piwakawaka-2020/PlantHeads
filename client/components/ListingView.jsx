@@ -35,7 +35,7 @@ class ListingView extends React.Component {
             </div>
             <div className='linkToCreateListing'>
                 <h2 className='createListingHeader'>To Give A Plant To Another Loving Family</h2>
-                <Link to='listings'><button id='save'>Create Listing</button></Link>
+                <Link to='/createListing'><button id='save'>Create Listing</button></Link>
             </div>
             </>
             
