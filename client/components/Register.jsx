@@ -49,7 +49,7 @@ class Register extends React.Component {
     render() {
         return (
             <>
-                <form onSubmit={this.handleSubmit}>
+                <form id='registerForm' onSubmit={this.handleSubmit}>
                     <label>
                         <h2>Register</h2>
                     Your name:
@@ -75,7 +75,7 @@ class Register extends React.Component {
 
                     </label>
                     <br />
-                    <input type="submit" value='Register' />
+                    <input className='greenHover' type="submit" value='Register' />
                 </form>
             </>
         )

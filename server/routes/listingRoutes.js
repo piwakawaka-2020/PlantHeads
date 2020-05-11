@@ -15,11 +15,14 @@ router.get('/', (req,res) => {
 //POST Routes for adding a plant to list
 router.post('/', (req,res) => {
     let plant  = {
-        usersId: req.body.usersId,
         plantsId: req.body.plantsId,
+        usersId: req.body.usersId,
         scientificName: req.body.scientificName,
+        commonName: req.body.commonName,
         cost: req.body.cost,
-        common_name: req.body.commonName
+        type: req.body.type,
+        careTips: req.body.careTips,
+        photoFile: req.body.photoFile  
     }
     dbFunction.addListing(plant)
         .then((id) => {
