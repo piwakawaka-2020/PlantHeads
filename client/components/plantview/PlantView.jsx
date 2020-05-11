@@ -1,6 +1,5 @@
 import React from 'react'
 
-import {Link} from 'react-router-dom'
 
 import {getPlant} from '../../apis/plants'
 import {getListingsByPlant} from '../../apis/listings'
@@ -42,7 +41,7 @@ class PlantView extends React.Component {
             users_id: 1, // placeholder
             scientific_name: plant.scientific_name,
             plants_id: plant.id,
-            photoURL: plant.images[0].url,
+            photoURL: plant.images.length > 0 ? plant.images[0].url : 'images/placeholder.jpg',
             common_name: plant.common_name
         })
     }
@@ -71,7 +70,7 @@ class PlantView extends React.Component {
                     <DroughtTolerance drought={plant.main_species.growth.drought_tolerance} />
                     <Lifespan lifespan={plant.main_species.specifications.lifespan} />
                 </div>
-                <Seasons />
+                <Seasons growthPeriod={plant.main_species.specifications.growth_period} />
                 <div id='bottomRight'>
                     <div id='buttons'>
                         <button id='save' onClick={this.saveCurrentPlant}>Save to favourites</button>
