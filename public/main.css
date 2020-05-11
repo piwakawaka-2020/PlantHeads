@@ -317,7 +317,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 .border {
    width: 100%;
    height: 100%;
-	padding: 40px;
+	/* padding: 40px; */
 	overflow-x: hidden; /* For Opera */
 	-webkit-box-shadow:
 		inset #06380e 0 0 0 5px,
@@ -354,6 +354,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
   font-size: 1em;
   text-align: center;
   padding-right: 400px;
+  margin: 40px;
   border-radius: .5em;
   border-style: groove;
   animation-name: heading;
@@ -396,7 +397,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 .plant-container{
   margin-top: 9em;
   margin-right: 1em;
-  justify-content: space-between;
+  justify-content: center;
   display: flex;
   align-items: center;
   height: 50vh;
@@ -409,6 +410,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
   width: 280px;
   height: 280px;
   perspective: 1000px; 
+  margin: 30px;
 }
 
 
