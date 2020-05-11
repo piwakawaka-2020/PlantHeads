@@ -534,6 +534,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 .createListingContainer {
     display: flex;
     justify-content: center;
+}
 
 /* Login and Register CSS */
 
