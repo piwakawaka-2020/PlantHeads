@@ -155,12 +155,14 @@ a {
     display: flex;
     justify-content: center;
     padding: 10px;
+    /* height: 60vh;
+    border-bottom: 2px black solid; */
 }
 
 #leftSide {
     display: flex;
     flex-direction: column;
-    background-color: rgb(119, 201, 119);
+    background-color: rgb(35, 172, 35);
 }
 
 #plantImage {
@@ -235,6 +237,7 @@ p {
     margin-top: 10px;
     padding: 10px;
     text-align: center;
+    width: 100%;
 }
 
 #plantViewListingsContainer {
@@ -255,7 +258,7 @@ p {
 }
 
 #height {
-    background-color: green;
+    background-color: rgb(35, 172, 35);
     border-radius: 10px;
     width: 20px;
     height: 100%;
@@ -303,11 +306,11 @@ p {
     padding: 5px;
     margin: 4px;
     text-align: center;
-    width: 50%;
+    width: 80%;
 }
 
 #navBar {
-    background-color: rgb(119, 201, 119);
+    background-color: rgb(35, 172, 35);
     margin: 0;
     border-bottom: 2px black solid;
     /* position: fixed;
@@ -325,8 +328,13 @@ ul {
 #navHeading {
     float: left;
     font-weight: bold;
-    font-size: 42px;
+    font-size: 40px;
     margin: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border: 2px black solid;
+    border-radius: 5px;
+    background-color: white;
 }
 
 #icon {
@@ -343,13 +351,12 @@ li {
 }
 
 li:hover, .result:hover, #searchSubmit:hover, #save:hover {
-    background-color: rgb(10, 146, 10);
+    background-color: rgb(35, 172, 35);
     color: white;
     cursor: pointer;
 }
 
 #intro {
-    background-color: rgb(52, 184, 52);
     background-image: url(images/plant2.jpg);
     background-size: cover;
     text-align: center;
@@ -393,7 +400,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 
 #resultSection {
     text-align: center;
-    background-color: rgb(119, 201, 119);
+    background-color: rgb(35, 172, 35);
     padding: 20px;
     border-top: 2px black solid;
     border-bottom: 2px black solid;
@@ -411,11 +418,22 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     border: 2px black solid;
     font-family: 'Balsamiq Sans', cursive;
     position: relative;
-    top: 55%;
+    margin: 5px;
 }
 
 .oddishLoading {
     text-align: center;
     margin: 0 auto;
     border-radius: 50%;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#bottomRight {
+    display: flex;
 }

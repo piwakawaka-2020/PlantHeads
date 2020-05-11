@@ -4,7 +4,7 @@ import SavedPlants from './SavedPlants'
 import Register from './Register'
 import Login from './Login'
 
-import PlantView from './PlantView'
+import PlantView from './plantview/PlantView'
 
 import HomePage from './HomePage'
 import Nav from './Nav'
@@ -39,6 +39,7 @@ const App = () => {
         <Route exact path="/register" component={Register} />
         <Route exact path="/plant/:plantId" component={PlantView} />
         <Route exact path="/savedPlants" component={SavedPlants} />
+        <Route exact path="/createListing" component={CreateListing} />
       </Router>
       </>
   )
