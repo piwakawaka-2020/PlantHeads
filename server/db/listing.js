@@ -15,10 +15,13 @@ function addListing(listing, db = connection) {
     return db('listing')
         .insert({
             plants_id: listing.plantsId,
-            scientific_name: listing.scientificName,
             users_id: listing.usersId,
+            scientific_name: listing.scientificName,
+            common_name:listing.commonName,
             cost: listing.cost,
-            common_name:listing.common_name
+            type: listing.type,
+            care_tips: listing.careTips,
+            photoFile: listing.photoFile
         })
 }
 
