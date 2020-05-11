@@ -329,11 +329,10 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 		inset #40bb5f 0 0 0 17px,
 		inset #44d644 0 0 0 22px,
 		inset #7be680 0 0 0 23px;
+}
 
-
-.headingDiv{
+.headingDiv {
   background-color:#0e5520;
-
   color: white;
   font-size: 1em;
   text-align: center;
