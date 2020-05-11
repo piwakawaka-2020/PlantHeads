@@ -26,7 +26,7 @@ class ListingView extends React.Component {
             <div className='listingViewContainer'>
             {listings.map(listing => 
                 <div className='singleListingView'>
-                    <img className='listingPic' src="/images/placeholder.jpg" alt="photo of tree"/>
+                    <img className='listingPic' src={listing.photoFile} alt="photo of tree"/>
                     <p className='listingInfo'>Botanical Name: {listing.scientific_name}</p>
                     <p className='listingInfo'>Common Name: {listing.notes}</p>
                     <p className='listingInfo'>${listing.cost}</p>  
