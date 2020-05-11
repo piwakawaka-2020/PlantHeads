@@ -2,6 +2,7 @@ import React from 'react'
 
 import {getPlant} from '../../apis/plants'
 import {getListingsByPlant} from '../../apis/listings'
+import {savePlant} from '../../apis/savedPlants'
 
 import PhMeter from './PhMeter'
 import Temperature from './Temperature'
@@ -32,6 +33,17 @@ class PlantView extends React.Component {
         })
     }
 
+    saveCurrentPlant = () => {
+        const plant = this.state.plant
+        savePlant({
+            users_id: 1, // placeholder
+            scientific_name: plant.scientific_name,
+            plants_id: plant.id,
+            photoURL: plant.images[0].url,
+            common_name: plant.common_name
+        })
+    }
+
     render() {
     const plant = this.state.plant
     const listings = this.state.listings
@@ -59,7 +71,7 @@ class PlantView extends React.Component {
                 <Seasons />
                 <div id='bottomRight'>
                     <div id='buttons'>
-                        <button id='save'>Save to favourites</button>
+                        <button id='save' onClick={this.saveCurrentPlant}>Save to favourites</button>
                         <button id='save'>Create Listing</button>
                     </div>
                     <PlantViewListings listings={listings} />
