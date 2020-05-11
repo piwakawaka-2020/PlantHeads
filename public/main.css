@@ -208,7 +208,7 @@ li {
     background-color: white;
 }
 
-li:hover, .result:hover, #searchSubmit:hover, #save:hover {
+li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover {
     background-color: rgb(35, 172, 35);
     color: white;
     cursor: pointer;
@@ -277,6 +277,14 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     font-family: 'Balsamiq Sans', cursive;
     position: relative;
     margin: 5px;
+    display: flex;
+    justify-self: center;
+    align-content: center;
+    text-align: center;
+}
+
+#createListingPlantView p {
+    margin-top: 20px;
 }
 
 

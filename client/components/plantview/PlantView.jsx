@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {Link} from 'react-router-dom'
+
 import {getPlant} from '../../apis/plants'
 import {getListingsByPlant} from '../../apis/listings'
 import {savePlant} from '../../apis/savedPlants'
@@ -72,7 +74,7 @@ class PlantView extends React.Component {
                 <div id='bottomRight'>
                     <div id='buttons'>
                         <button id='save' onClick={this.saveCurrentPlant}>Save to favourites</button>
-                        <button id='createListingPlantView'>Create Listing</button>
+                        <Link id='createListingPlantView' to='/createListing'><p>Create Listing</p></Link>
                     </div>
                     <PlantViewListings listings={listings} />
                 </div>
