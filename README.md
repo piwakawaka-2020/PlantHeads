@@ -8,18 +8,17 @@ app description
 ### MVP
 
 As a user:
-- [ ] I want to search a plant and see a page with a variety of details about it
-- [ ] I want to filter plants by different categories
-- [ ] I want to register an account with my name
-- [ ] I log in and register my own plants to my account
-- [ ] We can add a listing to the plant page and it saves it to a database
+- [x] I want to search a plant and see a page with a variety of details about it
+- [x] I want to register an account with my name
+- [x] I log in and register my own plants to my account
+- [x] We can add a listing to the plant page and it saves it to a database
 - [ ] We can accept a listing and the app will notify the seller
 - [ ] Unregistered users can see the plant database but cant save plants
 
 ### Stretch
 - [ ] Plant identification by picture
-- [ ] Uploading your own picture when making a listing
-- [ ] Seperate buy/sell section for listings
+- [x] Uploading your own picture when making a listing
+- [x] Seperate buy/sell section for listings
 - [ ] More search filters
 
   ---
