@@ -1,7 +1,4 @@
 import React from 'react'
-import SavedPlants from './SavedPlants'
-
-
 import Register from './Register'
 import Login from './Login'
 
