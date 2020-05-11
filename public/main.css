@@ -214,6 +214,7 @@ li {
     background-color: white;
 }
 
+
 li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .greenHover:hover {
     background-color: rgb(35, 172, 35);
     color: white;
@@ -477,6 +478,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 
 .listingViewContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 80%;
     margin: auto;
@@ -496,6 +498,9 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
     border: 2px black solid;
     border-radius: 5px;
     width: 200px;
+    margin: 7.5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .listingInfo {
