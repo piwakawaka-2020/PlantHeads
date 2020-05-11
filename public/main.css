@@ -13,8 +13,6 @@ a {
     display: flex;
     justify-content: center;
     padding: 10px;
-    /* height: 60vh;
-    border-bottom: 2px black solid; */
 }
 
 #leftSide {
@@ -305,43 +303,6 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover {
 #bottomRight {
     display: flex;
 }
-
-/*_________________________________________________________ ALICES CSS */
-/* * {
-  box-sizing: border-box;
-} */
-
-/* body {
-	padding: 40px;
-	overflow-x: hidden; /* For Opera */
-	/* -webkit-box-shadow:
-		inset #06380e 0 0 0 5px,
-		inset #0c4b1c 0 0 0 1px,
-		inset #0a7721 0 0 0 10px,
-		inset #1b9221 0 0 0 11px,
-		inset #23a74f 0 0 0 16px,
-		inset #40bb5f 0 0 0 17px,
-		inset #44d644 0 0 0 22px,
-		inset #7be680 0 0 0 23px;
-	-moz-box-shadow:
-		inset #06380e 0 0 0 5px,
-		inset #0c4b1c 0 0 0 1px,
-		inset #0a7721 0 0 0 10px,
-		inset #1b9221 0 0 0 11px,
-		inset #23a74f 0 0 0 16px,
-		inset #40bb5f 0 0 0 17px,
-		inset #44d644 0 0 0 22px,
-		inset #7be680 0 0 0 23px;
-	box-shadow:
-		inset #06380e 0 0 0 5px,
-		inset #0c4b1c 0 0 0 1px,
-		inset #0a7721 0 0 0 10px,
-		inset #1b9221 0 0 0 11px,
-		inset #23a74f 0 0 0 16px,
-		inset #40bb5f 0 0 0 17px,
-		inset #44d644 0 0 0 22px,
-		inset #7be680 0 0 0 23px; */
-/* }  */
 
 .headingDiv{
   background-color: rgb(28, 49, 6);
