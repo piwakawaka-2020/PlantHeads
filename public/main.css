@@ -453,3 +453,46 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 }
 
 /*_________________________________________________________ ALICES CSS */
+
+.listingViewHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.listingViewContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+}
+
+.listingPic {
+    width: 175px;
+    height: 175px;
+    border-radius: 5px;
+    margin-top: 12.5px;
+}
+
+.singleListingView {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px black solid;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.listingInfo {
+    padding: 5px;
+    text-align: center;
+}
+
+.linkToCreateListing {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.createListingHeader {
+    padding-top: 9px;
+}
