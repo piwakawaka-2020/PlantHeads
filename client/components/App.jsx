@@ -8,6 +8,7 @@ import HomePage from './HomePage'
 import Nav from './Nav'
 import CreateListing from './CreateListing'
 import SavedPlants from './SavedPlants'
+import ListingView from './ListingView'
 
 import { HashRouter as Router, Route } from 'react-router-dom'
 
