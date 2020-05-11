@@ -90,11 +90,14 @@ As a user:
   | Column Name | Data Type |
   | --- | --- |
   | id | Integer |
-  | plant_id | Integer |
-  | scientiic_name | String |
+  | plants_id | Integer |
   | users_id | Integer |
-  | cost | Integer |
+  | scientific_name | String |
   | common_name | String |
+  | cost | Integer |
+  | type | String |
+  | care_tips | String |
+  | photoFile | String |
   
 ### SavedPlant
 
