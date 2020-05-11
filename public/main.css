@@ -13,14 +13,12 @@ a {
     display: flex;
     justify-content: center;
     padding: 10px;
-    /* height: 60vh;
-    border-bottom: 2px black solid; */
 }
 
 #leftSide {
     display: flex;
     flex-direction: column;
-    background-color: rgb(35, 172, 35);
+    background-image: url(images/placeholder.jpg)
 }
 
 #plantImage {
@@ -66,7 +64,7 @@ p {
     display: inline-block;
     width: 25%;
     padding-top: 10px;
-    height: 40px;
+    height: 60px;
     text-align: center;
     color: white;
     font-size: 20px;
@@ -208,7 +206,7 @@ li {
     background-color: white;
 }
 
-li:hover, .result:hover, #searchSubmit:hover, #save:hover {
+li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover {
     background-color: rgb(35, 172, 35);
     color: white;
     cursor: pointer;
@@ -269,7 +267,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     margin: 0;
 }
 
-#save {
+#save, #createListingPlantView {
     border-radius: 50%;
     height: 80px;
     width: 80px;
@@ -277,7 +275,17 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     font-family: 'Balsamiq Sans', cursive;
     position: relative;
     margin: 5px;
+    display: flex;
+    justify-self: center;
+    align-content: center;
+    text-align: center;
 }
+
+/* #createListingPlantView p {
+    margin-top: 20px;
+} */
+
+
 
 .oddishLoading {
     text-align: center;
