@@ -54,7 +54,7 @@ class CreateListing extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <h1>Create Listing</h1>
         <p>Upload Picture</p>
-        <input type="file" name="image"/>
+        <input type="file" name="image" onChange={this.handleChange}/>
         <p>Price:</p>
         <input type="text" name="cost" onChange={this.handleChange}/>
         <p>Type:</p>
