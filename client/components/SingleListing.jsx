@@ -1,4 +1,7 @@
 import React from 'react'
+// import { getListings } from '../apis/listings' //do I need this?
+
+
 
 //open site search plant  click on palnt view listings bottom right
 //click listing
