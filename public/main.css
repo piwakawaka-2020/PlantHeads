@@ -64,7 +64,7 @@ p {
     display: inline-block;
     width: 25%;
     padding-top: 10px;
-    height: 60px;
+    height: 80px;
     text-align: center;
     color: white;
     font-size: 20px;
@@ -84,6 +84,14 @@ p {
 
 #spring {
     background-color: rgb(75, 163, 75);
+}
+
+.growthTime {
+    border: 2px white solid;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 5px;
+    display: inline-block;
 }
 
 /* Current plant listings */
@@ -206,7 +214,7 @@ li {
     background-color: white;
 }
 
-li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover, .greenHover:hover {
+li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .greenHover:hover {
     background-color: rgb(35, 172, 35);
     color: white;
     cursor: pointer;
