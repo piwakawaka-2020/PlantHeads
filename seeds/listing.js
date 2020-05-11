@@ -17,7 +17,7 @@ exports.seed = function(knex) {
         },
         {
           id: 2, 
-          plants_id: 196798,
+          plants_id: 220010,
           users_id: 1,
           scientific_name:'Anthurium Crystallinum',
           common_name: 'Crystal Anthurium',

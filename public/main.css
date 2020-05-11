@@ -496,3 +496,20 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 .createListingHeader {
     padding-top: 9px;
 }
+
+/*_________________________________________________________ Pat's CSS */
+
+.postListingHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.postListInfo {
+    padding: 5px;
+    text-align: center;
+}
+
+.createListingContainer {
+    display: flex;
+    justify-content: center;
+}
