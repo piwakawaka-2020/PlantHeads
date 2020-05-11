@@ -7,7 +7,8 @@ import {searchPlants} from '../apis/plants'
 class HomePage extends React.Component {
     state = {
         search: '',
-        results: []
+        results: [],
+        complete: false
     }
 
     handleChange = (event) => {
@@ -19,11 +20,17 @@ class HomePage extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         console.log('submit!')
-        searchPlants(this.state.search).then(res => {
+        searchPlants(this.state.search, this.state.complete).then(res => {
             this.setState({
                    search: '',
                 results: res
             })
+        })
+    }
+
+    toggleComplete = (event) => {
+        this.setState({
+            complete: this.state.complete ? false : true
         })
     }
 
@@ -36,6 +43,9 @@ class HomePage extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                 <input onChange={this.handleChange} value={this.state.search} placeholder='Search for a plant!' name='search' id='search' />
                 <input type="submit" id='searchSubmit'/>
+                <br />
+                <label htmlFor='complete' >Only show plants with complete data</label>
+                <input type='checkbox' name='complete' onChange={this.toggleComplete}/>
                 </form>
             </div>
             <Results results={this.state.results} />
