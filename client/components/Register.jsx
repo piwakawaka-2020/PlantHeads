@@ -1,6 +1,7 @@
 import React from 'react'
 import {registerUser} from '../actions/register'
 import { connect } from 'react-redux'
+import {register} from '../apis/auth'
 
 class Register extends React.Component{
 
@@ -18,7 +19,8 @@ class Register extends React.Component{
     handleSubmit = event => {
         event.preventDefault()
 
-        registerUser(this.state)
+        // registerUser(this.state)
+        register(this.state)
 
         this.setState({
             username: '',
