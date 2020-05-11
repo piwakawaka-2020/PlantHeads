@@ -304,8 +304,43 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover {
     display: flex;
 }
 
-.headingDiv{
-  background-color: rgb(28, 49, 6);
+/*_________________________________________________________ ALICES CSS */
+.border {
+   width: 100%;
+   height: 100%;
+	padding: 40px;
+	overflow-x: hidden; /* For Opera */
+	-webkit-box-shadow:
+		inset #06380e 0 0 0 5px,
+		inset #0c4b1c 0 0 0 1px,
+		inset #0a7721 0 0 0 10px,
+		inset #1b9221 0 0 0 11px,
+		inset #23a74f 0 0 0 16px,
+		inset #40bb5f 0 0 0 17px,
+		inset #44d644 0 0 0 22px,
+		inset #7be680 0 0 0 23px;
+	-moz-box-shadow:
+		inset #06380e 0 0 0 5px,
+		inset #0c4b1c 0 0 0 1px,
+		inset #0a7721 0 0 0 10px,
+		inset #1b9221 0 0 0 11px,
+		inset #23a74f 0 0 0 16px,
+		inset #40bb5f 0 0 0 17px,
+		inset #44d644 0 0 0 22px,
+		inset #7be680 0 0 0 23px;
+	box-shadow:
+		inset #06380e 0 0 0 5px,
+		inset #0c4b1c 0 0 0 1px,
+		inset #0a7721 0 0 0 10px,
+		inset #1b9221 0 0 0 11px,
+		inset #23a74f 0 0 0 16px,
+		inset #40bb5f 0 0 0 17px,
+		inset #44d644 0 0 0 22px,
+		inset #7be680 0 0 0 23px;
+}
+
+.headingDiv {
+  background-color:#0e5520;
   color: white;
   font-size: 1em;
   text-align: center;
@@ -313,19 +348,27 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover {
   border-radius: .5em;
   border-style: groove;
   animation-name: heading;
-  animation-duration: 3s;   
+  animation-duration: 10s;   
 }
 
 @keyframes heading {
   0%   {background-color:#106d27; left:0px; top:0px;}
-  25%  {background-color:#0a7721; left:200px; top:0px;}
-  50%  {background-color:#23a74f; left:200px; top:200px;}
-  75%  {background-color:#44d644; left:0px; top:200px;}
-  100% {background-color:#68f317; left:0px; top:0px;}
+
+  10%  {background-color:#0a7721; left:200px; top:0px;}
+  20%  {background-color:#23a74f; left:200px; top:200px;}
+  30%  {background-color:#44d644; left:0px; top:200px;}
+  40%  {background-color:#68f317; left:0px; top:0px;}
+  50%  {background-color:#106d27; left:0px; top:0px;}
+  60%  {background-color:#0a7721; left:200px; top:0px;}
+  70%  {background-color:#23a74f; left:200px; top:200px;}
+  80%  {background-color:#44d644; left:0px; top:200px;}
+  90%  {background-color:#68f317; left:0px; top:0px;}
+  100%  {background-color:#106d27; left:0px; top:0px;}
+ 
 }
 
 .headingDiv-image {
- background-image: url('/images/shinyoddish.jpg'); 
+ background-image: url('/images/oddishtrans.png'); 
  background-size: contain;
  background-repeat: no-repeat;
  margin-left: 350px;
@@ -334,7 +377,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover {
  .savedPlantRoom{
   height: 200vh; 
   max-width: 100vw;  
-  width: -webkit-fill-available;
+  width: 100%;
   background-image: url('/images/conserv2.jpg'); 
   background-repeat: no-repeat;
   background-size: cover;
@@ -354,8 +397,8 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover {
 
 .flip-card {
   background-color: transparent;
-  width: 20%;
-  height: 100%;
+  width: 280px;
+  height: 280px;
   perspective: 1000px; 
 }
 
@@ -405,4 +448,59 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover {
   color: black;
   transform: rotateY(180deg);
 }
+
+.plantcarelink {
+    font-size: 1rem;
+    font-style: inherit;
+    background-color: whitesmoke;
+    border: solid;
+    border-radius: 20px;
+    padding: 10px;
+    
+
+}
+
 /*_________________________________________________________ ALICES CSS */
+
+.listingViewHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.listingViewContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+}
+
+.listingPic {
+    width: 175px;
+    height: 175px;
+    border-radius: 5px;
+    margin-top: 12.5px;
+}
+
+.singleListingView {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px black solid;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.listingInfo {
+    padding: 5px;
+    text-align: center;
+}
+
+.linkToCreateListing {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.createListingHeader {
+    padding-top: 9px;
+}
