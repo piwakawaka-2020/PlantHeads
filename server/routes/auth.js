@@ -28,13 +28,16 @@ function user(req, res) {
 router.post('/register', register, token.issue)
 
 function register(req, res, next) {
-    const { username, password } = req.body
-    createUser({ username, password })
+    
+    const user = req.body
+
+    createUser(user)
         .then(([id]) => {
             res.locals.userId = id
             next()
         })
         .catch(({ message }) => {
+            console.log(message)
             if (message.includes('UNIQUE constraint failed: users.username')) {
                 return res.status(400).json({
                     ok: false,
