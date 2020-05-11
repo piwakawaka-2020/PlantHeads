@@ -17,3 +17,10 @@ export function createListing(newListing) {
         .send(newListing)
         .then(res => res.body)
 }
+
+
+export function getListings() {
+    return request
+    .get(baseUrl)
+    .then(res => res.body)
+}
