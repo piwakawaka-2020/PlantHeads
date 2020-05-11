@@ -13,14 +13,12 @@ a {
     display: flex;
     justify-content: center;
     padding: 10px;
-    /* height: 60vh;
-    border-bottom: 2px black solid; */
 }
 
 #leftSide {
     display: flex;
     flex-direction: column;
-    background-color: rgb(35, 172, 35);
+    background-image: url(images/placeholder.jpg)
 }
 
 #plantImage {
@@ -66,7 +64,7 @@ p {
     display: inline-block;
     width: 25%;
     padding-top: 10px;
-    height: 40px;
+    height: 80px;
     text-align: center;
     color: white;
     font-size: 20px;
@@ -86,6 +84,14 @@ p {
 
 #spring {
     background-color: rgb(75, 163, 75);
+}
+
+.growthTime {
+    border: 2px white solid;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 5px;
+    display: inline-block;
 }
 
 /* Current plant listings */
@@ -208,7 +214,8 @@ li {
     background-color: white;
 }
 
-li:hover, .result:hover, #searchSubmit:hover, #save:hover {
+
+li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .greenHover:hover {
     background-color: rgb(35, 172, 35);
     color: white;
     cursor: pointer;
@@ -269,7 +276,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     margin: 0;
 }
 
-#save {
+#save, #createListingPlantView {
     border-radius: 50%;
     height: 80px;
     width: 80px;
@@ -277,7 +284,17 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     font-family: 'Balsamiq Sans', cursive;
     position: relative;
     margin: 5px;
+    display: flex;
+    justify-self: center;
+    align-content: center;
+    text-align: center;
 }
+
+/* #createListingPlantView p {
+    margin-top: 20px;
+} */
+
+
 
 .oddishLoading {
     text-align: center;
@@ -465,6 +482,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 
 .listingViewContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 80%;
     margin: auto;
@@ -484,6 +502,9 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
     border: 2px black solid;
     border-radius: 5px;
     width: 200px;
+    margin: 7.5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .listingInfo {
@@ -499,4 +520,41 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 
 .createListingHeader {
     padding-top: 9px;
+}
+
+
+/*_________________________________________________________ Pat's CSS */
+
+.postListingHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.postListInfo {
+    padding: 5px;
+    text-align: center;
+}
+
+.createListingContainer {
+    display: flex;
+    justify-content: center;
+}
+
+/* Login and Register CSS */
+
+#loginForm, #registerForm {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#loginForm input, #registerForm input {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 30px;
+    border: 2px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 100px;
+    margin: 5px;
+
 }

@@ -1,6 +1,9 @@
 import request from 'superagent'
 
-export function searchPlants(query) {
+export function searchPlants(query, complete) {
+    if (complete === true) {
+        query += '&complete_data=true'
+    }
     return request.get(`/api/plants/search/${query}`)
         .then(res => res.body)
 }
