@@ -504,3 +504,21 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, a:hover {
 .createListingHeader {
     padding-top: 9px;
 }
+
+/* Login and Register CSS */
+
+#loginForm, #registerForm {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#loginForm input, #registerForm input {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 30px;
+    border: 2px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 100px;
+    margin: 5px;
+}
