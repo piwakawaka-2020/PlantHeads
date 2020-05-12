@@ -1,8 +1,7 @@
 import React from 'react'
 
 function Seasons(props) {
-    const seasons = props.growthPeriod.split(' ')
-    console.log(seasons)
+    const seasons = props.growthPeriod ? props.growthPeriod.split(' ') : ''
     return (
       <div>
           <h3>Seasonal info</h3>
