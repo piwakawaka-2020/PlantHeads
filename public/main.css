@@ -483,9 +483,9 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 /*_________________________________________________________ ALICES CSS above single listing below*/
 
 
-.single-list-container {
+/* .single-list-container {
 
-}
+} */
 
 .single-list-border {
     width: 100%;
@@ -573,13 +573,13 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 }
 
 
- .single-item-image-around {
+ /* .single-item-image-around {
      
  }
 
 .img-single-list {   
     ;
-}
+} */
 
 
 /*_________________________________________________________ ALICES CSS above single listing above*/
@@ -631,6 +631,10 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
     padding-top: 9px;
 }
 
+.listingViewBackground {
+    background-image: url(./images/plantViewBackG2.jpg);
+    background-size: cover;
+}
 
 /*_________________________________________________________ Pat's CSS */
 .createListing {
