@@ -38,6 +38,7 @@ function getSingleListing(id, db = connection) {
     return db('listing')
         .where('id', id)
         .select()
+        .first()
 }
 
 //functions to delete a listing

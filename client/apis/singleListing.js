@@ -1,11 +1,10 @@
 import request from 'superagent'
 
-const baseUrl = '/api/listings' //is this needed because the listing takes care of this?
+const baseUrl = '/api/listings/' 
 
-export function singleListing(plantsId) {
+export function singleListing(listingId) {
     return request
-    .get(baseUrl + '/plants/' + plantsId)
+    .get(baseUrl + listingId)
     .then(res => res.body)
 }  
 
-//GET LISTING IS in listing api so not needed here...???
