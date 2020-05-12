@@ -631,3 +631,13 @@ input[type=submit] {
 
 }
 
+/*------------- Styling for 404 Page ------------  */
+
+#pageNotFound {
+    text-align: center;
+}
+
+.bellsprout {
+    width: 500px;
+    height:500px;
+}
