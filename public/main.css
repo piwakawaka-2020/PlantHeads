@@ -388,7 +388,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
   height: 200vh; 
   max-width: 100vw;  
   width: 100%;
-  background-image: url('/images/conserv2.jpg'); 
+  background-image: url('/images/conserv3.jpg'); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -467,8 +467,11 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
     border: solid;
     border-radius: 20px;
     padding: 10px;
-    
+}
 
+.plantcarelink:hover {
+    background-color: rgb(35, 172, 35);
+    color: white;
 }
 
 /*_________________________________________________________ ALICES CSS */
@@ -570,7 +573,7 @@ input[type=file] {
     line-height: initial;
 }
 
-input[type=text] {
+.listingInput {
     width: 150px;
     padding: 10px 15px;
     margin: 10px 5px;
@@ -600,7 +603,7 @@ input[type=text] {
 }
 
 
-input[type=submit] {
+.listingSubmitInput {
     background-color:rgb(35, 172, 35);
     border: none;
     color: black;
@@ -631,3 +634,13 @@ input[type=submit] {
 
 }
 
+/*------------- Styling for 404 Page ------------  */
+
+#pageNotFound {
+    text-align: center;
+}
+
+.bellsprout {
+    width: 500px;
+    height:500px;
+}
