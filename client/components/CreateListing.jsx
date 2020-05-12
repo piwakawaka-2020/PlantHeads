@@ -99,11 +99,11 @@ class CreateListing extends React.Component {
           <br/>
           <div className='userInput'>
             <p>Price:</p>
-            <input type="text" name="cost" onChange={this.handleChange}/>
+            <input className='listingInput' type="text" name="cost" onChange={this.handleChange}/>
             <p>Type of Plant:</p>
-            <input type="text" name="type" onChange={this.handleChange}/>
+            <input className='listingInput' type="text" name="type" onChange={this.handleChange}/>
             <p> Share Your Care Tips:</p>
-            <input type="text" name="careTips" onChange={this.handleChange}/>
+            <input className='listingInput' type="text" name="careTips" onChange={this.handleChange}/>
           </div>
           <br/>
           <div>
@@ -116,7 +116,7 @@ class CreateListing extends React.Component {
           </div>
           <br/>
           <div className='submitListing'>
-            <input type="submit" value="Submit" /> 
+            <input className='listingSubmitInput' type="submit" value="Submit" /> 
           </div>      
         </form>
       </div>
