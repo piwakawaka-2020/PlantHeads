@@ -3,6 +3,7 @@ import { getListings } from '../apis/listings'
 import { getPlant } from '../apis/plants'
 import {Link} from 'react-router-dom'
 import { singleListing } from '../apis/singleListing'
+import EmailForm from '../components/EmailForm'
 
 
 class SingleListing extends React.Component {
@@ -42,10 +43,10 @@ class SingleListing extends React.Component {
                                 <p className='listingInfo'>Care Tips: {this.state.singlelisting.care_tips}</p> 
                                 <p className='listingInfo'>Plant Size: {this.state.singlelisting.type}</p> 
                         </div>
-                    {/* <div className='linkToCreateListing'>
-                        <h2 className='createListingHeader'>Buy This Plant ~ Contact Your Seller</h2>
-                        <Link to='/createListing'><button id='save'>Create Listing</button></Link> 
-                    </div>  */}
+                    <div className='linkToContactSeller'>
+                        <h2 className='contactSellerStyle'>Buy This Plant ~ Contact Your Seller</h2>
+                        <Link to='/emailForm'><button id='save'>Contact Seller</button></Link> 
+                    </div>  
                     </div>
                 </div>
             </div>
