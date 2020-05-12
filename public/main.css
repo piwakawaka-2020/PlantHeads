@@ -491,7 +491,6 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 
 .single-list-border {
     width: 100%;
-    height: 1000px;
      padding: 1px;
      /* overflow-x: hidden; For Opera  */
      -webkit-box-shadow:
@@ -529,7 +528,8 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 
 
 .header-container{
-    margin-right: 15px;
+    display: block;
+    margin: 20px 21px;
 }
 
 .heading-single-listing {
@@ -538,18 +538,19 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
     font-size: x-large;
     padding: 10px;
     background-color: #1cad2fdc;
-    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+    /* background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
 }
 
 .single-list-box {
      display: flex;
      justify-content: center;
      margin-top: 15px;
-     width: 600px;
+     width: 400px;
      height: 400px;
      border: solid;
      margin: auto;
      border-radius: 5px;
+     margin-bottom: 35px;
      /* background-image: url("./images/lotus_med.jpg");
      object-fit: contain; */
 }
@@ -568,6 +569,16 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
     align-content: center;
 }
 
+.linkToContactSeller {
+    display: flex;
+    justify-content: center;
+    margin: 5px auto;
+    padding-bottom: 20px;
+}
+
+.contactSellerStyle {
+    padding-top: 9px;
+}
 
 /* .single-item-image-around {
      
