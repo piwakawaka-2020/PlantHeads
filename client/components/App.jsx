@@ -37,7 +37,7 @@ const App = () => {
         {/* this CreateListing route accessed through the ListingView */}
         <Route exact path="/createListing" render={(props) => <CreateListing {...props} {...tempUser} />} />
         <Route exact path="/listings" component={ListingView} />
-        <Route exact path="/singlelistings/:plantsId" render={(props) => <SingleListing {...props} {...tempUser} />} />
+        <Route exact path="/listings/:listingId" render={(props) => <SingleListing {...props} {...tempUser} />} />
       </Router>
       </>
   )
