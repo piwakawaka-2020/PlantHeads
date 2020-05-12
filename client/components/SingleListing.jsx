@@ -3,6 +3,7 @@ import { getListings } from '../apis/listings'
 import { getPlant } from '../apis/plants'
 import {Link} from 'react-router-dom'
 import { singleListing } from '../apis/singleListing'
+import EmailForm from '../components/EmailForm'
 
 
 class SingleListing extends React.Component {
@@ -35,7 +36,7 @@ class SingleListing extends React.Component {
                                 {/* <img className='img-single-list' src="/images/placeholder.jpg" alt="photo of tree"/>   */}     
                         </div> 
                         <div className='single-plant-listing'>
-                                <p className='listingInfo'>Botanical Name: {this.state.singlelisting.scientific_name}</p>
+                                <p className='listingInfo'>Botanical Name: {this.state.singlelisting.scientific_name}</p>n
                                 <p className='listingInfo'>Notes: {this.state.singlelisting.notes}</p>
                                 <p className='listingInfo'>Common Name: {this.state.singlelisting.common_name}</p>
                                 <p className='listingInfo'>${this.state.singlelisting.cost}</p> 
@@ -43,10 +44,10 @@ class SingleListing extends React.Component {
                                 <p className='listingInfo'>Plant Size: {this.state.singlelisting.type}</p> 
                                 <p className='listingInfo'>{this.state.singlelisting.users_id}</p> 
                         </div>
-                    {/* <div className='linkToCreateListing'>
-                        <h2 className='createListingHeader'>Buy This Plant ~ Contact Your Seller</h2>
-                        <Link to='/createListing'><button id='save'>Create Listing</button></Link> 
-                    </div>  */}
+                    <div className='linkToContactSeller'>
+                        <h2 className='contactSellerStyle'>Buy This Plant ~ Contact Your Seller</h2>
+                        <Link to='/emailForm'><button id='save'>Contact Seller</button></Link> 
+                    </div>  
                     </div>
                 </div>
             </div>
