@@ -2,8 +2,10 @@ const express = require('express')
 const router = express.Router()
 const dbFunction = require('../db/savedPlants')
 const { decode } = require('../auth/token')
+const verifyJwt = require('express-jwt')
 
-router.get('/', decode, (req, res) => {
+
+router.get('/', verifyJwt({ secret: process.env.JWT_SECRET }), (req, res) => {
     dbFunction.getAllSaved()
     .then((saved) => {
         res.json(saved)
