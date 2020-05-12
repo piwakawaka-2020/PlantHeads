@@ -1,15 +1,16 @@
 import React from 'react'
 import { createListing } from '../apis/listings'
 import { getPlant } from '../apis/plants'
+import { connect } from 'react-redux'
 
 class CreateListing extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       //rendered from the LogIn session
-      username: this.props.username,
-      usersId: this.props.usersId,
-      email: this.props.email,
+      // username: this.props.username,
+      // usersId: this.props.usersId,
+      // email: this.props.email,
       //can be rendered if accessed through PlantView Component
       plantsId: this.props.match.params.plantsId,
       scientificName: this.props.scientificName,
@@ -110,9 +111,9 @@ class CreateListing extends React.Component {
             <p className='pickupInfo'>Buyer Must Pickup</p>
             <br/>
             <p className ='usernameListing'>Sellers Details:</p>
-            {/* let's check once merge if we can see info from the login session then we can delete the hardcode */}
-            <p className='usernameListing'>Username: {this.state.username}</p>
-            <p className='userEmailListing'>Email: {this.state.email}</p>
+           <br/>
+            <p className='usernameListing'>Username: {this.props.username}</p>
+            <p className='userEmailListing'>Email: {this.props.email}</p>
           </div>
           <br/>
           <div className='submitListing'>
@@ -124,4 +125,10 @@ class CreateListing extends React.Component {
   }
 }
 
-export default CreateListing
+const mapStateToProps = (state) => {
+  return {
+    ...state.auth.user
+  }
+}
+
+export default connect(mapStateToProps) (CreateListing)

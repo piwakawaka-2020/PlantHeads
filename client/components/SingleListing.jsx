@@ -3,7 +3,7 @@ import { getListings } from '../apis/listings'
 import { getPlant } from '../apis/plants'
 import {Link} from 'react-router-dom'
 import { singleListing } from '../apis/singleListing'
-import EmailForm from '../components/EmailForm'
+import { connect } from 'react-redux'
 
 
 class SingleListing extends React.Component {
@@ -33,7 +33,7 @@ class SingleListing extends React.Component {
                         </div>
                         <div className='background-image'>
                         <div className='single-list-box'>
-                                {/* <img className='img-single-list' src="/images/placeholder.jpg" alt="photo of tree"/>   */}     
+                                <img className='img-single-list' src={this.state.singlelisting.photoFile} alt="photo of tree"/>       
                         </div> 
                         <div className='single-plant-listing'>
                                 <p className='listingInfo'>Botanical Name: {this.state.singlelisting.scientific_name}</p>n
@@ -46,7 +46,7 @@ class SingleListing extends React.Component {
                         </div>
                     <div className='linkToContactSeller'>
                         <h2 className='contactSellerStyle'>Buy This Plant ~ Contact Your Seller</h2>
-                        <Link to='/emailForm'><button id='save'>Contact Seller</button></Link> 
+                        <Link to='/emailForm'><button id='save'>Contact Seller </button></Link> 
                     </div>  
                     </div>
                 </div>
@@ -57,4 +57,10 @@ class SingleListing extends React.Component {
     }   
 }
 
-export default SingleListing
+const mapStateToProps = (state) => {
+    return {
+        ...state.auth.user
+    }
+}
+
+export default connect(mapStateToProps) (SingleListing)
