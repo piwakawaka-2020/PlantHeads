@@ -498,6 +498,11 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 }
 
 /*_________________________________________________________ Pat's CSS */
+.createListing {
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
 
 .postListingHeader {
     display: flex;
@@ -512,4 +517,72 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover {
 .createListingContainer {
     display: flex;
     justify-content: center;
+    flex-flow: wrap column;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: initial;
 }
+
+input[type=file] {
+    border: none;
+    padding: 10px 15px;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: initial;
+    text-decoration: none;
+    margin: 5px 4px;
+    cursor: pointer; 
+}
+
+.userInput{
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap column;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: initial;
+}
+
+input[type=text] {
+    width: 150px;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    box-sizing: border-box;
+    border: 2px solid rgb(35, 172, 35);
+    border-radius: 5px; 
+}
+
+.pickupInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.usernameListing {
+    display: flex;
+    justify-content: center;
+}
+
+.userEmailListing {
+    display: flex;
+    justify-content: center;
+}
+
+.submitListing {
+    display: flex;
+    justify-content: center;
+}
+
+input[type=submit] {
+    background-color:rgb(35, 172, 35);
+    border: none;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin: 5px 4px;
+    cursor: pointer;  
+}
+
+/*_________________________________________________________ Pat's CSS */
