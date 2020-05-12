@@ -1,5 +1,4 @@
 import React from 'react'
-import App from './App'
 import { getAllSavedPlants } from '../apis/savedPlants'
 import { Link } from 'react-router-dom'
 import {getUserTokenInfo} from '../utils/auth'
