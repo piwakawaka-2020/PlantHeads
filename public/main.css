@@ -573,7 +573,7 @@ input[type=file] {
     line-height: initial;
 }
 
-input[type=text] {
+.listingInput {
     width: 150px;
     padding: 10px 15px;
     margin: 10px 5px;
@@ -603,7 +603,7 @@ input[type=text] {
 }
 
 
-input[type=submit] {
+.listingSubmitInput {
     background-color:rgb(35, 172, 35);
     border: none;
     color: black;
