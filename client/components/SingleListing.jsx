@@ -24,24 +24,23 @@ class SingleListing extends React.Component {
         
         return (
             <>
-            <div className='single-list-container'>
-                <div className='single-list-border'>
-                
+            <div className='single-list-border'>
+                <div className='single-list-container'>
                         <div className='header-container'>
                             <h2 className='heading-single-listing'>House Plants For Sale</h2>
                         </div>
                         <div className='background-image'>
-                        <div className='single-list-box'>
-                                {/* <img className='img-single-list' src="/images/placeholder.jpg" alt="photo of tree"/>   */}     
-                        </div> 
+                        
+                        
+                        <img className='single-list-box' src={this.state.singlelisting.photoFile} alt="image of plant"/>
+                       
+                        
                         <div className='single-plant-listing'>
                                 <p className='listingInfo'>Botanical Name: {this.state.singlelisting.scientific_name}</p>
-                                <p className='listingInfo'>Notes: {this.state.singlelisting.notes}</p>
                                 <p className='listingInfo'>Common Name: {this.state.singlelisting.common_name}</p>
                                 <p className='listingInfo'>${this.state.singlelisting.cost}</p> 
                                 <p className='listingInfo'>Care Tips: {this.state.singlelisting.care_tips}</p> 
                                 <p className='listingInfo'>Plant Size: {this.state.singlelisting.type}</p> 
-                                <p className='listingInfo'>{this.state.singlelisting.users_id}</p> 
                         </div>
                     {/* <div className='linkToCreateListing'>
                         <h2 className='createListingHeader'>Buy This Plant ~ Contact Your Seller</h2>
