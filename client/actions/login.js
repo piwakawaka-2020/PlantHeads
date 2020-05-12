@@ -30,7 +30,7 @@ export function loginUser (user) {
       .then((token) => {
         const userInfo = saveUserToken(token)
         dispatch(receiveLogin(userInfo))
-        //add a redirect
+        document.location = '/#/'
       })
       .catch(err => {
         dispatch(loginError(err.response.body.message))

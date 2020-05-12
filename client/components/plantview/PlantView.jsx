@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { connect } from 'react-redux'
 
 import {getPlant} from '../../apis/plants'
 import {getListingsByPlant} from '../../apis/listings'
@@ -72,10 +72,10 @@ class PlantView extends React.Component {
                 </div>
                 <Seasons growthPeriod={plant.main_species.specifications.growth_period} />
                 <div id='bottomRight'>
-                    <div id='buttons'>
+                    {this.props.auth.isAuthenticated ? <div id='buttons'>
                         <button id='save' onClick={this.saveCurrentPlant}>Save to favourites</button>
                         <Link to='/createListing'><button id='save'>Create Listing</button></Link>
-                    </div>
+                    </div> : <></>}
                     <PlantViewListings listings={listings} />
                 </div>
                 
@@ -85,4 +85,10 @@ class PlantView extends React.Component {
     }
 }
 
-export default PlantView
+const mapStateToProps = (state) => {
+    return {
+      auth: state.auth
+    }
+}
+
+export default connect(mapStateToProps)(PlantView)

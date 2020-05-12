@@ -2,6 +2,7 @@ import React from 'react'
 import App from './App'
 import { getAllSavedPlants } from '../apis/savedPlants'
 import { Link } from 'react-router-dom'
+import {getUserTokenInfo} from '../utils/auth'
 
 
 class SavedPlants extends React.Component {
@@ -10,12 +11,14 @@ class SavedPlants extends React.Component {
     }
 
     componentDidMount(){
-        getAllSavedPlants()
-        .then(plant => {
+        if (getUserTokenInfo()) {
+            getAllSavedPlants(getUserTokenInfo().id)
+            .then(plant => {
             this.setState({
-                plant: plant
+                plant: plant ? plant : 'No saved plants yet!'
             })
         })
+        }
     }
     
 

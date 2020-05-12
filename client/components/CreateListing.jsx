@@ -81,34 +81,45 @@ class CreateListing extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div className='postListingHeader'>
-          <h1> To Give A Plant To Another Loving Family</h1>
-        </div>
-        <div>
-            <p className='postListInfo'>We invite our fellow #plantHeads sellers to list your plants with us. Rather than listing via commercially operated websites, sell your plants with PlantHeads and help grow our community</p>
+      <div className='createListing'>
+        <form onSubmit={this.handleSubmit}>
+          <div className='postListingHeader'>
+            <h1> To Give A Plant To Another Loving Family</h1>
+          </div>
+          <div>
+              <p className='postListInfo'>We invite our fellow #plantHeads sellers to list your plants with us. Rather than listing via commercially operated websites, sell your plants with PlantHeads and help grow our community</p>
+              <br/>
+              <p className='postListInfo'>MUST SHARE IT! MUST SELL IT.</p>
+          </div>
+          <br/>
+          <div className='createListingContainer'>
+            <p>Upload a Photo </p>
+            <input type="file" name="photoFile" onChange={this.handlePhoto}/>
+          </div>
+          <br/>
+          <div className='userInput'>
+            <p>Price:</p>
+            <input type="text" name="cost" onChange={this.handleChange}/>
+            <p>Type of Plant:</p>
+            <input type="text" name="type" onChange={this.handleChange}/>
+            <p> Share Your Care Tips:</p>
+            <input type="text" name="careTips" onChange={this.handleChange}/>
+          </div>
+          <br/>
+          <div>
+            <p className='pickupInfo'>Buyer Must Pickup</p>
             <br/>
-            <p className='postListInfo'>MUST SHARE IT! MUST SELL IT.</p>
-        </div>
-        <br/>
-        <div className='createListingContainer'>
-          <p>Upload Picture</p>
-          <input type="file" name="photoFile" onChange={this.handlePhoto}/>
-          <p>Price:</p>
-          <input type="text" name="cost" onChange={this.handleChange}/>
-          <p>Type:</p>
-          <input type="text" name="type" onChange={this.handleChange}/>
-          <p>Your care tips:</p>
-          <input type="text" name="careTips" onChange={this.handleChange}/>
-        </div>
-        <br/>
-        <div>
-          <p>Buyer Must Pickup</p>
-          <p>Username: {this.state.username}</p>
-          <p>Email: {this.state.email}</p>
-          <input type="submit" value="Submit" />
-        </div>
-      </form>
+            <p className ='usernameListing'>Sellers Details:</p>
+            {/* let's check once merge if we can see info from the login session then we can delete the hardcode */}
+            <p className='usernameListing'>Username: {this.state.username}</p>
+            <p className='userEmailListing'>Email: {this.state.email}</p>
+          </div>
+          <br/>
+          <div className='submitListing'>
+            <input type="submit" value="Submit" /> 
+          </div>      
+        </form>
+      </div>
     )
   }
 }

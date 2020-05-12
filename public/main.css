@@ -354,6 +354,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
   font-size: 1em;
   text-align: center;
   padding-right: 400px;
+  margin: 40px;
   border-radius: .5em;
   border-style: groove;
   animation-name: heading;
@@ -390,7 +391,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
   height: 200vh; 
   max-width: 100vw;  
   width: 100%;
-  background-image: url('/images/conserv2.jpg'); 
+  background-image: url('/images/conserv3.jpg'); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -413,6 +414,7 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
   width: 280px;
   height: 280px;
   perspective: 1000px; 
+  margin: 30px;
 }
 
 
@@ -469,8 +471,11 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
     border: solid;
     border-radius: 20px;
     padding: 10px;
-    
+}
 
+.plantcarelink:hover {
+    background-color: rgb(35, 172, 35);
+    color: white;
 }
 
 /*_________________________________________________________ ALICES CSS */
@@ -524,6 +529,11 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 
 
 /*_________________________________________________________ Pat's CSS */
+.createListing {
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
 
 .postListingHeader {
     display: flex;
@@ -538,7 +548,76 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 .createListingContainer {
     display: flex;
     justify-content: center;
+    flex-flow: wrap column;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: initial;
 }
+
+input[type=file] {
+    border: none;
+    padding: 10px 15px;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: initial;
+    text-decoration: none;
+    margin: 5px 4px;
+    cursor: pointer; 
+}
+
+.userInput{
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap column;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: initial;
+}
+
+input[type=text] {
+    width: 150px;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    box-sizing: border-box;
+    border: 2px solid rgb(35, 172, 35);
+    border-radius: 5px; 
+}
+
+.pickupInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.usernameListing {
+    display: flex;
+    justify-content: center;
+}
+
+.userEmailListing {
+    display: flex;
+    justify-content: center;
+}
+
+.submitListing {
+    display: flex;
+    justify-content: center;
+}
+
+
+input[type=submit] {
+    background-color:rgb(35, 172, 35);
+    border: none;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin: 5px 4px;
+    cursor: pointer;  
+}
+
+/*_________________________________________________________ Pat's CSS */
 
 /* Login and Register CSS */
 
@@ -558,3 +637,4 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
     margin: 5px;
 
 }
+

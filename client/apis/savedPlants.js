@@ -7,8 +7,8 @@ export function savePlant(plant) {
         .then(res => res.body)
 }
 
-export function getAllSavedPlants() {
-    return request.get(`/api/savedPlants/`)
+export function getAllSavedPlants(userId) {
+    return request.get(`/api/savedPlants/${userId}`)
         .then(res => res.body)
 } 
 

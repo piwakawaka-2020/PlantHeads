@@ -32,7 +32,8 @@ class SingleListing extends React.Component {
                     <img className='listingPic' src="/images/placeholder.jpg" alt="photo of tree"/>
                     <p className='listingInfo'>Botanical Name: {this.state.singlelisting.scientific_name}</p>
                     <p className='listingInfo'>Common Name: {this.state.singlelisting.notes}</p>
-                    <p className='listingInfo'>${this.state.singlelisting.cost}</p>  
+                    <p className='listingInfo'>${this.state.singlelisting.cost}</p> 
+                    <p className='listingInfo'>${this.state.singlelisting.user_id}</p> 
                 </div> 
             </div> 
             <div className='linkToCreateListing'>
