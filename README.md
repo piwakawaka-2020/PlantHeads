@@ -13,7 +13,7 @@ As a user:
 - [x] I log in and register my own plants to my account
 - [x] We can add a listing to the plant page and it saves it to a database
 - [ ] We can accept a listing and the app will notify the seller
-- [ ] Unregistered users can see the plant database but cant save plants
+- [x] Unregistered users can see the plant database but cant save plants
 
 ### Stretch
 - [ ] Plant identification by picture
