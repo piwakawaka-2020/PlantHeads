@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken')
 const {getUserByUsername} = require('../db/users')
 const {comparePasswordToHash} = require('./hash')
+const verifyJwt = require('express-jwt')
+
 
 module.exports = {
   issue,
