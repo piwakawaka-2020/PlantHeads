@@ -5,7 +5,7 @@ import {getPlant} from '../../apis/plants'
 import {getListingsByPlant} from '../../apis/listings'
 import {savePlant} from '../../apis/savedPlants'
 import {Link} from 'react-router-dom'
-import { getUserTokenInfo } from '../utils/auth'
+import { getUserTokenInfo } from '../../utils/auth'
 
 import PhMeter from './PhMeter'
 import Temperature from './Temperature'
