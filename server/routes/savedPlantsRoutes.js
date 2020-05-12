@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 const dbFunction = require('../db/savedPlants')
 
-router.get('/', (req, res) => {
-    dbFunction.getAllSaved()
+router.get('/:userId', (req, res) => {
+    dbFunction.getAllSaved(req.params.userId)
     .then((saved) => {
         res.json(saved)
     })
