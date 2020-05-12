@@ -12,7 +12,7 @@ router.get('/:userId', decode ,(req, res) => {
     })
 })
 
-router.post('/', (req, res) => {
+router.post('/', decode, (req, res) => {
     dbFunction.addSavedPlant(req.body)
     .then(id => {
         console.log(res.body, 'saved as', id)
@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
     })
 })
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', decode, (req, res) => {
     dbFunction.deleteSavedPlant(req.params.id)
     .then(() => {
         res.status(200).json({delete: req.params.id})
