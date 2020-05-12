@@ -9,6 +9,7 @@ import Nav from './Nav'
 import CreateListing from './CreateListing'
 import SavedPlants from './SavedPlants'
 import ListingView from './ListingView'
+import EmailForm from './EmailForm'
 
 import { HashRouter as Router, Route } from 'react-router-dom'
 
@@ -35,6 +36,7 @@ const App = () => {
         {/* this CreateListing route accessed through the ListingView */}
         <Route exact path="/createListing" render={(props) => <CreateListing {...props} {...tempUser} />} />
         <Route exact path="/listings" component={ListingView} />
+        <Route exact path="/emailForm" component={EmailForm} />
       </Router>
       </>
   )
