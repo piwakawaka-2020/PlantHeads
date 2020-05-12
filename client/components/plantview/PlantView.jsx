@@ -5,6 +5,7 @@ import {getPlant} from '../../apis/plants'
 import {getListingsByPlant} from '../../apis/listings'
 import {savePlant} from '../../apis/savedPlants'
 import {Link} from 'react-router-dom'
+import { getUserTokenInfo } from '../../utils/auth'
 
 import PhMeter from './PhMeter'
 import Temperature from './Temperature'
@@ -38,11 +39,11 @@ class PlantView extends React.Component {
     saveCurrentPlant = () => {
         const plant = this.state.plant
         savePlant({
-            users_id: 1, // placeholder
+            users_id: getUserTokenInfo().id,
             scientific_name: plant.scientific_name,
             plants_id: plant.id,
             photoURL: plant.images.length > 0 ? plant.images[0].url : 'images/placeholder.jpg',
-            common_name: plant.common_name
+            common_name: plant.common_name ? plant.common_name : 'No common name'
         })
     }
 

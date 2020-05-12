@@ -37,8 +37,8 @@ class SavedPlants extends React.Component {
                                 <>
                                 
                             <div className="flip-card">
-                                <div>
-                                    <Link className='plantcarelink' to={`/plant/${plant.plants_id}`}>Details & Care</Link>
+                                <div className='plantcarelink'>
+                                    <Link to={`/plant/${plant.plants_id}`}>More Details & Care</Link>
                                 </div>
                             <div className="flip-card-inner">
                             <div className="flip-card-front">

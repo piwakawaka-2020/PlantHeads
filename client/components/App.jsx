@@ -9,6 +9,8 @@ import Nav from './Nav'
 import CreateListing from './CreateListing'
 import SavedPlants from './SavedPlants'
 import ListingView from './ListingView'
+import SingleListing from './SingleListing'
+
 import EmailForm from './EmailForm'
 import { connect } from 'react-redux'
 import { HashRouter as Router, Route } from 'react-router-dom'
@@ -39,6 +41,7 @@ class App extends React.Component{
         {/* this CreateListing route accessed through the ListingView */}
         <Route exact path="/createListing" render={(props) => <CreateListing {...props} {...tempUser} />} />
         <Route exact path="/listings" component={ListingView} />
+        <Route exact path="/listings/:listingId" render={(props) => <SingleListing {...props} {...tempUser} />} />
         <Route exact path="/emailForm" component={EmailForm} />
       </Router>
       </>

@@ -5,9 +5,8 @@ const { decode } = require('../auth/token')
 const verifyJwt = require('express-jwt')
 
 
-router.get('/', decode , (req, res) => {
-    console.log(req.user)
-    dbFunction.getAllSaved()
+router.get('/:userId', decode ,(req, res) => {
+    dbFunction.getAllSaved(req.params.userId)
     .then((saved) => {
         res.json(saved)
     })

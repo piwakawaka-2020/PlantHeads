@@ -1,4 +1,5 @@
 import React from 'react'
+import SingleListing from '../components/SingleListing'
 
 
 //needs to be linked from the SingleComponent to send an email to the seller from the buyer

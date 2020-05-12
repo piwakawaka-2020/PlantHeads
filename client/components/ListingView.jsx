@@ -1,6 +1,7 @@
 import React from 'react'
 import { getListings } from '../apis/listings'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 class ListingView extends React.Component {
     state = {
@@ -25,21 +26,32 @@ class ListingView extends React.Component {
             </div>
             <div className='listingViewContainer'>
             {listings.map(listing => 
-                <div className='singleListingView'>
+                <Link to={`/listings/${listing.id}`}><div className='singleListingView'>
                     <img className='listingPic' src={listing.photoFile} alt="photo of tree"/>
                     <p className='listingInfo'>Botanical Name: {listing.scientific_name}</p>
                     <p className='listingInfo'>Common Name: {listing.common_name}</p>
                     <p className='listingInfo'>Price: ${listing.cost}</p>  
-                </div>)}
+                </div></Link>)}
             </div>
+            
             <div className='linkToCreateListing'>
+                {this.props.auth.isAuthenticated ? (
+                <>
                 <h2 className='createListingHeader'>To Give A Plant To Another Loving Family</h2>
                 <Link to='/createListing'><button id='save'>Create Listing</button></Link>
+                </>
+                ) : 'Log in to create a listing'}
             </div>
-            </>
-            
+
+          </>  
         )
     }   
 }
 
-export default ListingView
+const mapStateToProps = (state) => {
+    return {
+      auth: state.auth
+    }
+  }
+
+export default connect(mapStateToProps)(ListingView)
