@@ -4,8 +4,9 @@ const env = process.env.NODE_ENV || 'development'
 const connection = knex(config[env])
 
 //functions getAllSaved
-function getAllSaved(db = connection) {
+function getAllSaved(id, db = connection) {
     return db('saved_plant')
+    .where('users_id', id)
     .select()
 }
 

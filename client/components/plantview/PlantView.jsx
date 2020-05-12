@@ -1,8 +1,10 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import {getPlant} from '../../apis/plants'
 import {getListingsByPlant} from '../../apis/listings'
 import {savePlant} from '../../apis/savedPlants'
+import {Link} from 'react-router-dom'
 
 import PhMeter from './PhMeter'
 import Temperature from './Temperature'
@@ -39,7 +41,7 @@ class PlantView extends React.Component {
             users_id: 1, // placeholder
             scientific_name: plant.scientific_name,
             plants_id: plant.id,
-            photoURL: plant.images[0].url,
+            photoURL: plant.images.length > 0 ? plant.images[0].url : 'images/placeholder.jpg',
             common_name: plant.common_name
         })
     }
@@ -68,12 +70,12 @@ class PlantView extends React.Component {
                     <DroughtTolerance drought={plant.main_species.growth.drought_tolerance} />
                     <Lifespan lifespan={plant.main_species.specifications.lifespan} />
                 </div>
-                <Seasons />
+                <Seasons growthPeriod={plant.main_species.specifications.growth_period} />
                 <div id='bottomRight'>
-                    <div id='buttons'>
+                    {this.props.auth.isAuthenticated ? <div id='buttons'>
                         <button id='save' onClick={this.saveCurrentPlant}>Save to favourites</button>
-                        <button id='save'>Create Listing</button>
-                    </div>
+                        <Link to='/createListing'><button id='save'>Create Listing</button></Link>
+                    </div> : <></>}
                     <PlantViewListings listings={listings} />
                 </div>
                 
@@ -83,4 +85,10 @@ class PlantView extends React.Component {
     }
 }
 
-export default PlantView
+const mapStateToProps = (state) => {
+    return {
+      auth: state.auth
+    }
+}
+
+export default connect(mapStateToProps)(PlantView)

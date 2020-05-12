@@ -49,33 +49,28 @@ class Register extends React.Component {
     render() {
         return (
             <>
-                <form onSubmit={this.handleSubmit}>
+                <form id='registerForm' onSubmit={this.handleSubmit}>
                     <label>
                         <h2>Register</h2>
-                    Your name:
                     <br/>
-                    <input type="text" name="first_name" onChange={this.handleChange}/>
-                    <input type="text" name="last_name" onChange={this.handleChange}/>
+                    <input placeholder='First Name' type="text" name="first_name" onChange={this.handleChange}/>
+                    <input placeholder='Last Name' type="text" name="last_name" onChange={this.handleChange}/>
                     <br/>
-                    Username:
                     <br />
-                        <input type="text" name="username" onChange={this.handleChange} />
+                        <input placeholder='Username' type="text" name="username" onChange={this.handleChange} />
                         <br />
-                    Email address:
                     <br />
-                        <input type="email" name='email' onChange={this.handleChange} />
+                        <input placeholder='Email' type="email" name='email' onChange={this.handleChange} />
                         <br />
-                    Password:
                     <br />
-                        <input type="password" name="password" onChange={this.handleChange} />
+                        <input placeholder='Password' type="password" name="password" onChange={this.handleChange} />
                         <br />
-                    Confirm Password:
                     <br />
-                        <input type="password" name="confirmedPassword" onChange={this.handleChange} />
+                        <input placeholder='Confirm Password' type="password" name="confirmedPassword" onChange={this.handleChange} />
 
                     </label>
                     <br />
-                    <input type="submit" value='Register' />
+                    <input className='greenHover' type="submit" value='Register' />
                 </form>
             </>
         )
