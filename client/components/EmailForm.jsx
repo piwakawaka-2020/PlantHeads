@@ -31,30 +31,32 @@ class EmailForm extends React.Component {
     render() {
         return(
         <div className='email-boarder'>
-            <div className='gif-plant-spin'>
-            <iframe  src="https://giphy.com/embed/3oz8xFRCuL0yhR8y4g" width="449" height="500" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
-            </div>
-            <div className='contact-seller'>
-                <form onSubmit={this.handleSubmit}>
-                    <div className='contact-seller-header'>
-                        <h2>Contact Seller:</h2>
-                    </div>
-                    <div>
-                        <p>
-                        Name:<br/>
-                        <input type="text" name="name" onChange={this.handleChange} />
-                        <br/>
-                        E-mail:<br/>
-                        <input type="text" name="email" onChange={this.handleChange} />
-                        <br/>
-                        Message:<br/>
-                        <textarea name="message" rows="10" cols="30" onChange={this.handleChange} />
-                        <br/><br/>
-                        <input type="submit" value="Send" />
-                        <input type="reset" value="Reset" />
-                        </p>
-                    </div>
-                </form>
+            <div className='email-container'>
+                <div className='gif-plant-spin'>
+                    <iframe  src="https://giphy.com/embed/3oz8xFRCuL0yhR8y4g" width="449" height="500" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+                </div>
+                <div className='contact-seller'>
+                    <form onSubmit={this.handleSubmit}>
+                        <div className='contact-seller-header'>
+                            <h2>Contact Seller:</h2>
+                        </div>
+                        <div>
+                            <p>
+                            Name:<br/>
+                            <input type="text" name="name" onChange={this.handleChange} />
+                            <br/>
+                            E-mail:<br/>
+                            <input type="text" name="email" onChange={this.handleChange} />
+                            <br/>
+                            Message:<br/>
+                            <textarea name="message" rows="10" cols="30" onChange={this.handleChange} />
+                            <br/><br/>
+                            <input type="submit" value="Send" className='createListingSubmit'/>
+                            <input type="reset" value="Reset" className='createListingSubmit'/>
+                            </p>
+                        </div>
+                    </form>
+                </div>
             </div>
          </div>
         )

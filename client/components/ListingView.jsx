@@ -31,7 +31,7 @@ class ListingView extends React.Component {
                         <h2 className='createListingHeader'>To Give A Plant To Another Loving Family</h2>
                         <Link to='/createListing'><button id='save'>Create Listing</button></Link>
                         </>
-                        ) : 'Log in to create a listing'}
+                        ) : <h2 className='notLoggedMessage'>Log in to create a listing</h2>}
                         <h2 className='listingViewTitle'>Adopt A New Best Friend <img className='hiddenOddish' src="/images/oddishtrans.png" /></h2>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ class ListingView extends React.Component {
                     <h2 className='createListingHeader'>To Give A Plant To Another Loving Family</h2>
                     <Link to='/createListing'><button id='save'>Create Listing</button></Link>
                     </>
-                    ) : 'Log in to create a listing'}
+                    ) : <h2 className='notLoggedMessage'>Log in to create a listing</h2>}
                 </div>
             </div>
             </div>
