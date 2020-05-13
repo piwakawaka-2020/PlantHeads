@@ -108,7 +108,7 @@ As a user:
 ### Listing
   | Column Name | Data Type |
   | --- | --- |
-  | id | Integer |
+  | id | Increments |
   | plants_id | Integer |
   | users_id | Integer |
   | scientific_name | String |
