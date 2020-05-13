@@ -235,11 +235,8 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 
 .heading {
     font-size: 100px;
-    background-color: white;
-    border: 2px black solid;
     border-radius: 10px;
-    /* width: 50%; */
-    height: 120px;
+    height: 140px;
     margin: 40px auto;
     padding: 10px;
 }
