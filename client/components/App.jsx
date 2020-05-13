@@ -19,11 +19,11 @@ import Page404 from './Page404'
 class App extends React.Component{
   render(){
   //This should be fetched from the login session, currently having an error with login/register API
-  const tempUser = {
-    username:'bossManThomas',
-    usersId:3,
-    email:'thomas@bossMan.co.nz'
-  }
+  // const tempUser = {
+  //   username:'bossManThomas',
+  //   usersId:3,
+  //   email:'thomas@bossMan.co.nz'
+  // }
 
   return (
     <>
@@ -37,11 +37,14 @@ class App extends React.Component{
         <Route exact path="/savedPlants" component={SavedPlants} />
         : <Route exact path="/savedPlants" component={Page404} /> }
         {/* this route for CreateListing is accessed through PlantView */}
-        <Route exact path="/createListing/:plantsId" render={(props) => <CreateListing {...props} {...tempUser} />} />
+        <Route exact path="/createListing/:plantsId" component={CreateListing} />
+        {/* render={(props) => <CreateListing {...props} {...tempUser} />} */}
         {/* this CreateListing route accessed through the ListingView */}
-        <Route exact path="/createListing" render={(props) => <CreateListing {...props} {...tempUser} />} />
+        <Route exact path="/createListing" component={CreateListing} />
+        {/* render={(props) => <CreateListing {...props} {...tempUser} />} */}
         <Route exact path="/listings" component={ListingView} />
-        <Route exact path="/listings/:listingId" render={(props) => <SingleListing {...props} {...tempUser} />} />
+        <Route exact path="/listings/:listingId" component={SingleListing} />
+        {/* render={(props) => <SingleListing {...props} {...tempUser} />} /> */}
         <Route exact path="/emailForm" component={EmailForm} />
       </Router>
       </>

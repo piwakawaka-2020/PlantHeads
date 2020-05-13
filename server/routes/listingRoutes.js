@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const { decode } = require('../auth/token')
 
 const dbFunction = require('../db/listing')
 
@@ -13,7 +14,7 @@ router.get('/', (req,res) => {
 })
 
 //POST Routes for adding a plant to list
-router.post('/', (req,res) => {
+router.post('/', decode, (req,res) => {
     let plant  = {
         plantsId: req.body.plantsId,
         usersId: req.body.usersId,
@@ -37,7 +38,7 @@ router.post('/', (req,res) => {
 })
 
 //DELETE Routes for deleting a plant on the list
-router.delete('/:id', (req,res) => {
+router.delete('/:id', decode, (req,res) => {
     let id = req.params.id
     dbFunction.deleteListing(id)
         .then(() => {
@@ -46,7 +47,7 @@ router.delete('/:id', (req,res) => {
 })
 
 //PUT Routes to update a listing
-router.put('/:id', (req,res) => {
+router.put('/:id', decode, (req,res) => {
     dbFunction.updateListing(req.params.id, req.body)
         .then((listing) => {
             res.status(201).send(listing)

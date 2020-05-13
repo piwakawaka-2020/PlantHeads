@@ -1,8 +1,6 @@
 import React from 'react'
-import SingleListing from '../components/SingleListing'
+import { connect } from 'react-redux'
 
-
-//needs to be linked from the SingleComponent to send an email to the seller from the buyer
 class EmailForm extends React.Component {
     handleChange = e => {
         console.log(e.target.value)
@@ -35,8 +33,13 @@ class EmailForm extends React.Component {
                         E-mail:<br/>
                         <input type="text" name="mail" onChange={this.handleChange} />
                         <br/>
+
                         Comment:<br/>
                         <textarea type="text" name="message" rows="10" cols="30" onChange={this.handleChange} />
+
+                        Message:<br/>
+                        <textarea name="message" rows="10" cols="30" onChange={this.handleChange} />
+
                         <br/><br/>
                         <input type="submit" value="Send" />
                         <input type="reset" value="Reset" />
@@ -49,5 +52,10 @@ class EmailForm extends React.Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        ...state.auth.user
+    }
+}
 
-export default EmailForm
+export default connect(mapStateToProps) (EmailForm)
