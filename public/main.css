@@ -194,11 +194,15 @@ ul {
     font-weight: bold;
     font-size: 40px;
     margin: 4px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding: 4px;
     border: 2px black solid;
     border-radius: 5px;
     background-color: white;
+    display: flex;
+}
+
+#navHeading img {
+    height: 40px;
 }
 
 #icon {
@@ -229,13 +233,15 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
     /* margin: 10px 0; */
 }
 
-#heading {
+.heading {
     font-size: 100px;
     background-color: white;
     border: 2px black solid;
     border-radius: 10px;
-    width: 50%;
+    /* width: 50%; */
+    height: 120px;
     margin: 40px auto;
+    padding: 10px;
 }
 
 #search, #searchSubmit {
