@@ -219,7 +219,7 @@ li {
 }
 
 
-li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .greenHover:hover, .singleListingView:hover {
+li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .greenHover:hover, .singleListingView:hover, .createListingSubmit:hover {
     background-color: rgb(35, 172, 35);
     color: white;
     cursor: pointer;
@@ -602,13 +602,13 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 .email-boarder {
     display: flex;
     justify-content: center;
-    border: solid darkgreen;
+    border: solid black;
 }
 
 .page-boarder {
     /* display: flex;
     justify-content: center; */
-    border: solid darkgreen;
+    border: solid black;
 }
 
 .gif-plant-spin {
@@ -696,11 +696,12 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 .linkToCreateListing {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .createListingHeader {
     padding-top: 9px;
+    margin-top: 20px
 }
 
 .listingViewBackground {
@@ -712,9 +713,15 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
     background-image: url(https://www.transparenttextures.com/patterns/black-thread-light.png);
 }
 
+.listingViewTitle {
+    padding-top: 9px;
+    margin-left: 100px;
+    margin-top: 20px
+}
+
 /*_________________________________________________________ Pat's CSS */
 .createListing {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin-top: 20px;
 }
 
@@ -754,7 +761,7 @@ input[type=file] {
 .userInput{
     display: flex;
     justify-content: center;
-    flex-flow: wrap column;
+    flex-flow: wrap row;
     align-items: center;
     text-align: center;
     vertical-align: middle;
@@ -788,18 +795,63 @@ input[type=file] {
 .submitListing {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
+.createListingInput {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 20px;
+    border: 2px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 100px;
+    margin: 5px;
+}
 
-.listingSubmitInput {
-    background-color:rgb(35, 172, 35);
+.createListingSubmit {
+    background-color:whitesmoke;
     border: none;
     color: black;
     padding: 10px 15px;
     text-decoration: none;
     margin: 5px 4px;
     cursor: pointer;  
+    border-radius: 5px;
+    border: 2px black solid;
 }
+
+.mainCreateListingContainer {
+    margin: 20px;
+    border-radius: 20px;
+    border: solid whitesmoke;
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+.createListingInput {
+    display: flex;
+}
+
+.abitOfpadding {
+    padding-top: 10px;
+}
+
+.abitMorepadding {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.careTipsInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.careTipsInput textarea {
+    width: 50%;
+    margin: 0px auto;
+}
+
 
 /*_________________________________________________________ Pat's CSS */
 

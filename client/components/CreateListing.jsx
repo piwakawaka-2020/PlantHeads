@@ -82,7 +82,8 @@ class CreateListing extends React.Component {
 
   render() {
     return (
-      <div className='createListing'>
+      <div className='page-boarder'>
+        <div className='mainCreateListingContainer'>
         <form onSubmit={this.handleSubmit}>
           <div className='postListingHeader'>
             <h1> To Give A Plant To Another Loving Family</h1>
@@ -91,36 +92,61 @@ class CreateListing extends React.Component {
               <p className='postListInfo'>We invite our fellow #plantHeads sellers to list your plants with us. Rather than listing via commercially operated websites, sell your plants with PlantHeads and help grow our community</p>
               <br/>
               <p className='postListInfo'>MUST SHARE IT! MUST SELL IT.</p>
+              <br/>
+              <p className='pickupInfo'>Please Read! Buyer Must Pickup</p>
           </div>
           <br/>
           <div className='createListingContainer'>
-            <p>Upload a Photo </p>
-            <input type="file" name="photoFile" onChange={this.handlePhoto}/>
+            <p>Upload a Photo Below</p>
+            <input type="file" name="photoFile" className='createListingSubmit' onChange={this.handlePhoto}/>
           </div>
           <br/>
+
+
           <div className='userInput'>
-            <p>Price:</p>
-            <input type="text" name="cost" onChange={this.handleChange}/>
-            <p>Type of Plant:</p>
-            <input type="text" name="type" onChange={this.handleChange}/>
-            <p> Share Your Care Tips:</p>
-            <input type="text" name="careTips" onChange={this.handleChange}/>
+
+            <div className='createListingInputStructure'>
+              <p className='abitOfpadding'>Botanical Name:</p>
+              <input type="text" name="scientificName" className='createListingInput' onChange={this.handleChange}/>
+              <p className='abitOfpadding'>Common Name:</p>
+              <input type="text" name="commonName" className='createListingInput' onChange={this.handleChange}/>
+            </div>
+
+            <div className='createListingInputStructure'>
+              <p className='abitOfpadding'>Type of Plant:</p>
+              <input type="text" name="type" className='createListingInput' onChange={this.handleChange}/>
+              <p className='abitOfpadding'>Price:</p>
+              <input type="text" name="cost" className='createListingInput' onChange={this.handleChange}/>
+            </div>
           </div>
+
+          <div className='careTipsInput'>
+            <p className='abitMorepadding'> Share Your Care Tips:</p>
+            {/* <input type="text" name="careTips"  onChange={this.handleChange}/> */}
+            <textarea name="careTips" className='createListingInput' rows="10" cols="30" onChange={this.handleChange} />
+          </div>
+          
+
           <br/>
           <div>
-            <p className='pickupInfo'>Buyer Must Pickup</p>
-            <br/>
-            <p className ='usernameListing'>Sellers Details:</p>
+            
+            
+            {/* <p className ='usernameListing'>Sellers Details:</p>
            <br/>
             <p className='usernameListing'>Username: {this.props.username}</p>
-            <p className='userEmailListing'>Email: {this.props.email}</p>
+            <p className='userEmailListing'>Email: {this.props.email}</p> */}
           </div>
           <br/>
           <div className='submitListing'>
-            <input type="submit" value="Submit" /> 
+            <input type="submit" value="Submit" className='createListingSubmit' /> 
           </div>      
         </form>
+        </div>
+        {/* <div className='createListing'> */}
+        
+        {/* </div> */}
       </div>
+      
     )
   }
 }

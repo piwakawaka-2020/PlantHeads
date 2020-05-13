@@ -22,9 +22,18 @@ class ListingView extends React.Component {
         return (
             <>
             <div  className='page-boarder'>
-            <div className='mainListingViewContainer'>
-                <div className='listingViewHeader'>
-                    <h2>Adopt A New Best Friend</h2>
+                <div className='mainListingViewContainer'>
+                    <div className='listingViewHeader'>
+                        
+                        <div className='linkToCreateListing'>
+                        {this.props.auth.isAuthenticated ? (
+                        <>
+                        <h2 className='createListingHeader'>To Give A Plant To Another Loving Family</h2>
+                        <Link to='/createListing'><button id='save'>Create Listing</button></Link>
+                        </>
+                        ) : 'Log in to create a listing'}
+                        <h2 className='listingViewTitle'>Adopt A New Best Friend</h2>
+                    </div>
                 </div>
                 <div className='listingViewContainer'>
                 {listings.map(listing => 
