@@ -38,7 +38,8 @@ class HomePage extends React.Component {
         return (
             <>
             <div id='intro'>
-                <h1 id='heading'>PlantHeads</h1>
+                {/* <h1 id='heading'>PlantHeads</h1> */}
+                <img className='heading' src="images/logo.png" alt="logo"/>
                 <h2>For people who have a plant for a head</h2>
                 <form onSubmit={this.handleSubmit}>
                 <input onChange={this.handleChange} value={this.state.search} placeholder='Search for a plant!' name='search' id='search' />
