@@ -18,10 +18,9 @@ Full Stack Application
 Users can research Botanical knowledge of plants by searching by their name. The User can learn about essential needs that sustain the plants full health. They can register as a PlantHead and log in to sell plants to other PlantHeads. Provided is all the options to enter their plant details in and upload a picture of their sale item. The User can add their contact details and be sent emails by the buyer regarding point of sale. Users can save their favourite plants they have found by browsing.
 
 ## Full Stack Technologies Utilised
-    React
+    JS React
     Express.js
     Knex.js
-    React DnD
     Trefle Api 
     
 
@@ -70,6 +69,9 @@ As a user:
 
  | type | data | purpose |
  | --- | --- | --- |
+ | login | request login / recieve login / login error / login user | 
+ | logout | request logout / recieve logout / logout user |
+ | register | register user - not used |
 
 
 
@@ -155,4 +157,4 @@ To run in production:
 npm start
 ```
 
-EDA DEV TEAM PLANTHEAD BUILD DEPLOYED COMPLETE FULL STACK 12pm 13th May 2020
+EDA DEV TEAM PLANTHEAD BUILD ~ DEPLOYED COMPLETE FULL STACK @12pm/13th/May/2020
