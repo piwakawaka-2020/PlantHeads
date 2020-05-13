@@ -4,6 +4,7 @@ const allPlants = require('./routes/plantsRoutes')
 const allListing = require('./routes/listingRoutes')
 const allSaved = require('./routes/savedPlantsRoutes')
 const sgMailer = require('./routes/sgEmailer')
+const users  = require('./routes/users')
 
 const server = express()
 
@@ -19,5 +20,6 @@ server.use('/api/plants', allPlants)
 server.use('/api/listings', allListing)
 server.use('/api/savedPlants', allSaved)
 server.use('/api/sgEmailer', sgMailer)
+server.use('/api/users', users)
 
 module.exports = server
