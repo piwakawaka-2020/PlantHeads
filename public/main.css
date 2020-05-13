@@ -854,3 +854,25 @@ input[type=file] {
     width: 500px;
     height:500px;
 }
+
+.hiddenOddish {
+    width: 40px;
+}
+
+.hiddenOddishBig {
+    width: 80px;
+}
+
+.checkbox {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 5px;
+    background-color: white;
+    border: 2px black solid;
+}
+
+.checkboxLabel {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
