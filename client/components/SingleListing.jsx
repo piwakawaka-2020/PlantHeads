@@ -25,6 +25,7 @@ class SingleListing extends React.Component {
         
         return (
             <>
+            <div className='page-boarder'>
             <div className='single-list-container'>
                     <div className='single-list-border'>
                         <div className='header-container'>
@@ -54,6 +55,8 @@ class SingleListing extends React.Component {
                 </div>
                 
             </div>
+            </div>
+            
             </>
             
         )

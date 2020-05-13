@@ -16,7 +16,7 @@ class EmailForm extends React.Component {
 
     render() {
         return(
-        <div className='email-page'>
+        <div className='email-boarder'>
             <div className='gif-plant-spin'>
             <iframe  src="https://giphy.com/embed/3oz8xFRCuL0yhR8y4g" width="449" height="500" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
             </div>
