@@ -1,6 +1,6 @@
 import request from 'superagent'
 import { isAuthenticated, removeUser } from '../utils/auth'
-import { get } from '../utils/localstorage'
+import { get } from '../utils/localStorage'
 
 
 export function savePlant(plant) {
