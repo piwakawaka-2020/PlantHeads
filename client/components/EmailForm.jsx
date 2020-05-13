@@ -47,13 +47,8 @@ class EmailForm extends React.Component {
                         E-mail:<br/>
                         <input type="text" name="email" onChange={this.handleChange} />
                         <br/>
-
-                        Comment:<br/>
-                        <textarea type="text" name="message" rows="10" cols="30" onChange={this.handleChange} />
-
                         Message:<br/>
                         <textarea name="message" rows="10" cols="30" onChange={this.handleChange} />
-
                         <br/><br/>
                         <input type="submit" value="Send" />
                         <input type="reset" value="Reset" />
