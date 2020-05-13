@@ -18,9 +18,13 @@ class EmailForm extends React.Component {
 
     render() {
         return(
-            <div className='contactSeller'>
+        <div className='email-page'>
+            <div className='gif-plant-spin'>
+            <iframe  src="https://giphy.com/embed/3oz8xFRCuL0yhR8y4g" width="449" height="500" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+            </div>
+            <div className='contact-seller'>
                 <form onSubmit={this.handleSubmit}>
-                    <div className='contactSellerHeader'>
+                    <div className='contact-seller-header'>
                         <h2>Contact Seller:</h2>
                     </div>
                     <div>
@@ -32,7 +36,7 @@ class EmailForm extends React.Component {
                         <input type="text" name="mail" onChange={this.handleChange} />
                         <br/>
                         Comment:<br/>
-                        <textarea name="message" rows="10" cols="30" onChange={this.handleChange} />
+                        <textarea type="text" name="message" rows="10" cols="30" onChange={this.handleChange} />
                         <br/><br/>
                         <input type="submit" value="Send" />
                         <input type="reset" value="Reset" />
@@ -40,6 +44,7 @@ class EmailForm extends React.Component {
                     </div>
                 </form>
             </div>
+         </div>
         )
     }
 }
