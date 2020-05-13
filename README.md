@@ -1,12 +1,32 @@
+Enspiral Developers Academy EDA
+Wellington 2020 Lockdown Final Project
+Full Stack Application
+
+## EDA Dev Team 
+  | Name | Role | Technical Work |
+  | --- | --- | --- |
+  | Thomas Codling | Product Owner/Front End Lead| ClientSide CSS | 
+  | Josh Wood | Back End/Git Master/Product Manager| Serverside API/Clientside CSS |
+  | Patricia Gonzales | Back End Lead/Heroku Deployment | Serverside API |
+  | Kevin Guan | Auth/Video Production | Clientside & Serverside |
+  | Alice Jowsey | Front End/Vibes Fun Master | Clientside CSS |
+  
+
+
 # PlantHeads
 
+Users can research Botanical knowledge of plants by searching by their name. The User can learn about essential needs that sustain the plants full health. They can register as a PlantHead and log in to sell plants to other PlantHeads. Provided is all the options to enter their plant details in and upload a picture of their sale item. The User can add their contact details and be sent emails by the buyer regarding point of sale. Users can save their favourite plants they have found by browsing.
 
-app description
+## Full Stack Technologies Utilised
+    React
+    Express.js
+    Knex.js
+    React DnD
+    Trefle Api 
+    
 
 ## User Stories
-
 ### MVP
-
 As a user:
 - [x] I want to search a plant and see a page with a variety of details about it
 - [x] I want to register an account with my name
@@ -16,14 +36,17 @@ As a user:
 - [x] Unregistered users can see the plant database but cant save plants
 
 ### Stretch
-- [ ] Plant identification by picture
 - [x] Uploading your own picture when making a listing
 - [x] Seperate buy/sell section for listings
 - [ ] More search filters
+- [ ] Plant identification by picture
 
   ---
 
-## Views (Client Side)
+
+## Technical Scope Full Stack Requirements
+
+## Views (Client Side)   
   | name | purpose |
   | --- | --- |
   | Login | View for user to enter their login credentials |
@@ -132,3 +155,4 @@ To run in production:
 npm start
 ```
 
+EDA DEV TEAM PLANTHEAD BUILD DEPLOYED COMPLETE FULL STACK 12pm 13th May 2020
