@@ -20,7 +20,8 @@ import Height from './Height'
 class PlantView extends React.Component {
     state = {
         plant: {},
-        listings: {}
+        listings: {},
+        saved: 'Save to favourites'
     }
 
     componentDidMount() {
@@ -44,6 +45,9 @@ class PlantView extends React.Component {
             plants_id: plant.id,
             photoURL: plant.images.length > 0 ? plant.images[0].url : 'images/placeholder.jpg',
             common_name: plant.common_name ? plant.common_name : 'No common name'
+        })
+        this.setState({
+            saved: 'Saved'
         })
     }
 
@@ -74,7 +78,7 @@ class PlantView extends React.Component {
                 <Seasons growthPeriod={plant.main_species.specifications.growth_period} />
                 <div id='bottomRight'>
                     {this.props.auth.isAuthenticated ? <div id='buttons'>
-                        <button id='save' onClick={this.saveCurrentPlant}>Save to favourites</button>
+                        <button id='save' onClick={this.saveCurrentPlant}>{this.state.saved}</button>
                         <Link to={'/createListing/' + this.state.plant.id}><button id='save'>Create Listing</button></Link>
                     </div> : <></>}
                     <PlantViewListings listings={listings} />
