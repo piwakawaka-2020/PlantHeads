@@ -9,7 +9,7 @@ class Nav extends React.Component {
   render() {
     return (
       <div id='navBar'>
-        <h2 id='navHeading'><img id='icon' src='images/plantIcon.svg' /><img src="images/logo.png" alt=""/></h2>
+        <Link to='/'><h2 id='navHeading'><img id='icon' src='images/plantIcon.svg' /><img src="images/logo.png" alt=""/></h2></Link>
         <ul>
 
             {this.props.auth.isAuthenticated ? 
