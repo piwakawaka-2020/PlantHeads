@@ -58,7 +58,7 @@ class CreateListing extends React.Component {
 
       .catch((err) => {
         console.error(err)
-        this.props.history.push('/listings/' + newListing.id)
+        this.props.history.push('/listings/')
       })
   }
 
