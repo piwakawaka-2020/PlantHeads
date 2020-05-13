@@ -7,14 +7,9 @@ class CreateListing extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      //rendered from the LogIn session
-      // username: this.props.username,
-      // usersId: this.props.usersId,
-      // email: this.props.email,
-      //can be rendered if accessed through PlantView Component
       plantsId: this.props.match.params.plantsId,
-      scientificName: this.props.scientificName,
-      commonName: this.props.commonName
+      scientificName: '',
+      commonName: ''
     }
   }
 
@@ -48,7 +43,7 @@ class CreateListing extends React.Component {
     event.preventDefault()
 
     createListing({
-      usersId: this.state.usersId,
+      usersId: this.props.id,
       plantsId: this.state.plantsId,
       scientificName: this.state.scientificName,
       commonName: this.state.commonName,
@@ -59,8 +54,7 @@ class CreateListing extends React.Component {
     })
 
       .then((newListing) => {
-        //route the page to the ListingDetailsComponent(single listing view)
-        alert("New Listing Added" + newListing)
+        this.props.history.push('/listings/' + newListing.id)
       })
 
       .catch((err) => {
@@ -107,9 +101,9 @@ class CreateListing extends React.Component {
 
             <div className='createListingInputStructure'>
               <p className='abitOfpadding'>Botanical Name:</p>
-              <input type="text" name="scientificName" className='createListingInput' onChange={this.handleChange}/>
+              <input type="text" name="scientificName" className='createListingInput' value={this.state.scientificName} onChange={this.handleChange}/>
               <p className='abitOfpadding'>Common Name:</p>
-              <input type="text" name="commonName" className='createListingInput' onChange={this.handleChange}/>
+              <input type="text" name="commonName" className='createListingInput' value={this.state.commonName} onChange={this.handleChange}/>
             </div>
 
             <div className='createListingInputStructure'>
