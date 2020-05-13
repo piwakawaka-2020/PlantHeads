@@ -75,7 +75,7 @@ class PlantView extends React.Component {
                 <div id='bottomRight'>
                     {this.props.auth.isAuthenticated ? <div id='buttons'>
                         <button id='save' onClick={this.saveCurrentPlant}>Save to favourites</button>
-                        <Link to='/createListing'><button id='save'>Create Listing</button></Link>
+                        <Link to={'/createListing/' + this.state.plant.id}><button id='save'>Create Listing</button></Link>
                     </div> : <></>}
                     <PlantViewListings listings={listings} />
                 </div>

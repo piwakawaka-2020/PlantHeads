@@ -22,8 +22,8 @@ class EmailForm extends React.Component {
                     text: this.state.message,
                     html: "<p>" + this.state.message + "</p>"
                 })
-
-                alert('Email sent to Seller')
+                alert("Email Sent!")
+                this.props.history.push('/listings/')
             })
         
     }
