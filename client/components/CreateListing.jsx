@@ -52,13 +52,13 @@ class CreateListing extends React.Component {
       careTips: this.state.careTips,
       photoFile: this.state.photoFile
     })
-
       .then((newListing) => {
         this.props.history.push('/listings/' + newListing.id)
       })
 
       .catch((err) => {
-        alert("Cannot Add this listing " + err.message)
+        console.error(err)
+        this.props.history.push('/listings/' + newListing.id)
       })
   }
 
@@ -116,19 +116,10 @@ class CreateListing extends React.Component {
 
           <div className='careTipsInput'>
             <p className='abitMorepadding'> Share Your Care Tips:</p>
-            {/* <input type="text" name="careTips"  onChange={this.handleChange}/> */}
             <textarea name="careTips" className='createListingInput' rows="10" cols="30" onChange={this.handleChange} />
           </div>
-          
-
           <br/>
           <div>
-            
-            
-            {/* <p className ='usernameListing'>Sellers Details:</p>
-           <br/>
-            <p className='usernameListing'>Username: {this.props.username}</p>
-            <p className='userEmailListing'>Email: {this.props.email}</p> */}
           </div>
           <br/>
           <div className='submitListing'>
@@ -136,9 +127,6 @@ class CreateListing extends React.Component {
           </div>      
         </form>
         </div>
-        {/* <div className='createListing'> */}
-        
-        {/* </div> */}
       </div>
       
     )
