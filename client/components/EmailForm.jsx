@@ -1,5 +1,7 @@
 import React from 'react'
+import { sgEmailer } from '../apis/sgMailer'
 import { connect } from 'react-redux'
+import { getUser } from '../apis/users'
 
 class EmailForm extends React.Component {
     handleChange = e => {
@@ -11,7 +13,19 @@ class EmailForm extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        alert('Email sent to Seller')
+        getUser(this.props.match.params.sellerId)
+            .then((seller) => {
+                sgEmailer({
+                    to: seller.email,
+                    from: this.state.email,
+                    subject: "Plant Enquiry from " + this.state.name,
+                    text: this.state.message,
+                    html: "<p>" + this.state.message + "</p>"
+                })
+
+                alert('Email sent to Seller')
+            })
+        
     }
 
     render() {
@@ -31,7 +45,7 @@ class EmailForm extends React.Component {
                         <input type="text" name="name" onChange={this.handleChange} />
                         <br/>
                         E-mail:<br/>
-                        <input type="text" name="mail" onChange={this.handleChange} />
+                        <input type="text" name="email" onChange={this.handleChange} />
                         <br/>
 
                         Comment:<br/>

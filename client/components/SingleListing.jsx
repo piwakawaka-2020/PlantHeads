@@ -15,6 +15,7 @@ class SingleListing extends React.Component {
         const id = this.props.match.params.listingId
         singleListing(id) 
         .then( singlelisting => {
+            console.log(singleListing)
             this.setState({
                 singlelisting: singlelisting
             })
@@ -47,7 +48,7 @@ class SingleListing extends React.Component {
                                 <p className='listingInfo'>Cost: ${this.state.singlelisting.cost}</p> 
                             <div className='linkToContactSeller'>
                                 <h2 className='contactSellerStyle'>Buy This Plant ~ Contact The Seller</h2>
-                                <Link to='/emailForm'><button id='save'>Contact Seller</button></Link> 
+                                <Link to='/emailForm/1'><button id='save'>Contact Seller</button></Link> 
                             </div>
                           </div>    
                     </div>
