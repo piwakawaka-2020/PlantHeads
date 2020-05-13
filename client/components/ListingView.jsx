@@ -24,7 +24,7 @@ class ListingView extends React.Component {
             <div  className='page-boarder'>
             <div className='mainListingViewContainer'>
                 <div className='listingViewHeader'>
-                    <h2>Adopt A New Best Friend</h2>
+                    <h2>Adopt A New Best Friend <img className='hiddenOddish' src="/images/oddishtrans.png" /></h2>
                 </div>
                 <div className='listingViewContainer'>
                 {listings.map(listing => 

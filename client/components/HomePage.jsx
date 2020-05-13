@@ -45,8 +45,8 @@ class HomePage extends React.Component {
                 <input onChange={this.handleChange} value={this.state.search} placeholder='Search for a plant!' name='search' id='search' />
                 <input type="submit" id='searchSubmit'/>
                 <br />
-                <label htmlFor='complete' >Only show plants with complete data</label>
-                <input type='checkbox' name='complete' onChange={this.toggleComplete}/>
+                <label className='checkboxLabel' htmlFor='complete' >Only show plants with complete data</label>
+                <input className='checkbox' type='checkbox' name='complete' onChange={this.toggleComplete}/>
                 </form>
             </div>
             <Results results={this.state.results} />
