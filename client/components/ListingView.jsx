@@ -32,7 +32,7 @@ class ListingView extends React.Component {
                         <Link to='/createListing'><button id='save'>Create Listing</button></Link>
                         </>
                         ) : 'Log in to create a listing'}
-                        <h2 className='listingViewTitle'>Adopt A New Best Friend</h2>
+                        <h2 className='listingViewTitle'>Adopt A New Best Friend <img className='hiddenOddish' src="/images/oddishtrans.png" /></h2>
                     </div>
                 </div>
                 <div className='listingViewContainer'>

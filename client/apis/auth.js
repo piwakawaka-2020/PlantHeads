@@ -1,7 +1,7 @@
 
 import request from 'superagent'
 
-import { get } from '../utils/localstorage'
+import { get } from '../utils/localStorage'
 import { isAuthenticated, removeUser } from '../utils/auth'
 import { saveUserToken } from '../utils/auth'
 

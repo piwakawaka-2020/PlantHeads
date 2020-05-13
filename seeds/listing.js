@@ -41,75 +41,75 @@ exports.seed = function(knex) {
           id: 5, 
           plants_id: 220010,
           users_id: 1,
-          scientific_name:'Anthurium Crystallinum',
-          common_name: 'Crystal Anthurium',
-          cost: 98.45,
+          scientific_name:'Quercus falcata',
+          common_name: 'southern red oak',
+          cost: 86,
           type: 'seedling',
           care_tips: 'soil must be moist but well drained, can grow indoors, require bright filtered light ',
-          photoFile: 'https://trademe.tmcdn.co.nz/photoserver/plusw/1318017998.jpg'
+          photoFile: 'https://i0.wp.com/vervemagazine.co.nz/wp-content/uploads/2019/02/monedit.jpg?resize=1000%2C667'
         },
         {
           id: 6, 
           plants_id: 220010,
           users_id: 1,
-          scientific_name:'Anthurium Crystallinum',
-          common_name: 'Crystal Anthurium',
-          cost: 98.45,
+          scientific_name:'Carex viridula',
+          common_name: 'little green sedge',
+          cost: 44.25,
           type: 'seedling',
           care_tips: 'soil must be moist but well drained, can grow indoors, require bright filtered light ',
-          photoFile: 'https://trademe.tmcdn.co.nz/photoserver/plusw/1318017998.jpg'
+          photoFile: 'https://media.bunnings.co.nz/Product-384x384/01dba519-b646-462b-984d-039435b0c6f3.png'
         },
         {
           id: 7, 
           plants_id: 220010,
           users_id: 1,
-          scientific_name:'Anthurium Crystallinum',
-          common_name: 'Crystal Anthurium',
+          scientific_name:'Coccoloba diversifolia',
+          common_name: 'tietongue',
           cost: 98.45,
           type: 'seedling',
           care_tips: 'soil must be moist but well drained, can grow indoors, require bright filtered light ',
-          photoFile: 'https://trademe.tmcdn.co.nz/photoserver/plusw/1318017998.jpg'
+          photoFile: 'https://assets.mitre10.co.nz/sys-master/productimages/hcf/h3b/9396132904990/351200xlg.jpg'
         },
         {
           id: 8, 
           plants_id: 220010,
           users_id: 1,
-          scientific_name:'Anthurium Crystallinum',
-          common_name: 'Crystal Anthurium',
-          cost: 98.45,
+          scientific_name:'Lespedeza hirta',
+          common_name: 'hairy lespedeza',
+          cost: 16.45,
           type: 'seedling',
           care_tips: 'soil must be moist but well drained, can grow indoors, require bright filtered light ',
-          photoFile: 'https://trademe.tmcdn.co.nz/photoserver/plusw/1318017998.jpg'
+          photoFile: 'https://cdn.shopify.com/s/files/1/0151/1650/1046/products/Monstera_monkey_mask_indoor_pot_plant_new_Zealand_2400x.jpg?v=1573164164'
         },
         {
           id: 9, 
           plants_id: 220010,
           users_id: 1,
-          scientific_name:'Anthurium Crystallinum',
-          common_name: 'Crystal Anthurium',
+          scientific_name:'Poa trivialis',
+          common_name: 'rough bluegrass',
           cost: 98.45,
           type: 'seedling',
           care_tips: 'soil must be moist but well drained, can grow indoors, require bright filtered light ',
-          photoFile: 'https://trademe.tmcdn.co.nz/photoserver/plusw/1318017998.jpg'
+          photoFile: 'https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1557258847-chinese-evergreen-houseplant-1557258690.jpg?crop=0.883xw:0.887xh;0.0849xw,0.0821xh&resize=480:*'
         },
         {
           id: 10, 
           plants_id: 220010,
           users_id: 1,
-          scientific_name:'Anthurium Crystallinum',
-          common_name: 'Crystal Anthurium',
+          scientific_name:'Salix arbusculoides',
+          common_name: 'littletree willow',
           cost: 98.45,
           type: 'seedling',
           care_tips: 'soil must be moist but well drained, can grow indoors, require bright filtered light ',
-          photoFile: 'https://trademe.tmcdn.co.nz/photoserver/plusw/1318017998.jpg'
+          photoFile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbgKlPadEAWuZcBHyd6fCjgzOqSuGEGXCCVyRi8YSHwNfkD1U8&usqp=CAU'
         },
         {
           id: 11, 
           plants_id: 220010,
           users_id: 1,
-          scientific_name:'Anthurium Crystallinum',
-          common_name: 'Crystal Anthurium',
-          cost: 98.45,
+          scientific_name:'Spartina spartinae',
+          common_name: 'gulf cordgrass',
+          cost: 30,
           type: 'seedling',
           care_tips: 'soil must be moist but well drained, can grow indoors, require bright filtered light ',
           photoFile: 'https://trademe.tmcdn.co.nz/photoserver/plusw/1318017998.jpg'
@@ -118,23 +118,23 @@ exports.seed = function(knex) {
           id: 12, 
           plants_id: 220010,
           users_id: 1,
-          scientific_name:'Anthurium Crystallinum',
-          common_name: 'Crystal Anthurium',
-          cost: 98.45,
+          scientific_name:'Viola sororia',
+          common_name: 'common blue violet',
+          cost: 20,
           type: 'seedling',
           care_tips: 'soil must be moist but well drained, can grow indoors, require bright filtered light ',
-          photoFile: 'https://trademe.tmcdn.co.nz/photoserver/plusw/1318017998.jpg'
+          photoFile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSMO_Bo_Ngg6YLuXQNIWVO7JgIh7mQXKUY0kTsghPhVEKX4o6uF&usqp=CAU'
         },
         {
           id: 13, 
           plants_id: 220010,
           users_id: 1,
-          scientific_name:'Anthurium Crystallinum',
-          common_name: 'Crystal Anthurium',
-          cost: 98.45,
+          scientific_name:'Sophora secundiflora',
+          common_name: 'mescal bean',
+          cost: 8.45,
           type: 'seedling',
           care_tips: 'soil must be moist but well drained, can grow indoors, require bright filtered light ',
-          photoFile: 'https://trademe.tmcdn.co.nz/photoserver/plusw/1318017998.jpg'
+          photoFile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQ1nvqFH-jvEbdMsT1_tVvUrv4ErhHx4xf6_W1W9-r7k9cZ7ik&usqp=CAU'
         },
       ])
     })

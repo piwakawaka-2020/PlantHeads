@@ -70,7 +70,7 @@ class Register extends React.Component {
 
                     </label>
                     <br />
-                    <input className='greenHover' type="submit" value='Register' />
+                    <input className='greenHover' type="submit" value='Register' /><img className='hiddenOddishBig' src="/images/oddishtrans.png" />
                 </form>
             </div>
         )

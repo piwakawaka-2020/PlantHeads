@@ -86,7 +86,7 @@ class CreateListing extends React.Component {
         <div className='mainCreateListingContainer'>
         <form onSubmit={this.handleSubmit}>
           <div className='postListingHeader'>
-            <h1> To Give A Plant To Another Loving Family</h1>
+            <h1><img className='hiddenOddish' src="/images/oddishtrans.png" /> To Give A Plant To Another Loving Family</h1>
           </div>
           <div>
               <p className='postListInfo'>We invite our fellow #plantHeads sellers to list your plants with us. Rather than listing via commercially operated websites, sell your plants with PlantHeads and help grow our community</p>
