@@ -287,9 +287,6 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
     font-family: 'Balsamiq Sans', cursive;
     position: relative;
     margin: 5px;
-    display: flex;
-    justify-self: center;
-    align-content: center;
     text-align: center;
 }
 
