@@ -1,5 +1,7 @@
 import React from 'react'
+import { sgEmailer } from '../apis/sgMailer'
 import { connect } from 'react-redux'
+import { getUser } from '../apis/users'
 
 class EmailForm extends React.Component {
     handleChange = e => {
@@ -11,14 +13,30 @@ class EmailForm extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        alert('Email sent to Seller')
+        getUser(this.props.match.params.sellerId)
+            .then((seller) => {
+                sgEmailer({
+                    to: seller.email,
+                    from: this.state.email,
+                    subject: "Plant Enquiry from " + this.state.name,
+                    text: this.state.message,
+                    html: "<p>" + this.state.message + "</p>"
+                })
+
+                alert('Email sent to Seller')
+            })
+        
     }
 
     render() {
         return(
-            <div className='contactSeller'>
+        <div className='email-page'>
+            <div className='gif-plant-spin'>
+            <iframe  src="https://giphy.com/embed/3oz8xFRCuL0yhR8y4g" width="449" height="500" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+            </div>
+            <div className='contact-seller'>
                 <form onSubmit={this.handleSubmit}>
-                    <div className='contactSellerHeader'>
+                    <div className='contact-seller-header'>
                         <h2>Contact Seller:</h2>
                     </div>
                     <div>
@@ -27,10 +45,15 @@ class EmailForm extends React.Component {
                         <input type="text" name="name" onChange={this.handleChange} />
                         <br/>
                         E-mail:<br/>
-                        <input type="text" name="mail" onChange={this.handleChange} />
+                        <input type="text" name="email" onChange={this.handleChange} />
                         <br/>
+
+                        Comment:<br/>
+                        <textarea type="text" name="message" rows="10" cols="30" onChange={this.handleChange} />
+
                         Message:<br/>
                         <textarea name="message" rows="10" cols="30" onChange={this.handleChange} />
+
                         <br/><br/>
                         <input type="submit" value="Send" />
                         <input type="reset" value="Reset" />
@@ -38,6 +61,7 @@ class EmailForm extends React.Component {
                     </div>
                 </form>
             </div>
+         </div>
         )
     }
 }

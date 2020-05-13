@@ -45,7 +45,7 @@ class App extends React.Component{
         <Route exact path="/listings" component={ListingView} />
         <Route exact path="/listings/:listingId" component={SingleListing} />
         {/* render={(props) => <SingleListing {...props} {...tempUser} />} /> */}
-        <Route exact path="/emailForm" component={EmailForm} />
+        <Route exact path="/emailForm/:sellerId" component={EmailForm} />
       </Router>
       </>
   )
