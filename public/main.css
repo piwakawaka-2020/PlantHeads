@@ -478,9 +478,9 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
     color: white;
 }
 
-/*_________________________________________________________ ALICES CSS above saved plant*/
+/*_______________________ ALICES CSS above saved plant*/
 
-/*_________________________________________________________ ALICES CSS above single listing below*/
+/*_______________________ ALICES CSS single listing below*/
 
 
 .single-list-container {
@@ -590,7 +590,59 @@ li:hover, .result:hover, #searchSubmit:hover, #save:hover, #navbar a:hover, .gre
 } */
 
 
-/*_________________________________________________________ ALICES CSS above single listing above*/
+/*_______________________________ ALICES CSS above single listing above*/
+
+/*________________________________ALICES CSS EmailForm below */
+
+
+.email-page {
+    display: flex;
+    justify-content: center;
+    border: solid darkgreen;
+}
+
+.gif-plant-spin {
+   margin-top: 50px;
+   margin-right: 50px;
+   object-fit: cover
+}
+
+.contact-seller{
+    background-color: white;
+    padding: 100px;
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+.contact-seller input {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 20px;
+    border: 2px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    
+}
+
+.contact-seller textarea {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 20px;
+    border: 2px black solid;
+    border-radius: 10px;
+   
+}
+
+/*____________________________________ALICE CSS EMAIL FORM above*/
+
+.list-page {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/*___________________________________ALICES CSS PLANT LIST*/
+
 
 .listingViewHeader {
     display: flex;
