@@ -29,7 +29,8 @@ class Login extends React.Component{
 
     render(){
         return(
-            <div className='login-style'>
+            <>
+            <div className='login-style' >
             <form id='loginForm' onSubmit = {this.handleSubmit}>
                 <label>
                     <h2>Login</h2>
@@ -39,6 +40,9 @@ class Login extends React.Component{
                 <input className='greenHover' type="submit" value='Log in'/>
             </form>
             </div>
+            <div className='login-img'>
+            </div>
+            </>
         )
     }
 }
