@@ -31,16 +31,12 @@ As a user:
 - [x] I want to register an account with my name
 - [x] I log in and register my own plants to my account
 - [x] We can add a listing to the plant page and it saves it to a database
-- [ ] We can accept a listing and the app will notify the seller
+- [x] We can accept a listing and the app will notify the seller
 - [x] Unregistered users can see the plant database but cant save plants
 
 ### Stretch
 - [x] Uploading your own picture when making a listing
 - [x] Seperate buy/sell section for listings
-- [ ] More search filters
-- [ ] Plant identification by picture
-
-  ---
 
 
 ## Technical Scope Full Stack Requirements
@@ -52,9 +48,11 @@ As a user:
   | Register | View for user to register an account |
   | Home | Landing view for website |
   | Plant Profile | Plant details for selected plant |
-  | Listing | Details for individual plant listing |
   | Saved Plants | Current users saved plants (not listings) |
-  | Make Listing | Form to create a listing |
+  | Buy/Sell Plants | Users can view a plants for sale |
+  | Listing | Details for individual plant for sale |
+  | Make Listing | Form to create a listing for the users plant |
+  | Contact Seller | Registered user(buyer) can send and email to another registered user(seller) |
 
 
 ## Reducers (Client Side)
@@ -63,9 +61,8 @@ As a user:
   | --- | --- |
   | auth | Store information regarding user logins, auth status and auth errors |
 
- ## Actions
 
- ### ACTION NAME
+ ## Actions(Client Side)
 
  | type | data | purpose |
  | --- | --- | --- |
@@ -101,14 +98,12 @@ As a user:
 ### Users
   | Column Name | Data Type |
   | --- | --- |
-  | id | Integer |
+  | id | Increments |
   | username | String |
   | email | String |
   | first_name | String |
   | last_name | String |
-  | hash | text |
-  | created_at | timestamp |
-  | updated_at | timestamp |
+  | hash | String |
 
 ### Listing
   | Column Name | Data Type |
@@ -118,16 +113,16 @@ As a user:
   | users_id | Integer |
   | scientific_name | String |
   | common_name | String |
-  | cost | Integer |
+  | cost | Decimal |
   | type | String |
   | care_tips | String |
-  | photoFile | String |
+  | photoFile | Text |
   
 ### SavedPlant
 
  | Column Name | Data Type |
  | --- | --- |
- | id | Integer |
+ | id | Increments |
  | users_id | Integer |
  | scientific_name | String |
  | plants_id | Integer |
