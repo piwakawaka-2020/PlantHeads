@@ -47,7 +47,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^25.3.0",
-    "nodemon": "^2.0.3",
+    "nodemon": "^2.0.20",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   }
